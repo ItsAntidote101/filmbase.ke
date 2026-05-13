@@ -150,10 +150,7 @@ export default function HomePage() {
   return (
     <PageTransition>
       {/* ── HERO — stays dark ── */}
-      <section
-        className="relative flex flex-col justify-start overflow-hidden bg-brand-dark"
-        style={{ height: "85vh", minHeight: "600px" }}
-      >
+      <section className="relative flex flex-col overflow-hidden bg-brand-dark h-[80vh] min-h-[480px] sm:h-[70vh] sm:min-h-[520px] lg:h-[65vh] lg:min-h-[580px]">
         <div className="absolute inset-0 bg-brand-dark">
           <video
             autoPlay
@@ -171,13 +168,14 @@ export default function HomePage() {
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-        <div
-          className="relative max-w-7xl mx-auto px-6 lg:px-8 pb-12"
-          style={{ paddingTop: "calc(15vh + 60px)" }}
-        >
-          <HeroHeadline />
+        {/* Vertically centered content */}
+        <div className="relative flex-1 flex items-center">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+            <HeroHeadline />
+          </div>
         </div>
 
+        {/* Scroll indicator anchored inside the bottom of the hero */}
         <ScrollIndicator />
       </section>
 
