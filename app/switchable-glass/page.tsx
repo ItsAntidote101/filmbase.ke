@@ -30,9 +30,9 @@ const FEATURES = [
   {
     title: "How it works",
     body: "PDLC (Polymer Dispersed Liquid Crystal) film mounts onto glass and switches between fully transparent and fully frosted states with electrical activation. Power on: clear. Power off: frosted. Instant, repeatable, reliable.",
-    // REPLACE: Diagram or photograph showing PDLC film in both clear and frosted states side by side
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=PDLC+Clear+vs+Frosted",
+    image: "/smart-glass-how-it-works.png",
     imageAlt: "Switchable smart glass showing transparent and frosted states",
+    plain: true,
   },
   {
     title: "Where it is used",
@@ -157,9 +157,9 @@ export default function SwitchableGlassPage() {
                 <p className="text-brand-muted text-lg leading-relaxed font-light">{feature.body}</p>
               </div>
 
-              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} rounded-2xl overflow-hidden aspect-[7/5] relative bg-brand-alt`}>
-                <Image src={feature.image} alt={feature.imageAlt} fill className="object-cover" />
-                <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
+              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} ${"plain" in feature && feature.plain ? "overflow-hidden aspect-[7/5] relative" : "rounded-2xl overflow-hidden aspect-[7/5] relative bg-brand-alt"}`}>
+                <Image src={feature.image} alt={feature.imageAlt} fill className="object-cover" unoptimized={"plain" in feature && feature.plain} />
+                {"plain" in feature && feature.plain ? null : <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />}
               </div>
             </div>
           </section>
