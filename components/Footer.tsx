@@ -1,0 +1,107 @@
+import Link from "next/link";
+
+const SOCIAL_LINKS = [
+  { label: "Instagram", href: "https://instagram.com" },
+  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "Facebook", href: "https://facebook.com" },
+  { label: "TikTok", href: "https://tiktok.com" },
+];
+
+// REPLACE: Update social links with actual Filmbase social media URLs
+
+export default function Footer() {
+  return (
+    <footer className="bg-brand-navy border-t border-brand-border">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <span className="text-2xl font-black tracking-[0.15em] text-white block mb-4">
+              FILMBASE
+            </span>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              Kenya&apos;s first specialist in transparent LED display screens and switchable
+              smart glass. Delivered and installed across all 47 counties.
+            </p>
+            <div className="flex items-center gap-4 mt-6">
+              {SOCIAL_LINKS.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 hover:text-brand-accent transition-colors duration-200"
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Products */}
+          <div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest block mb-4">
+              Products
+            </span>
+            <ul className="flex flex-col gap-3">
+              {[
+                { label: "LED Film Screen", href: "/led-film" },
+                { label: "LED Crystal Film", href: "/led-crystal-film" },
+                { label: "Switchable Smart Glass", href: "/switchable-glass" },
+                { label: "Overview", href: "/overview" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest block mb-4">
+              Contact
+            </span>
+            <address className="not-italic flex flex-col gap-3">
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Diamond Homes, Othaya Road,<br />
+                Kileleshwa, Nairobi, Kenya
+              </p>
+              <a
+                href="mailto:info@filmbasetechnology.co.ke"
+                className="text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200"
+              >
+                info@filmbasetechnology.co.ke
+              </a>
+              <a
+                href="tel:+254965021920"
+                className="text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200"
+              >
+                +254 965 021 920
+              </a>
+              <span className="text-sm text-gray-500">
+                Showroom visits: by appointment
+              </span>
+            </address>
+          </div>
+        </div>
+
+        <hr className="hr-accent my-10" />
+
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-600">
+            &copy; 2026 Filmbase Technology Limited. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-700">
+            Filmbase Technology Limited — Nairobi, Kenya
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
