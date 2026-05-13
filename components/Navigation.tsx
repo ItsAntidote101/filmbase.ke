@@ -8,37 +8,29 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-const MEGA_PRODUCTS = {
-  mediaGlass: [
-    {
-      title: "LED Film Screen",
-      href: "/led-film",
-      description: "Transparent LED on glass. For storefronts, banks, and brand environments.",
-      // REPLACE: Mega menu product image — LED Film installed on a retail storefront
-      image: "https://placehold.co/300x200/0a0a0a/ffffff?text=LED+Film+Screen",
-    },
-    {
-      title: "LED Crystal Film Screen",
-      href: "/led-crystal-film",
-      description: "Premium-grade transparent display. For luxury retail and hotels.",
-      // REPLACE: Mega menu product image — LED Crystal Film in a luxury hotel lobby
-      image: "https://placehold.co/300x200/0a0a0a/ffffff?text=LED+Crystal+Film",
-    },
-  ],
-  smartFilm: [
-    {
-      title: "Switchable Smart Glass",
-      href: "/switchable-glass",
-      description: "Privacy on demand. Transparent to frosted at the flick of a switch.",
-      // REPLACE: Mega menu product image — smart glass boardroom partition
-      image: "https://placehold.co/300x200/0a0a0a/ffffff?text=Switchable+Smart+Glass",
-    },
-  ],
-};
+const MEGA_PRODUCTS = [
+  {
+    title: "LED Film Screen",
+    href: "/led-film",
+    // REPLACE: Mega menu product image — LED Film installed on a retail storefront
+    image: "https://placehold.co/500x380/054e72/ffffff?text=LED+Film+Screen",
+  },
+  {
+    title: "LED Crystal Film Screen",
+    href: "/led-crystal-film",
+    // REPLACE: Mega menu product image — LED Crystal Film in a luxury hotel lobby
+    image: "https://placehold.co/500x380/033a55/ffffff?text=LED+Crystal+Film",
+  },
+  {
+    title: "Switchable Smart Glass",
+    href: "/switchable-glass",
+    // REPLACE: Mega menu product image — smart glass boardroom partition
+    image: "https://placehold.co/500x380/0a7aad/ffffff?text=Switchable+Smart+Glass",
+  },
+];
 
 function Logo({ white = false }: { white?: boolean }) {
   const [imgError, setImgError] = useState(false);
@@ -67,45 +59,12 @@ function Logo({ white = false }: { white?: boolean }) {
   );
 }
 
-function MegaMenuCard({
-  item,
-  onClick,
-}: {
-  item: (typeof MEGA_PRODUCTS.mediaGlass)[0];
-  onClick: () => void;
-}) {
-  return (
-    <Link
-      href={item.href}
-      onClick={onClick}
-      className="group flex gap-4 p-3 rounded-xl hover:bg-brand-alt transition-colors duration-200"
-    >
-      <div className="flex-shrink-0 w-[110px] h-[76px] rounded-lg overflow-hidden relative">
-        <Image src={item.image} alt={item.title} fill className="object-cover" />
-      </div>
-      <div className="flex flex-col justify-center">
-        <span className="text-sm font-semibold text-[#0a0a0a] group-hover:text-brand-ink transition-colors duration-200 leading-tight">
-          {item.title}
-        </span>
-        <span className="text-xs text-brand-muted leading-snug mt-1 line-clamp-2">
-          {item.description}
-        </span>
-        <span className="inline-flex items-center gap-1 text-xs text-brand-ink font-medium mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          Learn more
-          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </span>
-      </div>
-    </Link>
-  );
-}
-
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
+  const [activeProduct, setActiveProduct] = useState(MEGA_PRODUCTS[0]);
   const megaTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
@@ -120,7 +79,6 @@ export default function Navigation() {
     setMegaOpen(false);
   }, [pathname]);
 
-  // close mega menu on outside click
   useEffect(() => {
     if (!megaOpen) return;
     const handler = (e: MouseEvent) => {
@@ -139,7 +97,6 @@ export default function Navigation() {
     megaTimeout.current = setTimeout(() => setMegaOpen(false), 120);
   };
 
-  // Nav is "over dark" when not scrolled (hero sections are always dark on all pages)
   const overDark = !scrolled && !mobileOpen;
 
   return (
@@ -159,7 +116,6 @@ export default function Navigation() {
 
         {/* Desktop links */}
         <ul className="hidden lg:flex items-center gap-8">
-          {/* Home */}
           <li>
             <Link
               href="/"
@@ -173,7 +129,6 @@ export default function Navigation() {
             </Link>
           </li>
 
-          {/* Overview */}
           <li>
             <Link
               href="/overview"
@@ -187,7 +142,6 @@ export default function Navigation() {
             </Link>
           </li>
 
-          {/* Gallery */}
           <li>
             <Link
               href="/gallery"
@@ -228,7 +182,6 @@ export default function Navigation() {
             </button>
           </li>
 
-          {/* Contact */}
           <li>
             <Link
               href="/contact"
@@ -263,61 +216,105 @@ export default function Navigation() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`w-6 h-0.5 transition-all duration-300 ${mobileOpen || !overDark ? "bg-[#0a0a0a]" : "bg-white"} ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`w-6 h-0.5 transition-all duration-300 ${mobileOpen || !overDark ? "bg-[#0a0a0a]" : "bg-white"} ${mobileOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`w-6 h-0.5 transition-all duration-300 ${mobileOpen || !overDark ? "bg-[#0a0a0a]" : "bg-white"} ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
+          <span className={`w-6 h-0.5 transition-all duration-300 ${mobileOpen || !overDark ? "bg-[#0a0a0a]" : "bg-white"} ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`w-6 h-0.5 transition-all duration-300 ${mobileOpen || !overDark ? "bg-[#0a0a0a]" : "bg-white"} ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`w-6 h-0.5 transition-all duration-300 ${mobileOpen || !overDark ? "bg-[#0a0a0a]" : "bg-white"} ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </nav>
 
-      {/* ── MEGA MENU ── */}
+      {/* ── MEGA MENU (desktop only) ── */}
       <AnimatePresence>
         {megaOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -8 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             onMouseEnter={openMega}
             onMouseLeave={closeMegaDelayed}
             className="hidden lg:block absolute top-full left-0 right-0 bg-white border-b border-brand-border shadow-2xl"
           >
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
-              <div className="grid grid-cols-3 gap-8">
-                {/* Media Glass column */}
-                <div className="col-span-2">
-                  <span className="text-[10px] font-semibold text-brand-muted uppercase tracking-[0.2em] block mb-4 px-3">
-                    Media Glass
-                  </span>
-                  <div className="grid grid-cols-2 gap-2">
-                    {MEGA_PRODUCTS.mediaGlass.map((item) => (
-                      <MegaMenuCard key={item.href} item={item} onClick={() => setMegaOpen(false)} />
-                    ))}
+            {/* Two-panel body */}
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <div className="flex">
+
+                {/* LEFT PANEL — 40%: crossfading image + name + link */}
+                <div className="w-[40%] flex-shrink-0 py-8 pr-10">
+                  <div className="relative overflow-hidden rounded-xl bg-brand-alt" style={{ aspectRatio: "500/380" }}>
+                    <AnimatePresence mode="wait">
+                      <motion.img
+                        key={activeProduct.href}
+                        src={activeProduct.image}
+                        alt={activeProduct.title}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </AnimatePresence>
                   </div>
+                  <p className="mt-4 text-base font-bold text-[#0a0a0a] leading-tight">
+                    {activeProduct.title}
+                  </p>
+                  <Link
+                    href={activeProduct.href}
+                    onClick={() => setMegaOpen(false)}
+                    className="inline-flex items-center gap-1.5 mt-2 text-sm font-medium text-brand-ink hover:text-brand-ink-light transition-colors duration-200"
+                  >
+                    Learn more
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
                 </div>
 
-                {/* Smart Film column */}
-                <div>
-                  <span className="text-[10px] font-semibold text-brand-muted uppercase tracking-[0.2em] block mb-4 px-3">
-                    Smart Film
-                  </span>
-                  <div className="flex flex-col gap-2">
-                    {MEGA_PRODUCTS.smartFilm.map((item) => (
-                      <MegaMenuCard key={item.href} item={item} onClick={() => setMegaOpen(false)} />
+                {/* RIGHT PANEL — 60%: vertical product list */}
+                <div className="flex-1 py-8 pl-10 border-l border-brand-border">
+                  <ul className="flex flex-col divide-y divide-[#e8e8e8]">
+                    {MEGA_PRODUCTS.map((product) => (
+                      <li key={product.href}>
+                        <Link
+                          href={product.href}
+                          onClick={() => setMegaOpen(false)}
+                          onMouseEnter={() => setActiveProduct(product)}
+                          className="group flex items-center justify-between py-6 w-full"
+                        >
+                          <span
+                            className={`text-base font-semibold transition-colors duration-200 ${
+                              activeProduct.href === product.href
+                                ? "text-brand-ink"
+                                : "text-[#0a0a0a] group-hover:text-brand-ink"
+                            }`}
+                          >
+                            {product.title}
+                          </span>
+                          <motion.span
+                            animate={{ x: activeProduct.href === product.href ? 4 : 0 }}
+                            transition={{ duration: 0.15 }}
+                            className={`transition-colors duration-200 ${
+                              activeProduct.href === product.href
+                                ? "text-brand-ink"
+                                : "text-[#0a0a0a]/30 group-hover:text-brand-ink"
+                            }`}
+                          >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </motion.span>
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
+            </div>
 
-              {/* Bottom strip */}
-              <div className="mt-6 pt-5 border-t border-brand-border flex items-center justify-between">
+            {/* Bottom strip — #f8f8f8 */}
+            <div className="bg-[#f8f8f8] border-t border-brand-border">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm text-brand-muted">
-                  <svg className="w-4 h-4 text-brand-ink/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-brand-ink/50 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                       d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -394,27 +391,16 @@ export default function Navigation() {
                       transition={{ duration: 0.22 }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-3 pl-3 flex flex-col gap-1">
-                        <p className="text-[10px] font-semibold text-brand-muted uppercase tracking-widest py-2">
-                          Media Glass
-                        </p>
-                        {MEGA_PRODUCTS.mediaGlass.map((item) => (
+                      <div className="pb-3 flex flex-col">
+                        {MEGA_PRODUCTS.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
-                            className={`py-2 text-sm pl-2 border-l-2 transition-colors ${pathname === item.href ? "border-brand-ink text-brand-ink" : "border-transparent text-[#0a0a0a]/70"}`}
-                          >
-                            {item.title}
-                          </Link>
-                        ))}
-                        <p className="text-[10px] font-semibold text-brand-muted uppercase tracking-widest py-2 mt-1">
-                          Smart Film
-                        </p>
-                        {MEGA_PRODUCTS.smartFilm.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className={`py-2 text-sm pl-2 border-l-2 transition-colors ${pathname === item.href ? "border-brand-ink text-brand-ink" : "border-transparent text-[#0a0a0a]/70"}`}
+                            className={`py-3 px-2 text-sm border-b border-brand-border last:border-0 transition-colors ${
+                              pathname === item.href
+                                ? "text-brand-ink font-medium"
+                                : "text-[#0a0a0a]/70"
+                            }`}
                           >
                             {item.title}
                           </Link>
