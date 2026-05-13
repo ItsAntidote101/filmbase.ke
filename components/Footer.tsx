@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// REPLACE: Update social links with actual Filmbase social media URLs
 const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://instagram.com" },
   { label: "LinkedIn", href: "https://linkedin.com" },
@@ -7,30 +8,29 @@ const SOCIAL_LINKS = [
   { label: "TikTok", href: "https://tiktok.com" },
 ];
 
-// REPLACE: Update social links with actual Filmbase social media URLs
-
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy border-t border-brand-border">
+    <footer className="bg-brand-dark text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="text-2xl font-black tracking-[0.15em] text-white block mb-4">
+            <span className="text-2xl font-bold tracking-[0.15em] text-white block mb-4">
               FILMBASE
             </span>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+            {/* REPLACE: swap text logo above with: <img src="/logo-white.png" alt="Filmbase Technology" className="h-8 w-auto mb-4" /> */}
+            <p className="text-white/50 text-sm leading-relaxed max-w-sm font-light">
               Kenya&apos;s first specialist in transparent LED display screens and switchable
               smart glass. Delivered and installed across all 47 counties.
             </p>
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex items-center gap-5 mt-6">
               {SOCIAL_LINKS.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 hover:text-brand-accent transition-colors duration-200"
+                  className="text-sm text-white/30 hover:text-white transition-colors duration-200"
                 >
                   {s.label}
                 </a>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest block mb-4">
+            <span className="text-[10px] font-semibold text-white/30 uppercase tracking-widest block mb-4">
               Products
             </span>
             <ul className="flex flex-col gap-3">
@@ -53,7 +53,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-sm text-white/50 hover:text-white transition-colors duration-200 font-light"
                   >
                     {link.label}
                   </Link>
@@ -64,41 +64,39 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest block mb-4">
+            <span className="text-[10px] font-semibold text-white/30 uppercase tracking-widest block mb-4">
               Contact
             </span>
             <address className="not-italic flex flex-col gap-3">
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-white/50 leading-relaxed font-light">
                 Diamond Homes, Othaya Road,<br />
                 Kileleshwa, Nairobi, Kenya
               </p>
               <a
                 href="mailto:info@filmbasetechnology.co.ke"
-                className="text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200"
+                className="text-sm text-white/50 hover:text-white transition-colors duration-200 font-light"
               >
                 info@filmbasetechnology.co.ke
               </a>
               <a
                 href="tel:+254965021920"
-                className="text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200"
+                className="text-sm text-white/50 hover:text-white transition-colors duration-200 font-light"
               >
                 +254 965 021 920
               </a>
-              <span className="text-sm text-gray-500">
-                Showroom visits: by appointment
+              <span className="text-sm text-white/30 font-light">
+                Showroom: by appointment
               </span>
             </address>
           </div>
         </div>
 
-        <hr className="hr-accent my-10" />
-
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-600">
+        <div className="mt-12 pt-8 border-t border-white/8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-white/25 font-light">
             &copy; 2026 Filmbase Technology Limited. All rights reserved.
           </p>
-          <p className="text-xs text-gray-700">
-            Filmbase Technology Limited — Nairobi, Kenya
+          <p className="text-xs text-white/15 font-light">
+            Nairobi, Kenya
           </p>
         </div>
       </div>

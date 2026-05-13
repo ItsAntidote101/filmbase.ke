@@ -24,28 +24,23 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
             className="w-full flex items-center justify-between gap-4 py-5 text-left group"
             aria-expanded={openIndex === i}
           >
-            <span className="text-base font-medium text-white group-hover:text-brand-accent transition-colors duration-200">
+            <span className="text-base font-medium text-[#0a0a0a] group-hover:text-brand-ink transition-colors duration-200">
               {item.q}
             </span>
             <span
-              className={`flex-shrink-0 w-6 h-6 rounded-full border border-brand-border flex items-center justify-center transition-all duration-300 ${
+              className={`flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-300 ${
                 openIndex === i
-                  ? "bg-brand-accent border-brand-accent rotate-45"
-                  : "bg-transparent"
+                  ? "bg-brand-ink border-brand-ink rotate-45"
+                  : "border-brand-border bg-transparent"
               }`}
             >
               <svg
-                className={`w-3 h-3 transition-colors ${openIndex === i ? "text-brand-dark" : "text-gray-400"}`}
+                className={`w-3 h-3 transition-colors ${openIndex === i ? "text-white" : "text-brand-muted"}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M12 5v14M5 12h14"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 5v14M5 12h14" />
               </svg>
             </span>
           </button>
@@ -58,7 +53,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                 transition={{ duration: 0.28, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <p className="pb-5 text-gray-400 leading-relaxed text-sm">{item.a}</p>
+                <p className="pb-5 text-brand-muted leading-relaxed text-sm font-light">{item.a}</p>
               </motion.div>
             )}
           </AnimatePresence>

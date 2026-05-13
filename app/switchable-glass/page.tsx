@@ -11,10 +11,9 @@ export const metadata: Metadata = {
     "PDLC smart film technology — converts glass to on-demand privacy. Transparent to frosted at the touch of a switch. Filmbase Technology installs across Kenya.",
   openGraph: {
     title: "Switchable Smart Glass | Filmbase Technology Limited",
-    description:
-      "Privacy at the touch of a button. The new standard for boardrooms, executive offices, and premium homes.",
+    description: "Privacy at the touch of a button. The new standard for boardrooms, executive offices, and premium homes.",
     // REPLACE: OG image for Switchable Glass page
-    images: ["https://placehold.co/1200x630/111827/ffffff?text=Switchable+Smart+Glass"],
+    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Switchable+Smart+Glass"],
   },
 };
 
@@ -23,35 +22,35 @@ const FEATURES = [
     title: "How it works",
     body: "PDLC (Polymer Dispersed Liquid Crystal) film mounts onto glass surfaces and switches between fully transparent and fully frosted states with electrical activation. Power on — clear. Power off — opaque. Instant, repeatable, reliable.",
     // REPLACE: Diagram or photograph showing PDLC film in both clear and frosted states side by side
-    image: "https://placehold.co/700x500/111827/ffffff?text=PDLC+Clear+vs+Frosted",
+    image: "https://placehold.co/700x500/e8e8e8/666666?text=PDLC+Clear+vs+Frosted",
     imageAlt: "Switchable smart glass showing transparent and frosted states",
   },
   {
     title: "Where it is used",
     body: "Corporate boardrooms and executive offices, hotel suite bathrooms and bedroom partitions, hospital consultation rooms, law firm partner offices, premium residential master suites, home offices, and spa facilities.",
     // REPLACE: Corporate boardroom with switchable glass partition in use
-    image: "https://placehold.co/700x500/111827/ffffff?text=Boardroom+Smart+Glass",
+    image: "https://placehold.co/700x500/e8e8e8/666666?text=Boardroom+Smart+Glass",
     imageAlt: "Switchable smart glass in a corporate boardroom setting",
   },
   {
     title: "Why it wins",
     body: "Outlasts blinds, curtains, and fabric partitions that wear, tear, and require constant maintenance. Modernises any glass surface without architectural disruption. Delivers a luxury feel that traditional privacy solutions simply cannot match.",
     // REPLACE: Before/after visual comparing smart glass to traditional blinds or curtains
-    image: "https://placehold.co/700x500/111827/ffffff?text=Smart+Glass+vs+Blinds",
+    image: "https://placehold.co/700x500/e8e8e8/666666?text=Smart+Glass+vs+Blinds",
     imageAlt: "Smart glass versus traditional blind and curtain alternatives",
   },
   {
     title: "The bonus",
     body: "In its frosted state, smart glass doubles as a rear-projection surface. A meeting room divider becomes a screen. One installation. Two functions. No additional hardware required.",
     // REPLACE: Meeting room showing projector content displayed on frosted smart glass partition
-    image: "https://placehold.co/700x500/111827/ffffff?text=Rear+Projection+on+Smart+Glass",
+    image: "https://placehold.co/700x500/e8e8e8/666666?text=Rear+Projection+on+Smart+Glass",
     imageAlt: "Smart glass used as a rear projection screen in a meeting room",
   },
   {
     title: "Installed quickly",
     body: "Most installations completed in one to three days. Locally stocked, locally installed. No waiting weeks for imported shipments — our team is on the ground.",
     // REPLACE: Filmbase technicians installing smart film during a commercial project
-    image: "https://placehold.co/700x500/111827/ffffff?text=Smart+Glass+Installation",
+    image: "https://placehold.co/700x500/e8e8e8/666666?text=Smart+Glass+Installation",
     imageAlt: "Filmbase team installing switchable smart glass",
   },
 ];
@@ -94,12 +93,12 @@ const FAQ_ITEMS = [
 export default function SwitchableGlassPage() {
   return (
     <PageTransition>
-      {/* ── HERO ── */}
-      <section className="relative min-h-[85vh] flex items-end overflow-hidden">
+      {/* ── HERO — stays dark ── */}
+      <section className="relative min-h-[85vh] flex items-end overflow-hidden bg-brand-dark">
         <div className="absolute inset-0">
           {/* REPLACE: Modern corporate boardroom with switchable smart glass partition — one side clear, one frosted */}
           <Image
-            src="https://placehold.co/1400x700/080c14/111827?text=Switchable+Smart+Glass+%E2%80%94+Modern+Boardroom"
+            src="https://placehold.co/1400x700/0a0a0a/1a1a2e?text=Switchable+Smart+Glass+%E2%80%94+Modern+Boardroom"
             alt="Modern boardroom with switchable smart glass partition"
             fill
             className="object-cover opacity-50"
@@ -107,36 +106,35 @@ export default function SwitchableGlassPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent" />
         </div>
-
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-accent/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-40 pb-20 w-full">
-          <SectionTag className="mb-6">Switchable Smart Glass</SectionTag>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
+          <SectionTag dark className="mb-6">Switchable Smart Glass</SectionTag>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
             Privacy. At the<br />
             <span className="gradient-text">Touch of a Button.</span>
           </h1>
-          <p className="text-xl text-gray-300 font-light max-w-2xl leading-relaxed">
+          <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
             The new standard for boardrooms, executive offices, and premium homes.
             Advanced PDLC smart film technology — transparent at the flick of a switch. Frosted at the next.
           </p>
 
           {/* State toggle visual */}
-          <div className="mt-10 inline-flex items-center gap-4 glass-card px-6 py-4 rounded-2xl">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-white/20 border border-white/30 flex items-center justify-center">
-                <div className="w-4 h-4 rounded bg-brand-accent/80" />
+          <div className="mt-10 inline-flex items-center gap-4 dark-card px-6 py-4 rounded-2xl">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-white/15 border border-white/20 flex items-center justify-center">
+                <div className="w-3.5 h-3.5 rounded-sm bg-white/60" />
               </div>
-              <span className="text-sm text-gray-300">Power on: clear</span>
+              <span className="text-sm text-white/60 font-light">Power on: clear</span>
             </div>
-            <svg className="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
             </svg>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                <div className="w-4 h-4 rounded bg-white/20" />
+                <div className="w-3.5 h-3.5 rounded-sm bg-white/10" />
               </div>
-              <span className="text-sm text-gray-300">Power off: frosted</span>
+              <span className="text-sm text-white/60 font-light">Power off: frosted</span>
             </div>
           </div>
         </div>
@@ -151,23 +149,18 @@ export default function SwitchableGlassPage() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                <span className="text-xs font-semibold text-brand-accent/60 tracking-[0.2em] uppercase block mb-4">
+                <span className="text-xs font-semibold text-brand-ink/30 tracking-[0.2em] uppercase block mb-4">
                   0{i + 1}
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight tracking-tight mb-5">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-5">
                   {feature.title}
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed">{feature.body}</p>
+                <p className="text-brand-muted text-lg leading-relaxed font-light">{feature.body}</p>
               </div>
 
-              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} rounded-2xl overflow-hidden aspect-[7/5] relative`}>
-                <Image
-                  src={feature.image}
-                  alt={feature.imageAlt}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl" />
+              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} rounded-2xl overflow-hidden aspect-[7/5] relative bg-brand-alt`}>
+                <Image src={feature.image} alt={feature.imageAlt} fill className="object-cover" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
               </div>
             </div>
           </section>
@@ -175,9 +168,9 @@ export default function SwitchableGlassPage() {
       </div>
 
       {/* ── USE CASE STRIP ── */}
-      <section className="py-16 bg-brand-navy border-y border-brand-border">
+      <section className="py-16 bg-brand-alt border-y border-brand-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold text-gray-600 uppercase tracking-widest mb-8 text-center">
+          <p className="text-xs font-semibold text-brand-muted uppercase tracking-widest mb-8 text-center">
             Installed in
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -193,7 +186,7 @@ export default function SwitchableGlassPage() {
             ].map((use) => (
               <span
                 key={use}
-                className="px-4 py-2 glass-card rounded-full text-sm text-gray-300 text-nowrap"
+                className="px-4 py-2 bg-white border border-brand-border rounded-full text-sm text-[#0a0a0a] font-light whitespace-nowrap"
               >
                 {use}
               </span>
@@ -203,12 +196,12 @@ export default function SwitchableGlassPage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <div className="lg:sticky lg:top-28 self-start">
               <SectionTag className="mb-6">FAQ</SectionTag>
-              <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
                 Questions about Smart Glass.
               </h2>
             </div>
@@ -220,17 +213,17 @@ export default function SwitchableGlassPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-24 bg-brand-navy border-t border-brand-border">
+      <section className="py-24 bg-brand-ink">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
             Don&apos;t be the last building to switch.
           </h2>
-          <p className="text-gray-400 text-lg mb-10">
+          <p className="text-white/60 text-lg mb-10 font-light">
             Book a showroom visit. Press the button yourself.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-brand-accent text-brand-dark font-bold text-sm tracking-wide rounded-xl hover:bg-brand-accent-dim transition-colors duration-200"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-white text-brand-ink font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-colors duration-200"
           >
             Book a Demo
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

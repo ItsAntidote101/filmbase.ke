@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     "Get in touch with Filmbase Technology Limited. Send your project brief and our team responds with technical guidance and a detailed quotation — within 48 hours.",
   openGraph: {
     title: "Contact | Filmbase Technology Limited",
-    description:
-      "Tell us about your space. Our team responds with technical guidance and a detailed quotation.",
+    description: "Tell us about your space. Our team responds with technical guidance and a detailed quotation.",
     // REPLACE: OG image for contact page
-    images: ["https://placehold.co/1200x630/111827/ffffff?text=Contact+Filmbase"],
+    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Contact+Filmbase"],
   },
 };
 
+// REPLACE: Update social links with actual Filmbase social media URLs
 const SOCIAL_LINKS = [
   {
     label: "Instagram",
@@ -55,62 +55,57 @@ const SOCIAL_LINKS = [
   },
 ];
 
-// REPLACE: Update all social links with actual Filmbase social media URLs
-
 export default function ContactPage() {
   return (
     <PageTransition>
-      {/* ── HERO ── */}
-      <section className="pt-40 pb-16 relative overflow-hidden">
+      {/* ── HERO — stays dark ── */}
+      <section className="pt-40 pb-24 relative overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-dark to-brand-dark" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-accent/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.025]"
           style={{
             backgroundImage:
-              "linear-gradient(#00d4ff 1px, transparent 1px), linear-gradient(90deg, #00d4ff 1px, transparent 1px)",
+              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionTag className="mb-6">Contact</SectionTag>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter max-w-3xl mb-6">
+          <SectionTag dark className="mb-6">Contact</SectionTag>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-3xl mb-6">
             Tell us about<br />
             <span className="gradient-text">your space.</span>
           </h1>
-          <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed">
+          <p className="text-xl text-white/50 font-light max-w-2xl leading-relaxed">
             Send us your brief. Our team responds with technical guidance and a detailed quotation.
           </p>
         </div>
       </section>
 
       {/* ── MAIN CONTENT ── */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24">
             {/* Contact form — wider column */}
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold text-white mb-8">Request a Quotation</h2>
+              <h2 className="text-2xl font-bold text-[#0a0a0a] mb-8">Request a Quotation</h2>
               <div className="glass-card rounded-2xl p-8 lg:p-10">
-                <QuoteForm
-                  showProjectType
-                  projectLabel="Tell us about your project"
-                />
+                <QuoteForm showProjectType projectLabel="Tell us about your project" />
               </div>
             </div>
 
             {/* Contact details */}
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-white mb-8">Direct Contact</h2>
+              <h2 className="text-2xl font-bold text-[#0a0a0a] mb-8">Direct Contact</h2>
 
-              <div className="glass-card rounded-2xl p-8 mb-6">
-                <h3 className="text-sm font-semibold text-brand-accent mb-1 tracking-wider uppercase">
+              <div className="glass-card rounded-2xl p-8 mb-5">
+                <h3 className="text-xs font-semibold text-brand-ink tracking-wider uppercase mb-5">
                   Filmbase Technology Limited
                 </h3>
-                <address className="not-italic flex flex-col gap-5 mt-5">
+                <address className="not-italic flex flex-col gap-5">
                   <div className="flex gap-3">
-                    <span className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400">
+                    <span className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-full bg-brand-alt border border-brand-border flex items-center justify-center text-brand-muted">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -119,8 +114,8 @@ export default function ContactPage() {
                       </svg>
                     </span>
                     <div>
-                      <p className="text-sm text-white font-medium">Location</p>
-                      <p className="text-sm text-gray-400 leading-relaxed mt-0.5">
+                      <p className="text-sm font-medium text-[#0a0a0a]">Location</p>
+                      <p className="text-sm text-brand-muted font-light leading-relaxed mt-0.5">
                         Diamond Homes, Othaya Road,<br />
                         Kileleshwa, Nairobi, Kenya
                       </p>
@@ -128,17 +123,17 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-alt border border-brand-border flex items-center justify-center text-brand-muted">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </span>
                     <div>
-                      <p className="text-sm text-white font-medium">Email</p>
+                      <p className="text-sm font-medium text-[#0a0a0a]">Email</p>
                       <a
                         href="mailto:info@filmbasetechnology.co.ke"
-                        className="text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200 mt-0.5 block"
+                        className="text-sm text-brand-muted font-light hover:text-brand-ink transition-colors duration-200 mt-0.5 block"
                       >
                         info@filmbasetechnology.co.ke
                       </a>
@@ -146,17 +141,17 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-alt border border-brand-border flex items-center justify-center text-brand-muted">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </span>
                     <div>
-                      <p className="text-sm text-white font-medium">Phone / WhatsApp</p>
+                      <p className="text-sm font-medium text-[#0a0a0a]">Phone / WhatsApp</p>
                       <a
                         href="tel:+254965021920"
-                        className="text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200 mt-0.5 block"
+                        className="text-sm text-brand-muted font-light hover:text-brand-ink transition-colors duration-200 mt-0.5 block"
                       >
                         +254 965 021 920
                       </a>
@@ -164,15 +159,15 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-alt border border-brand-border flex items-center justify-center text-brand-muted">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                           d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     </span>
                     <div>
-                      <p className="text-sm text-white font-medium">Showroom</p>
-                      <p className="text-sm text-gray-400 mt-0.5">By appointment</p>
+                      <p className="text-sm font-medium text-[#0a0a0a]">Showroom</p>
+                      <p className="text-sm text-brand-muted font-light mt-0.5">By appointment</p>
                     </div>
                   </div>
                 </address>
@@ -180,7 +175,7 @@ export default function ContactPage() {
 
               {/* Social links */}
               <div className="glass-card rounded-2xl p-8">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-5">
+                <h3 className="text-xs font-semibold text-brand-muted uppercase tracking-wider mb-5">
                   Follow Us
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -190,12 +185,12 @@ export default function ContactPage() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/3 border border-brand-border hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all duration-200 group"
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-brand-alt border border-brand-border hover:border-brand-ink/20 hover:bg-brand-ink/5 transition-all duration-200 group"
                     >
-                      <span className="text-gray-500 group-hover:text-brand-accent transition-colors duration-200">
+                      <span className="text-brand-muted group-hover:text-brand-ink transition-colors duration-200">
                         {social.icon}
                       </span>
-                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-200">
+                      <span className="text-sm text-brand-muted group-hover:text-[#0a0a0a] font-light transition-colors duration-200">
                         {social.label}
                       </span>
                     </a>

@@ -10,18 +10,29 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          dark: "#080c14",
+          // Dark contexts — hero sections and footer stay full dark
+          dark: "#0a0a0a",
           navy: "#0d1526",
-          card: "#111827",
-          accent: "#00d4ff",
-          "accent-dim": "#0099bb",
-          muted: "#6b7280",
-          border: "#1e2a3a",
+          "border-dark": "#1e2a3a",
+          // Light theme — main site palette
+          ink: "#1a1a2e",        // deep navy: buttons, tags, icons, accent
+          "ink-light": "#252548", // ink hover state
+          alt: "#f5f5f5",        // alternating section background
+          muted: "#71717a",      // body / secondary text
+          border: "#e5e5e5",     // borders on light backgrounds
+          "border-strong": "#d4d4d4",
+          card: "#ffffff",       // card background
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+      },
+      fontWeight: {
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease forwards",

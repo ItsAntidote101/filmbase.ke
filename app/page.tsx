@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import AnimatedNumber from "@/components/AnimatedNumber";
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     title: "Filmbase Technology Limited",
     description: "Transparent LED. Switchable smart glass. Engineered globally. Delivered across Kenya.",
     // REPLACE: OG image for home page
-    images: ["https://placehold.co/1200x630/111827/ffffff?text=Filmbase+Technology"],
+    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Technology"],
   },
 };
 
@@ -31,27 +30,24 @@ const STATS = [
 const PRODUCTS = [
   {
     title: "LED Film Screen",
-    description:
-      "Transparent LED on glass. Designed for storefronts, banks, and brand environments.",
+    description: "Transparent LED on glass. Designed for storefronts, banks, and brand environments.",
     href: "/led-film",
     // REPLACE: Product card image — LED film display installed on a retail storefront
-    image: "https://placehold.co/800x600/111827/ffffff?text=LED+Film+Screen",
+    image: "https://placehold.co/800x600/e8e8e8/666666?text=LED+Film+Screen",
   },
   {
     title: "LED Crystal Film Screen",
-    description:
-      "Premium-grade transparent display. For luxury retail, hotels, and architectural showcases.",
+    description: "Premium-grade transparent display. For luxury retail, hotels, and architectural showcases.",
     href: "/led-crystal-film",
     // REPLACE: Product card image — LED Crystal Film in a luxury hotel or high-end retail environment
-    image: "https://placehold.co/800x600/111827/ffffff?text=LED+Crystal+Film+Screen",
+    image: "https://placehold.co/800x600/e8e8e8/666666?text=LED+Crystal+Film+Screen",
   },
   {
     title: "Switchable Smart Glass",
-    description:
-      "Privacy on demand. From transparent to frosted at the flick of a switch.",
+    description: "Privacy on demand. From transparent to frosted at the flick of a switch.",
     href: "/switchable-glass",
     // REPLACE: Product card image — switchable smart glass partition in a corporate boardroom
-    image: "https://placehold.co/800x600/111827/ffffff?text=Switchable+Smart+Glass",
+    image: "https://placehold.co/800x600/e8e8e8/666666?text=Switchable+Smart+Glass",
   },
 ];
 
@@ -59,8 +55,7 @@ const FEATURES = [
   {
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M5 3l14 9-14 9V3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3l14 9-14 9V3z" />
       </svg>
     ),
     title: "First in Kenya",
@@ -110,41 +105,39 @@ const FAQ_ITEMS = [
 export default function HomePage() {
   return (
     <PageTransition>
-      {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        {/* Background image */}
+      {/* ── HERO — stays dark ── */}
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-brand-dark">
         <div className="absolute inset-0">
           {/* REPLACE: Full-screen hero background — modern glass building storefront with LED display */}
           <Image
-            src="https://placehold.co/1920x1080/080c14/111827?text=Modern+Glass+Building+with+LED+Display"
+            src="https://placehold.co/1920x1080/0a0a0a/1a1a2e?text=Modern+Glass+Building+with+LED+Display"
             alt="Modern glass building storefront with LED display"
             fill
             className="object-cover opacity-40"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/30 to-brand-dark" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/20 to-brand-dark" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/80 via-transparent to-transparent" />
         </div>
 
-        {/* Decorative accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-accent/40 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
           <HomeAnimations>
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 mb-8">
-                <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-                <span className="text-xs font-semibold text-brand-accent tracking-[0.25em] uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+                <span className="text-xs font-semibold text-white/50 tracking-[0.25em] uppercase">
                   Kenya&apos;s First Specialist
                 </span>
               </div>
 
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tighter text-white mb-8">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter text-white mb-8">
                 Make Glass<br />
                 <span className="gradient-text">Do More.</span>
               </h1>
 
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 font-light max-w-2xl leading-relaxed mb-12">
+              <p className="text-lg sm:text-xl lg:text-2xl text-white/60 font-light max-w-2xl leading-relaxed mb-12">
                 Transparent LED. Switchable smart glass.<br />
                 Engineered globally. Delivered across Kenya.
               </p>
@@ -152,21 +145,19 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/led-film"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-brand-accent text-brand-dark font-bold text-sm tracking-wide rounded-xl hover:bg-brand-accent-dim transition-all duration-200 group"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-dark font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-all duration-200 group"
                 >
                   Explore Products
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-white/10 text-white font-medium text-sm tracking-wide rounded-xl hover:bg-white/10 transition-all duration-200"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-white/8 border border-white/15 text-white font-medium text-sm tracking-wide rounded-xl hover:bg-white/12 transition-all duration-200"
                 >
                   Get a Quote
                 </Link>
@@ -175,24 +166,22 @@ export default function HomePage() {
           </HomeAnimations>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
           <div className="w-px h-12 bg-gradient-to-b from-transparent to-white" />
           <span className="text-xs tracking-widest text-white uppercase">Scroll</span>
         </div>
       </section>
 
       {/* ── STATS BAND ── */}
-      <section className="relative bg-brand-navy border-y border-brand-border overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/5 via-transparent to-brand-accent/5" />
+      <section className="relative bg-brand-alt border-y border-brand-border overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-14">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-brand-border">
             {STATS.map((stat) => (
               <div key={stat.label} className="text-center lg:px-8">
-                <div className="text-4xl lg:text-5xl font-black text-brand-accent mb-2 tracking-tight">
+                <div className="text-4xl lg:text-5xl font-bold text-brand-ink mb-2 tracking-tight">
                   <AnimatedNumber value={stat.value} />
                 </div>
-                <p className="text-sm text-gray-400 leading-snug">{stat.label}</p>
+                <p className="text-sm text-brand-muted font-light leading-snug">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -200,15 +189,15 @@ export default function HomePage() {
       </section>
 
       {/* ── PRODUCTS SECTION ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-16 max-w-3xl">
             <SectionTag className="mb-6">Our Products</SectionTag>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
               Two technologies.<br />
               Built for the spaces that lead.
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-brand-muted text-lg leading-relaxed font-light">
               Filmbase delivers two of the most advanced architectural display technologies on the market today —
               sourced from leading global manufacturers and engineered for the demands of premium commercial and
               residential environments across Kenya.
@@ -216,13 +205,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PRODUCTS.map((product, i) => (
+            {PRODUCTS.map((product) => (
               <Link
                 key={product.href}
                 href={product.href}
-                className="group glass-card rounded-2xl overflow-hidden hover:border-brand-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-accent/5"
+                className="group glass-card rounded-2xl overflow-hidden hover:border-brand-ink/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
+                <div className="aspect-[4/3] overflow-hidden relative bg-brand-alt">
                   <Image
                     src={product.image}
                     alt={product.title}
@@ -231,17 +220,15 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-7">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-accent transition-colors duration-200">
+                  <h3 className="text-xl font-semibold text-[#0a0a0a] mb-3 group-hover:text-brand-ink transition-colors duration-200">
                     {product.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-5">{product.description}</p>
-                  <span className="inline-flex items-center gap-2 text-brand-accent text-sm font-medium">
+                  <p className="text-brand-muted text-sm leading-relaxed font-light mb-5">{product.description}</p>
+                  <span className="inline-flex items-center gap-2 text-brand-ink text-sm font-medium">
                     Learn more
                     <svg
                       className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -254,15 +241,15 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY FILMBASE ── */}
-      <section className="py-24 lg:py-32 bg-brand-navy">
+      <section className="py-24 lg:py-32 bg-brand-alt">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <SectionTag className="mb-6">Why Filmbase</SectionTag>
-              <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
                 Kenya&apos;s first specialist in transparent LED and smart glass.
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-10">
+              <p className="text-brand-muted leading-relaxed mb-10 font-light">
                 Filmbase Technology is the first company in Kenya focused exclusively on transparent LED display and
                 switchable smart glass technology. We work directly with established manufacturers — the global center
                 of display innovation — and bring their most advanced products to Kenya through a fully integrated
@@ -270,7 +257,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/overview"
-                className="inline-flex items-center gap-3 text-brand-accent font-medium text-sm hover:gap-5 transition-all duration-200"
+                className="inline-flex items-center gap-3 text-brand-ink font-medium text-sm hover:gap-5 transition-all duration-200"
               >
                 Read our overview
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -279,18 +266,18 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               {FEATURES.map((f) => (
                 <div
                   key={f.title}
-                  className="glass-card rounded-2xl p-7 flex gap-5 hover:border-brand-accent/20 transition-colors duration-300"
+                  className="glass-card rounded-2xl p-7 flex gap-5 hover:border-brand-ink/20 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-ink/8 border border-brand-ink/10 flex items-center justify-center text-brand-ink">
                     {f.icon}
                   </div>
                   <div>
-                    <h3 className="font-bold text-white mb-1.5">{f.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{f.body}</p>
+                    <h3 className="font-semibold text-[#0a0a0a] mb-1.5">{f.title}</h3>
+                    <p className="text-brand-muted text-sm leading-relaxed font-light">{f.body}</p>
                   </div>
                 </div>
               ))}
@@ -300,12 +287,12 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <div>
               <SectionTag className="mb-6">FAQs</SectionTag>
-              <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -317,15 +304,15 @@ export default function HomePage() {
       </section>
 
       {/* ── QUOTE FORM ── */}
-      <section className="py-24 lg:py-32 bg-brand-navy">
+      <section className="py-24 lg:py-32 bg-brand-alt">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div className="lg:sticky lg:top-28">
               <SectionTag className="mb-6">Get a Quote</SectionTag>
-              <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
                 Let&apos;s bring your space to life.
               </h2>
-              <p className="text-gray-400 leading-relaxed text-lg">
+              <p className="text-brand-muted leading-relaxed text-lg font-light">
                 Send us your project brief and our team will respond with technical guidance, product recommendations,
                 and a detailed quotation.
               </p>
@@ -333,10 +320,10 @@ export default function HomePage() {
               <div className="mt-10 flex flex-col gap-4">
                 <a
                   href="mailto:info@filmbasetechnology.co.ke"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200"
+                  className="flex items-center gap-3 text-sm text-brand-muted hover:text-brand-ink transition-colors duration-200"
                 >
-                  <span className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="w-8 h-8 rounded-full bg-brand-ink/5 border border-brand-border flex items-center justify-center">
+                    <svg className="w-4 h-4 text-brand-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -345,10 +332,10 @@ export default function HomePage() {
                 </a>
                 <a
                   href="tel:+254965021920"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-brand-accent transition-colors duration-200"
+                  className="flex items-center gap-3 text-sm text-brand-muted hover:text-brand-ink transition-colors duration-200"
                 >
-                  <span className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="w-8 h-8 rounded-full bg-brand-ink/5 border border-brand-border flex items-center justify-center">
+                    <svg className="w-4 h-4 text-brand-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>

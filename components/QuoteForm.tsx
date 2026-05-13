@@ -41,19 +41,19 @@ export default function QuoteForm({
   };
 
   const inputClass =
-    "w-full bg-white/5 border border-brand-border rounded-lg px-4 py-3.5 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-brand-accent/50 focus:bg-white/8 transition-all duration-200";
-  const labelClass = "block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2";
+    "w-full bg-white border border-brand-border rounded-lg px-4 py-3.5 text-[#0a0a0a] placeholder-brand-muted/60 text-sm font-light focus:outline-none focus:border-brand-ink/40 focus:ring-1 focus:ring-brand-ink/10 transition-all duration-200";
+  const labelClass = "block text-xs font-semibold text-[#0a0a0a]/60 uppercase tracking-wider mb-2";
 
   if (submitted) {
     return (
-      <div className="glass-card rounded-2xl p-10 text-center">
-        <div className="w-12 h-12 rounded-full bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center mx-auto mb-5">
-          <svg className="w-6 h-6 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="rounded-2xl p-10 text-center">
+        <div className="w-12 h-12 rounded-full bg-brand-ink/10 border border-brand-ink/20 flex items-center justify-center mx-auto mb-5">
+          <svg className="w-6 h-6 text-brand-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-white mb-2">Message received.</h3>
-        <p className="text-gray-400 text-sm">
+        <h3 className="text-xl font-bold text-[#0a0a0a] mb-2">Message received.</h3>
+        <p className="text-brand-muted text-sm font-light">
           Our team will respond within 48 hours with technical guidance and a quotation.
         </p>
       </div>
@@ -94,7 +94,7 @@ export default function QuoteForm({
       {showProjectType && (
         <div>
           <label className={labelClass} htmlFor="project_type">Project Type</label>
-          <select id="project_type" name="project_type" className={`${inputClass} [&>option]:bg-brand-navy`}>
+          <select id="project_type" name="project_type" className={inputClass}>
             <option value="">Select project type</option>
             <option value="Retail">Retail</option>
             <option value="Hospitality">Hospitality</option>
@@ -109,7 +109,7 @@ export default function QuoteForm({
       {showBudget && (
         <div>
           <label className={labelClass} htmlFor="budget">Budget</label>
-          <select id="budget" name="budget" className={`${inputClass} [&>option]:bg-brand-navy`}>
+          <select id="budget" name="budget" className={inputClass}>
             <option value="">Select budget range</option>
             <option value="Less than USD 5,000">Less than USD 5,000</option>
             <option value="USD 5,000 to 10,000">USD 5,000 to 10,000</option>
@@ -133,7 +133,7 @@ export default function QuoteForm({
       <button
         type="submit"
         disabled={submitting}
-        className="px-8 py-4 bg-brand-accent text-brand-dark font-bold text-sm tracking-wide rounded-xl hover:bg-brand-accent-dim transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="px-8 py-4 bg-brand-ink text-white font-semibold text-sm tracking-wide rounded-xl hover:bg-brand-ink-light transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {submitting ? "Sending…" : "Request a Quote"}
       </button>
