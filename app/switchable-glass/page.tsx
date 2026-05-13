@@ -81,10 +81,6 @@ const FAQ_ITEMS = [
     a: "Yes. Most projects are retrofits. We assess on-site to confirm the glass condition and specify the right product for the application.",
   },
   {
-    q: "How long does installation take?",
-    a: "One to three working days for most projects.",
-  },
-  {
     q: "How long does it last?",
     a: "Years. Far outlasts blinds, curtains, and fabric partitions. No mechanical parts. No wear from opening and closing.",
   },
