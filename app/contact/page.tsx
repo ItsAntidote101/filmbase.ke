@@ -150,10 +150,10 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm font-medium text-[#0a0a0a]">Phone / WhatsApp</p>
                       <a
-                        href="tel:+254965021920"
+                        href="tel:+254727808264"
                         className="text-sm text-brand-muted font-light hover:text-brand-ink transition-colors duration-200 mt-0.5 block"
                       >
-                        +254 965 021 920
+                        +254 727 808 264
                       </a>
                     </div>
                   </div>

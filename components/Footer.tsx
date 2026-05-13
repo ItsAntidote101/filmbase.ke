@@ -80,10 +80,10 @@ export default function Footer() {
                 info@filmbasetechnology.co.ke
               </a>
               <a
-                href="tel:+254965021920"
+                href="tel:+254727808264"
                 className="text-sm text-white/50 hover:text-white transition-colors duration-200 font-light"
               >
-                +254 965 021 920
+                +254 727 808 264
               </a>
               <span className="text-sm text-white/30 font-light">
                 Showroom: by appointment
