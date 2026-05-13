@@ -101,15 +101,15 @@ export default function SwitchableGlassPage() {
       {/* ── HERO — stays dark ── */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden bg-brand-dark">
         <div className="absolute inset-0">
-          {/* REPLACE: Modern corporate boardroom with switchable smart glass partition — one side clear, one frosted */}
           <Image
-            src="https://placehold.co/1400x700/0a0a0a/1a1a2e?text=Switchable+Smart+Glass+%E2%80%94+Modern+Boardroom"
-            alt="Modern boardroom with switchable smart glass partition"
+            src="/smart-glass-hero.jpg"
+            alt="Gallery space with frosted and clear switchable smart glass panels"
             fill
-            className="object-cover opacity-50"
+            className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent" />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.55)" }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent" />
         </div>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
