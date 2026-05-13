@@ -150,7 +150,10 @@ export default function HomePage() {
   return (
     <PageTransition>
       {/* ── HERO — stays dark ── */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-brand-dark">
+      <section
+        className="relative flex flex-col justify-start overflow-hidden bg-brand-dark"
+        style={{ height: "85vh", minHeight: "600px" }}
+      >
         <div className="absolute inset-0 bg-brand-dark">
           <video
             autoPlay
@@ -168,7 +171,10 @@ export default function HomePage() {
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+        <div
+          className="relative max-w-7xl mx-auto px-6 lg:px-8 pb-12"
+          style={{ paddingTop: "calc(15vh + 60px)" }}
+        >
           <HeroHeadline />
         </div>
 

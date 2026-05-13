@@ -116,7 +116,7 @@ export default function HeroHeadline() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="inline-flex items-center gap-2 mb-8"
+        className="inline-flex items-center gap-2 mb-4"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
         <span className="text-xs font-semibold text-white/50 tracking-[0.25em] uppercase">
@@ -125,7 +125,7 @@ export default function HeroHeadline() {
       </motion.div>
 
       {/* Rotating headline */}
-      <div className="min-h-[108px] sm:min-h-[144px] lg:min-h-[200px]">
+      <div className="min-h-[80px] sm:min-h-[110px] lg:min-h-[155px]">
         <AnimatePresence mode="wait">
           <motion.h1
             key={current}
@@ -133,7 +133,7 @@ export default function HeroHeadline() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -60 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl sm:text-5xl lg:text-[80px] font-extrabold leading-[1.05] tracking-tighter text-white"
+            className="text-[38px] sm:text-[52px] lg:text-[72px] font-extrabold leading-[1.05] tracking-tighter text-white"
             style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}
           >
             {slide.headlineParts.map((part, i) =>
@@ -148,7 +148,7 @@ export default function HeroHeadline() {
       </div>
 
       {/* Rotating subheadline */}
-      <div className="min-h-[72px] sm:min-h-[64px] mt-4">
+      <div className="min-h-[72px] sm:min-h-[64px] mt-5">
         <AnimatePresence mode="wait">
           <motion.p
             key={current}
@@ -165,7 +165,7 @@ export default function HeroHeadline() {
       </div>
 
       {/* Indicator dots */}
-      <div className="flex items-center gap-2 mt-6">
+      <div className="flex items-center gap-2 mt-4">
         {SLIDES.map((_, i) => (
           <motion.button
             key={i}
@@ -187,7 +187,7 @@ export default function HeroHeadline() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="flex flex-col sm:flex-row gap-4 mt-10"
+        className="flex flex-col sm:flex-row gap-4 mt-6"
       >
         <Link
           href="/led-film"
@@ -210,7 +210,7 @@ export default function HeroHeadline() {
       </motion.div>
 
       {/* Proof strip — hidden on mobile */}
-      <div className="hidden sm:block mt-10">
+      <div className="hidden sm:block mt-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}

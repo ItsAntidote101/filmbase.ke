@@ -108,7 +108,7 @@ export default function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Logo white={overDark} />
