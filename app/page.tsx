@@ -168,7 +168,7 @@ export default function HomePage() {
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="http://169.255.58.110/wp-content/uploads/2026/04/165648422.mp4" type="video/mp4" />
+            <source src="/165648422.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.5)" }} />
         </div>
