@@ -49,17 +49,23 @@ body {
   background-clip: text;
 }
 
-/* Teal gradient text — for use on LIGHT backgrounds (stats, section headings) */
+/* Teal gradient text — for use on WHITE/LIGHT backgrounds only */
 .gradient-text-teal {
-  background: linear-gradient(135deg, #054e72, #0a7aad, #12b5e8);
+  background: linear-gradient(135deg, #054e72, #7dd3f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Light blue-to-white gradient — for QuoteBreak section on dark bg */
+/* Solid accent — for use on DARK backgrounds (#054e72, #033a55) */
+.accent-text {
+  color: #7dd3f0;
+  -webkit-text-fill-color: #7dd3f0;
+}
+
+/* Accent-to-white gradient — for dark bg sections (QuoteBreak) */
 .gradient-text-light {
-  background: linear-gradient(135deg, #12b5e8, #ffffff);
+  background: linear-gradient(135deg, #7dd3f0, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -76,7 +82,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #054e72;
+  background: #7dd3f0;
   transition: width 0.3s ease;
   border-radius: 1px;
 }

@@ -48,7 +48,7 @@ export default function HeroHeadline() {
               className="inline-block mr-[0.25em] last:mr-0"
             >
               {word === "More." ? (
-                <span className="gradient-text-teal">{word}</span>
+                <span className="accent-text">{word}</span>
               ) : (
                 word
               )}

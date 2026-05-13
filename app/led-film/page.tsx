@@ -114,7 +114,7 @@ export default function LEDFilmPage() {
           <SectionTag dark className="mb-6">LED Film Screen</SectionTag>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
             Transparent LED.<br />
-            <span className="gradient-text-teal">Mounted on glass.</span>
+            <span className="accent-text">Mounted on glass.</span>
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
             LED film screen is a transparent display that mounts directly onto glass surfaces,

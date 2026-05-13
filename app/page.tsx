@@ -181,7 +181,7 @@ export default function HomePage() {
           {/* Heading */}
           <ScrollReveal className="mb-16 lg:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-4">
-              Why Choose <span className="gradient-text-teal">Filmbase</span>
+              Why Choose <span className="accent-text">Filmbase</span>
             </h2>
             <p className="text-white/60 text-lg font-light max-w-2xl leading-relaxed">
               Kenya&apos;s first company dedicated entirely to transparent LED and smart glass. Not a side product. Not an import agent. A specialist operation built around two technologies.
@@ -205,9 +205,9 @@ export default function HomePage() {
                   ].filter(Boolean).join(" ")}
                 >
                   <div className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight">
-                    <AnimatedNumber value={stat.value} className="gradient-text-teal" />
+                    <AnimatedNumber value={stat.value} className="accent-text" />
                   </div>
-                  <div className="w-8 h-px bg-white/25 mb-3" />
+                  <div className="w-8 h-px mb-3" style={{ backgroundColor: "rgba(125, 211, 240, 0.6)" }} />
                   <p className="text-sm text-white/60 font-light leading-snug">{stat.label}</p>
                 </div>
               );
@@ -218,7 +218,7 @@ export default function HomePage() {
           <div className="mt-12 flex justify-end">
             <Link
               href="/overview"
-              className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm text-brand-accent/70 hover:text-brand-accent transition-colors duration-200"
             >
               About us
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -37,12 +37,12 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
             <span
               className={`flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-300 ${
                 openIndex === i
-                  ? "bg-brand-ink border-brand-ink rotate-45"
+                  ? "bg-brand-accent border-brand-accent rotate-45"
                   : "border-brand-border bg-transparent"
               }`}
             >
               <svg
-                className={`w-3 h-3 transition-colors ${openIndex === i ? "text-white" : "text-brand-muted"}`}
+                className={`w-3 h-3 transition-colors ${openIndex === i ? "text-brand-ink" : "text-brand-muted"}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

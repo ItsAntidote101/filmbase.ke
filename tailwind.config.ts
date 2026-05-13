@@ -17,6 +17,7 @@ const config: Config = {
           // Light theme — main site palette
           ink: "#054e72",        // primary teal: buttons, tags, icons, accent
           "ink-light": "#0a7aad", // primary hover state
+          accent: "#7dd3f0",     // bright sky blue: highlights on dark backgrounds
           alt: "#e8f4fb",        // light tint: alternating section background
           muted: "#71717a",      // body / secondary text
           border: "#e5e5e5",     // borders on light backgrounds

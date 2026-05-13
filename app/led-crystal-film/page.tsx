@@ -108,7 +108,7 @@ export default function LEDCrystalFilmPage() {
           <SectionTag dark className="mb-6">LED Crystal Film Screen</SectionTag>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
             Premium transparent<br />
-            <span className="gradient-text-teal">display.</span>
+            <span className="accent-text">display.</span>
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
             Higher transparency. Finer pixel detail. Near-invisible when off, extraordinary when on.
