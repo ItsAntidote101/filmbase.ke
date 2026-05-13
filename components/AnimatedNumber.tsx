@@ -8,6 +8,7 @@ interface AnimatedNumberProps {
   prefix?: string;
   suffix?: string;
   duration?: number;
+  className?: string;
 }
 
 export default function AnimatedNumber({
@@ -15,6 +16,7 @@ export default function AnimatedNumber({
   prefix = "",
   suffix = "",
   duration = 2000,
+  className,
 }: AnimatedNumberProps) {
   const [count, setCount] = useState(0);
   const startTime = useRef<number | null>(null);
@@ -39,7 +41,7 @@ export default function AnimatedNumber({
 
   if (isNaN(numericValue)) {
     return (
-      <span ref={ref}>
+      <span ref={ref} className={className}>
         {prefix}
         {value}
         {suffix}
@@ -48,7 +50,7 @@ export default function AnimatedNumber({
   }
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={className}>
       {prefix}
       {count}
       {suffix}

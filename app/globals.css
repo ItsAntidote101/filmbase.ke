@@ -49,6 +49,42 @@ body {
   background-clip: text;
 }
 
+/* Teal gradient text — for use on LIGHT backgrounds (stats, section headings) */
+.gradient-text-teal {
+  background: linear-gradient(135deg, #054e72, #0a7aad, #12b5e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Light blue-to-white gradient — for QuoteBreak section on dark bg */
+.gradient-text-light {
+  background: linear-gradient(135deg, #12b5e8, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Nav link with sliding underline */
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #054e72;
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+.nav-underline:hover::after,
+.nav-underline.nav-active::after {
+  width: 100%;
+}
+
 /* Horizontal rules */
 .hr-light {
   height: 1px;
@@ -66,6 +102,16 @@ body {
   position: fixed;
   inset: 0;
   z-index: 40;
+}
+
+/* WhatsApp button pulse */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(5, 78, 114, 0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(5, 78, 114, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(5, 78, 114, 0); }
+}
+.pulse-anim {
+  animation: pulse-ring 2s infinite;
 }
 
 /* Scrollbar */

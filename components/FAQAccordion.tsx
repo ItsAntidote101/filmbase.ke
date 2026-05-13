@@ -18,7 +18,14 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
   return (
     <div className="flex flex-col divide-y divide-brand-border">
       {items.map((item, i) => (
-        <div key={i} className="py-1">
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-20px" }}
+          transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
+          className="py-1"
+        >
           <button
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
             className="w-full flex items-center justify-between gap-4 py-5 text-left group"
@@ -57,7 +64,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import FAQAccordion from "@/components/FAQAccordion";
 import QuoteForm from "@/components/QuoteForm";
-import HomeAnimations from "@/components/HomeAnimations";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import HeroHeadline from "@/components/HeroHeadline";
+import ScrollReveal from "@/components/ScrollReveal";
+import AnimatedProductCards from "@/components/AnimatedProductCards";
+import AnimatedFeatureBlocks from "@/components/AnimatedFeatureBlocks";
+import QuoteBreak from "@/components/QuoteBreak";
 
 export const metadata: Metadata = {
   title: "Filmbase Technology | Transparent LED & Smart Glass Kenya",
@@ -68,37 +71,6 @@ const PRODUCTS = [
   },
 ];
 
-const FEATURES = [
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3l14 9-14 9V3z" />
-      </svg>
-    ),
-    title: "First in Kenya",
-    body: "We brought these technologies to the market. We know them better than any general supplier.",
-  },
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-      </svg>
-    ),
-    title: "Direct manufacturer access",
-    body: "Direct partnerships with leading global manufacturers. No middlemen.",
-  },
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    title: "Installed by Our Own Team",
-    body: "Sourcing, installation, warranty, and support. All handled by our team. No subcontractors.",
-  },
-];
 
 const SHOWCASE_IMAGES = [
   {
@@ -197,47 +169,7 @@ export default function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
-          <HomeAnimations>
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
-                <span className="text-xs font-semibold text-white/50 tracking-[0.25em] uppercase">
-                  Kenya&apos;s First Specialist
-                </span>
-              </div>
-
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter text-white mb-8" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
-                Make Glass<br />
-                <span className="gradient-text">Do More.</span>
-              </h1>
-
-              <p className="text-lg sm:text-xl lg:text-2xl text-white/60 font-light max-w-2xl leading-relaxed mb-12" style={{ textShadow: "0 1px 10px rgba(0,0,0,0.4)" }}>
-                Transparent LED displays and switchable smart glass,<br />
-                supplied and installed across Kenya.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/led-film"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-dark font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-all duration-200 group"
-                >
-                  See Our Products
-                  <svg
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-white/8 border border-white/15 text-white font-medium text-sm tracking-wide rounded-xl hover:bg-white/12 transition-all duration-200"
-                >
-                  Get a Quote
-                </Link>
-              </div>
-            </div>
-          </HomeAnimations>
+          <HeroHeadline />
         </div>
 
         <ScrollIndicator />
@@ -247,14 +179,14 @@ export default function HomePage() {
       <section id="stats-section" className="relative bg-brand-ink overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
           {/* Heading */}
-          <div className="mb-16 lg:mb-20">
+          <ScrollReveal className="mb-16 lg:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-4">
-              Why Choose Filmbase
+              Why Choose <span className="gradient-text-teal">Filmbase</span>
             </h2>
             <p className="text-white/60 text-lg font-light max-w-2xl leading-relaxed">
               Kenya&apos;s first company dedicated entirely to transparent LED and smart glass. Not a side product. Not an import agent. A specialist operation built around two technologies.
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Stats grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4">
@@ -272,8 +204,8 @@ export default function HomePage() {
                     !isLastInDesktop && isLastInMobileRow ? "lg:border-r border-white/10" : "",
                   ].filter(Boolean).join(" ")}
                 >
-                  <div className="text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">
-                    <AnimatedNumber value={stat.value} />
+                  <div className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight">
+                    <AnimatedNumber value={stat.value} className="gradient-text-teal" />
                   </div>
                   <div className="w-8 h-px bg-white/25 mb-3" />
                   <p className="text-sm text-white/60 font-light leading-snug">{stat.label}</p>
@@ -297,69 +229,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── SECTION DIVIDER ── */}
+      <div className="flex justify-center py-2">
+        <div className="w-[60%] h-px opacity-30" style={{ background: "linear-gradient(to right, transparent, #054e72, transparent)" }} />
+      </div>
+
       {/* ── PRODUCTS SECTION ── */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-16 max-w-3xl">
+          <ScrollReveal className="mb-16 max-w-3xl">
             <SectionTag className="mb-6">Our Products</SectionTag>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
               Two technologies.<br />
-              Serious applications.
+              Serious <span className="gradient-text-teal">applications.</span>
             </h2>
             <p className="text-brand-muted text-lg leading-relaxed font-light">
               Filmbase supplies two of the most advanced architectural technologies available: transparent LED display
               and switchable smart glass. Both sourced from leading global manufacturers. Both installed by our own team.
               Both backed by a written warranty.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PRODUCTS.map((product) => (
-              <Link
-                key={product.href}
-                href={product.href}
-                className="group glass-card rounded-2xl overflow-hidden hover:border-brand-ink/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="aspect-[4/3] overflow-hidden relative bg-brand-alt">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <div className="p-7">
-                  <h3 className="text-xl font-semibold text-[#0a0a0a] mb-3 group-hover:text-brand-ink transition-colors duration-200">
-                    {product.title}
-                  </h3>
-                  <p className="text-brand-muted text-sm leading-relaxed font-light mb-5">{product.description}</p>
-                  <span className="inline-flex items-center gap-2 text-brand-ink text-sm font-medium">
-                    Learn more
-                    <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <AnimatedProductCards products={PRODUCTS} />
         </div>
       </section>
 
-      {/* ── SEEN IN THE WILD ── */}
+      {/* ── SECTION DIVIDER ── */}
+      <div className="flex justify-center py-2 bg-white">
+        <div className="w-[60%] h-px opacity-30" style={{ background: "linear-gradient(to right, transparent, #054e72, transparent)" }} />
+      </div>
+
+      {/* ── SEEN IN THE FIELD ── */}
       <section className="py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-            <div>
+            <ScrollReveal>
               <SectionTag className="mb-4">Gallery</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
                 Seen in the Field
               </h2>
               <p className="text-brand-muted mt-3 font-light">A look at what these technologies look like in real spaces.</p>
-            </div>
+            </ScrollReveal>
             <Link
               href="/gallery"
               className="inline-flex items-center gap-2 text-sm font-medium text-brand-ink hover:gap-4 transition-all duration-200 flex-shrink-0"
@@ -422,11 +332,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── SECTION DIVIDER ── */}
+      <div className="flex justify-center py-2 bg-brand-alt">
+        <div className="w-[60%] h-px opacity-30" style={{ background: "linear-gradient(to right, transparent, #054e72, transparent)" }} />
+      </div>
+
       {/* ── WHY FILMBASE ── */}
       <section className="py-24 lg:py-32 bg-brand-alt">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div>
+            <ScrollReveal>
               <SectionTag className="mb-6">Why Filmbase</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
                 The first. The only. The local team behind it.
@@ -445,38 +360,26 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-            </div>
+            </ScrollReveal>
 
-            <div className="flex flex-col gap-5">
-              {FEATURES.map((f) => (
-                <div
-                  key={f.title}
-                  className="glass-card rounded-2xl p-7 flex gap-5 hover:border-brand-ink/20 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-ink/8 border border-brand-ink/10 flex items-center justify-center text-brand-ink">
-                    {f.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-[#0a0a0a] mb-1.5">{f.title}</h3>
-                    <p className="text-brand-muted text-sm leading-relaxed font-light">{f.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <AnimatedFeatureBlocks />
           </div>
         </div>
       </section>
+
+      {/* ── QUOTE BREAK ── */}
+      <QuoteBreak />
 
       {/* ── FAQ ── */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            <div>
+            <ScrollReveal className="lg:sticky lg:top-28 self-start">
               <SectionTag className="mb-6">FAQs</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
                 Questions We Get Asked
               </h2>
-            </div>
+            </ScrollReveal>
             <div>
               <FAQAccordion items={FAQ_ITEMS} />
             </div>
@@ -484,11 +387,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── SECTION DIVIDER ── */}
+      <div className="flex justify-center py-2 bg-brand-alt">
+        <div className="w-[60%] h-px opacity-30" style={{ background: "linear-gradient(to right, transparent, #054e72, transparent)" }} />
+      </div>
+
       {/* ── QUOTE FORM ── */}
       <section className="py-24 lg:py-32 bg-brand-alt">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <div className="lg:sticky lg:top-28">
+            <ScrollReveal className="lg:sticky lg:top-28">
               <SectionTag className="mb-6">Get a Quote</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
                 Tell us about your project.
@@ -524,7 +432,7 @@ export default function HomePage() {
                   +254 727 808 264
                 </a>
               </div>
-            </div>
+            </ScrollReveal>
 
             <div className="glass-card rounded-2xl p-8 lg:p-10">
               <QuoteForm showBudget />

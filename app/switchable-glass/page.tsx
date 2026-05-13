@@ -117,7 +117,7 @@ export default function SwitchableGlassPage() {
           <SectionTag dark className="mb-6">Switchable Smart Glass</SectionTag>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
             Privacy. At the<br />
-            <span className="gradient-text">Touch of a Button.</span>
+            <span className="gradient-text-teal">Touch of a Button.</span>
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
             The new standard for boardrooms, executive offices, and premium homes.

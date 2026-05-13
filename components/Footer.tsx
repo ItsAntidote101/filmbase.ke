@@ -15,10 +15,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="text-2xl font-bold tracking-[0.15em] text-white block mb-4">
-              FILMBASE
-            </span>
-            {/* REPLACE: swap text logo above with: <img src="/logo-white.png" alt="Filmbase Technology" className="h-8 w-auto mb-4" /> */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-white.png" alt="Filmbase Technology" className="h-10 w-auto mb-4" />
             <p className="text-white/50 text-sm leading-relaxed max-w-sm font-light">
               Kenya&apos;s first specialist in transparent LED display screens and switchable
               smart glass. Delivered and installed across all 47 counties.

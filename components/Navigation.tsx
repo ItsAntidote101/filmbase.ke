@@ -69,7 +69,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -102,7 +102,7 @@ export default function Navigation() {
   return (
     <header
       id="main-nav"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
           ? "bg-white border-b border-brand-border shadow-sm"
           : "bg-transparent"
@@ -119,9 +119,9 @@ export default function Navigation() {
           <li>
             <Link
               href="/"
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+              className={`nav-underline text-sm font-medium tracking-wide transition-colors duration-200 ${
                 pathname === "/"
-                  ? overDark ? "text-white" : "text-brand-ink"
+                  ? overDark ? "text-white nav-active" : "text-brand-ink nav-active"
                   : overDark ? "text-white/70 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"
               }`}
             >
@@ -132,9 +132,9 @@ export default function Navigation() {
           <li>
             <Link
               href="/overview"
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+              className={`nav-underline text-sm font-medium tracking-wide transition-colors duration-200 ${
                 pathname === "/overview"
-                  ? overDark ? "text-white" : "text-brand-ink"
+                  ? overDark ? "text-white nav-active" : "text-brand-ink nav-active"
                   : overDark ? "text-white/70 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"
               }`}
             >
@@ -145,9 +145,9 @@ export default function Navigation() {
           <li>
             <Link
               href="/gallery"
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+              className={`nav-underline text-sm font-medium tracking-wide transition-colors duration-200 ${
                 pathname === "/gallery"
-                  ? overDark ? "text-white" : "text-brand-ink"
+                  ? overDark ? "text-white nav-active" : "text-brand-ink nav-active"
                   : overDark ? "text-white/70 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"
               }`}
             >
@@ -185,9 +185,9 @@ export default function Navigation() {
           <li>
             <Link
               href="/contact"
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+              className={`nav-underline text-sm font-medium tracking-wide transition-colors duration-200 ${
                 pathname === "/contact"
-                  ? overDark ? "text-white" : "text-brand-ink"
+                  ? overDark ? "text-white nav-active" : "text-brand-ink nav-active"
                   : overDark ? "text-white/70 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"
               }`}
             >
@@ -200,9 +200,9 @@ export default function Navigation() {
         <div className="hidden lg:block">
           <Link
             href="/contact"
-            className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-colors duration-200 tracking-wide ${
+            className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all duration-300 tracking-wide ${
               overDark
-                ? "bg-white text-[#0a0a0a] hover:bg-white/90"
+                ? "border border-white/60 text-white bg-transparent hover:bg-white/10"
                 : "bg-brand-ink text-white hover:bg-brand-ink-light"
             }`}
           >

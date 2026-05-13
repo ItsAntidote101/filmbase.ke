@@ -30,7 +30,7 @@ export default function WhatsAppButton() {
         onHoverEnd={() => setHovered(false)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-xl hover:shadow-green-500/30 transition-shadow duration-300"
+        className="pulse-anim w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-xl hover:shadow-green-500/30 transition-shadow duration-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
