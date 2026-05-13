@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     title: "How it works",
-    body: "PDLC (Polymer Dispersed Liquid Crystal) film mounts onto glass surfaces and switches between fully transparent and fully frosted states with electrical activation. Power on — clear. Power off — opaque. Instant, repeatable, reliable.",
+    body: "PDLC (Polymer Dispersed Liquid Crystal) film mounts onto glass and switches between fully transparent and fully frosted states with electrical activation. Power on: clear. Power off: frosted. Instant, repeatable, reliable.",
     // REPLACE: Diagram or photograph showing PDLC film in both clear and frosted states side by side
     image: "https://placehold.co/700x500/e8e8e8/666666?text=PDLC+Clear+vs+Frosted",
     imageAlt: "Switchable smart glass showing transparent and frosted states",
@@ -43,21 +43,21 @@ const FEATURES = [
   },
   {
     title: "Why it wins",
-    body: "Outlasts blinds, curtains, and fabric partitions that wear, tear, and require constant maintenance. Modernises any glass surface without architectural disruption. Delivers a luxury feel that traditional privacy solutions simply cannot match.",
+    body: "Outlasts blinds, curtains, and fabric partitions that wear, tear, and require constant maintenance. Modernises any glass surface without architectural disruption. Delivers a result that traditional privacy solutions cannot match.",
     // REPLACE: Before/after visual comparing smart glass to traditional blinds or curtains
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Smart+Glass+vs+Blinds",
     imageAlt: "Smart glass versus traditional blind and curtain alternatives",
   },
   {
-    title: "The bonus",
-    body: "In its frosted state, smart glass doubles as a rear-projection surface. A meeting room divider becomes a screen. One installation. Two functions. No additional hardware required.",
+    title: "A second function",
+    body: "In its frosted state, smart glass works as a rear-projection surface. A meeting room divider becomes a presentation screen. One installation. Two functions. No additional hardware required.",
     // REPLACE: Meeting room showing projector content displayed on frosted smart glass partition
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Rear+Projection+on+Smart+Glass",
     imageAlt: "Smart glass used as a rear projection screen in a meeting room",
   },
   {
-    title: "Installed quickly",
-    body: "Most installations completed in one to three days. Locally stocked, locally installed. No waiting weeks for imported shipments — our team is on the ground.",
+    title: "Installed by our own team",
+    body: "Most installations are completed in one to three days. Locally stocked and locally installed. Our technical team is on the ground. No waiting on imported shipments or third-party contractors.",
     // REPLACE: Filmbase technicians installing smart film during a commercial project
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Smart+Glass+Installation",
     imageAlt: "Filmbase team installing switchable smart glass",
@@ -67,23 +67,23 @@ const FEATURES = [
 const FAQ_ITEMS = [
   {
     q: "How does it work?",
-    a: "A smart film bonded to glass. Power on — clear. Power off — frosted. Instant electrical activation via standard switch, remote, or automation system.",
+    a: "A smart film bonded to glass. Power on: clear. Power off: frosted. Instant electrical activation via a standard switch, remote, or automation system.",
   },
   {
     q: "How fast does it switch?",
-    a: "Milliseconds. Faster than a light switch. The transition is instant — no gradual fade.",
+    a: "Milliseconds. The transition is instant, faster than a light switch. There is no gradual fade.",
   },
   {
     q: "Where is it being installed today?",
-    a: "Boardrooms. Executive suites. Hotel rooms. Hospital consultation rooms. High-end residential bathrooms and bedrooms.",
+    a: "Boardrooms. Executive offices. Hotel suites. Hospital consultation rooms. High-end residential bathrooms and bedrooms.",
   },
   {
     q: "Does it need power to stay clear?",
-    a: "Yes. The default state is frosted. Power makes it clear. Energy use is minimal — much less than a single LED bulb.",
+    a: "Yes. The default state is frosted. Power makes it clear. Energy use is minimal, far less than a single LED bulb.",
   },
   {
     q: "Can it work as a projection screen?",
-    a: "Yes. The frosted state is ideal for rear projection. One install, two functions — privacy partition and presentation screen.",
+    a: "Yes. The frosted state is ideal for rear projection. One installation, two functions: privacy partition and presentation screen.",
   },
   {
     q: "Can it be retrofitted on existing glass?",
@@ -91,7 +91,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How long does it last?",
-    a: "Years. Far outlasts blinds, curtains, and fabric partitions. No mechanical parts. No wear from opening and closing.",
+    a: "Years. It far outlasts blinds, curtains, and fabric partitions. No mechanical parts. No wear from repeated use.",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function SwitchableGlassPage() {
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
             The new standard for boardrooms, executive offices, and premium homes.
-            Advanced PDLC smart film technology — transparent at the flick of a switch. Frosted at the next.
+            Advanced PDLC smart film: transparent at the flick of a switch. Frosted at the next.
           </p>
 
           {/* State toggle visual */}
@@ -221,10 +221,10 @@ export default function SwitchableGlassPage() {
       <section className="py-24 bg-brand-ink">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-            Don&apos;t be the last building to switch.
+            See it. Press the button. Decide.
           </h2>
           <p className="text-white/60 text-lg mb-10 font-light">
-            Book a showroom visit. Press the button yourself.
+            Our Nairobi showroom has a working smart glass installation. Book a visit and experience it for yourself.
           </p>
           <Link
             href="/contact"

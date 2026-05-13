@@ -23,27 +23,27 @@ const OVERVIEW_SECTIONS = [
   {
     tag: "Our Mission",
     heading: "A specialist company.\nA focused mission.",
-    body: "Filmbase Technology is Kenya's first dedicated specialist in transparent display and switchable smart glass. We work with architects, brands, and developers to deliver installations that change how a space is experienced.",
+    body: "Filmbase Technology is Kenya's first dedicated specialist in transparent LED display and switchable smart glass. We work with architects, brands, developers, and space owners to deliver installations that change how a space communicates and feels.",
   },
   {
     tag: "Quality",
     heading: "Engineered to global standards.",
-    body: "Every product is sourced from leading global manufacturers, technically vetted by our team, and proven on real installations before we offer it to a client.",
+    body: "Every product is sourced from leading global manufacturers, technically vetted by our team, and proven in real installations before we offer it to any client.",
   },
   {
     tag: "Standards",
     heading: "The installation discipline\nbehind the finish.",
-    body: "Site assessment. Mounting. Electrical. Commissioning. Every stage handled by our trained team.",
+    body: "Site assessment. Mounting. Electrical. Commissioning. Every stage is handled by our own trained technical team. No subcontractors. No shortcuts.",
   },
   {
     tag: "Warranty",
     heading: "A long-term partner,\nnot a one-time supplier.",
-    body: "Written warranty issued by Filmbase Technology Limited. Local spares. Local service. The team that installed your project is the team that supports it.",
+    body: "Written warranty issued by Filmbase Technology Limited. Local spare parts. Local service team. The engineers who installed your project are the same ones who support it.",
   },
   {
     tag: "Sustainability",
     heading: "Designed to last.",
-    body: "Our products are engineered for years of operation, not seasons. Service-and-repair over replacement. Lower long-term cost. Lower environmental footprint.",
+    body: "Our products are built for years of continuous operation. We prioritise repair and maintenance over replacement, which means lower long-term cost and a smaller environmental footprint for every client.",
   },
 ];
 
@@ -117,10 +117,10 @@ export default function OverviewPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <SectionTag dark className="mb-6">Showroom</SectionTag>
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-            Experience the technology in person.
+            See it working before you decide.
           </h2>
           <p className="text-white/60 text-lg mb-10 font-light">
-            Our Nairobi showroom is open by appointment.
+            Our Nairobi showroom has live demonstrations of every product. Visits are by appointment.
           </p>
           <Link
             href="/contact"

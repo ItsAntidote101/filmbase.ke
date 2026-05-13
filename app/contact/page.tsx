@@ -82,7 +82,7 @@ export default function ContactPage() {
             <span className="gradient-text">your space.</span>
           </h1>
           <p className="text-xl text-white/50 font-light max-w-2xl leading-relaxed">
-            Send us your brief. Our team responds with technical guidance and a detailed quotation.
+            Send us your brief. Our team responds with technical guidance and a detailed quotation within 48 hours.
           </p>
         </div>
       </section>

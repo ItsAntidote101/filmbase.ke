@@ -38,30 +38,30 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "1st", label: "Kenya's first specialist supplier" },
-  { value: 2, label: "Product categories" },
-  { value: 47, label: "Counties served" },
-  { value: "100%", label: "Locally installed and supported" },
+  { value: "1st", label: "First in Kenya" },
+  { value: 2, label: "Product Categories" },
+  { value: 47, label: "Counties We Serve" },
+  { value: "100%", label: "Installed by Our Own Team" },
 ];
 
 const PRODUCTS = [
   {
     title: "LED Film Screen",
-    description: "Transparent LED on glass. Designed for storefronts, banks, and brand environments.",
+    description: "Transparent LED mounted directly on glass. For storefronts, banking halls, car showrooms, and anywhere glass needs to communicate.",
     href: "/led-film",
     // REPLACE: Product card image — LED film display installed on a retail storefront
     image: "https://placehold.co/800x600/e8e8e8/666666?text=LED+Film+Screen",
   },
   {
     title: "LED Crystal Film Screen",
-    description: "Premium-grade transparent display. For luxury retail, hotels, and architectural showcases.",
+    description: "Higher transparency, finer pixel detail. For luxury retail, five-star hotels, and premium architectural environments.",
     href: "/led-crystal-film",
     // REPLACE: Product card image — LED Crystal Film in a luxury hotel or high-end retail environment
     image: "https://placehold.co/800x600/e8e8e8/666666?text=LED+Crystal+Film+Screen",
   },
   {
     title: "Switchable Smart Glass",
-    description: "Privacy on demand. From transparent to frosted at the flick of a switch.",
+    description: "Transparent to frosted at the touch of a button. For boardrooms, executive offices, hotel suites, and premium homes.",
     href: "/switchable-glass",
     // REPLACE: Product card image — switchable smart glass partition in a corporate boardroom
     image: "https://placehold.co/800x600/e8e8e8/666666?text=Switchable+Smart+Glass",
@@ -95,8 +95,8 @@ const FEATURES = [
           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: "End-to-end delivery",
-    body: "Sourcing, installation, warranty, support — all handled by our team.",
+    title: "Installed by Our Own Team",
+    body: "Sourcing, installation, warranty, and support. All handled by our team. No subcontractors.",
   },
 ];
 
@@ -153,20 +153,24 @@ const SHOWCASE_IMAGES = [
 
 const FAQ_ITEMS = [
   {
-    q: "What does Filmbase do?",
-    a: "We supply, install, and support transparent display screens and switchable smart glass — across Kenya.",
+    q: "What does Filmbase Technology do?",
+    a: "We supply, install, and support two specialist technologies: transparent LED display screens and switchable smart glass. We serve clients across all 47 counties in Kenya.",
   },
   {
-    q: "Are these technologies new in Kenya?",
-    a: "Yes. Filmbase Technology is the first dedicated specialist in Kenya focused exclusively on transparent LED display and switchable smart glass. We bring these innovations to the Kenyan market with full local installation, warranty, and ongoing support.",
+    q: "Are these technologies available elsewhere in Kenya?",
+    a: "Filmbase Technology is the first dedicated specialist in Kenya for these products. We are not a general AV supplier or import agent. This is all we do.",
   },
   {
     q: "How do I get a quotation?",
-    a: "Send us your project brief through our contact form, by email, or by WhatsApp. Our team will review your requirements and respond with technical guidance, recommended product options, and a detailed quotation — typically within 48 hours of receiving your brief.",
+    a: "Send us your project brief through our contact form, by email, or on WhatsApp. Our team responds with technical guidance and a detailed quotation, typically within 48 hours.",
   },
   {
-    q: "Can I see the products before committing?",
-    a: "Absolutely. Our demonstration space is open by appointment. Our team will walk you through working installations of every product in our range and discuss your specific project.",
+    q: "Can I see the products working before I decide?",
+    a: "Yes. Our Nairobi showroom has working installations of every product in our range. Visits are by appointment.",
+  },
+  {
+    q: "Do you handle installation yourselves?",
+    a: "Yes. Our own trained team handles every installation from site survey to commissioning. We do not subcontract.",
   },
 ];
 
@@ -208,8 +212,8 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg sm:text-xl lg:text-2xl text-white/60 font-light max-w-2xl leading-relaxed mb-12" style={{ textShadow: "0 1px 10px rgba(0,0,0,0.4)" }}>
-                Transparent LED. Switchable smart glass.<br />
-                Engineered globally. Delivered across Kenya.
+                Transparent LED displays and switchable smart glass,<br />
+                supplied and installed across Kenya.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -217,7 +221,7 @@ export default function HomePage() {
                   href="/led-film"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-dark font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-all duration-200 group"
                 >
-                  Explore Products
+                  See Our Products
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -248,7 +252,7 @@ export default function HomePage() {
               Why Choose Filmbase
             </h2>
             <p className="text-white/60 text-lg font-light max-w-2xl leading-relaxed">
-              Kenya&apos;s first dedicated specialist in transparent LED and smart glass — built for the spaces that lead.
+              Kenya&apos;s first company dedicated entirely to transparent LED and smart glass. Not a side product. Not an import agent. A specialist operation built around two technologies.
             </p>
           </div>
 
@@ -300,12 +304,12 @@ export default function HomePage() {
             <SectionTag className="mb-6">Our Products</SectionTag>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
               Two technologies.<br />
-              Built for the spaces that lead.
+              Serious applications.
             </h2>
             <p className="text-brand-muted text-lg leading-relaxed font-light">
-              Filmbase delivers two of the most advanced architectural display technologies on the market today —
-              sourced from leading global manufacturers and engineered for the demands of premium commercial and
-              residential environments across Kenya.
+              Filmbase supplies two of the most advanced architectural technologies available: transparent LED display
+              and switchable smart glass. Both sourced from leading global manufacturers. Both installed by our own team.
+              Both backed by a written warranty.
             </p>
           </div>
 
@@ -352,9 +356,9 @@ export default function HomePage() {
             <div>
               <SectionTag className="mb-4">Gallery</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
-                Seen in the Wild
+                Seen in the Field
               </h2>
-              <p className="text-brand-muted mt-3 font-light">A glimpse of what&apos;s possible.</p>
+              <p className="text-brand-muted mt-3 font-light">A look at what these technologies look like in real spaces.</p>
             </div>
             <Link
               href="/gallery"
@@ -425,13 +429,12 @@ export default function HomePage() {
             <div>
               <SectionTag className="mb-6">Why Filmbase</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
-                Kenya&apos;s first specialist in transparent LED and smart glass.
+                The first. The only. The local team behind it.
               </h2>
               <p className="text-brand-muted leading-relaxed mb-10 font-light">
                 Filmbase Technology is the first company in Kenya focused exclusively on transparent LED display and
-                switchable smart glass technology. We work directly with established manufacturers — the global center
-                of display innovation — and bring their most advanced products to Kenya through a fully integrated
-                supply, installation, and support operation.
+                switchable smart glass. We work directly with established manufacturers and bring their most advanced
+                products to Kenya through a fully integrated supply, installation, and support operation.
               </p>
               <Link
                 href="/overview"
@@ -471,7 +474,7 @@ export default function HomePage() {
             <div>
               <SectionTag className="mb-6">FAQs</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
-                Frequently Asked Questions
+                Questions We Get Asked
               </h2>
             </div>
             <div>
@@ -488,11 +491,11 @@ export default function HomePage() {
             <div className="lg:sticky lg:top-28">
               <SectionTag className="mb-6">Get a Quote</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
-                Let&apos;s bring your space to life.
+                Tell us about your project.
               </h2>
               <p className="text-brand-muted leading-relaxed text-lg font-light">
-                Send us your project brief and our team will respond with technical guidance, product recommendations,
-                and a detailed quotation.
+                Send us your brief and our team will respond with technical guidance, product recommendations,
+                and a detailed quotation within 48 hours.
               </p>
 
               <div className="mt-10 flex flex-col gap-4">

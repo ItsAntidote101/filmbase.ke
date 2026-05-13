@@ -44,7 +44,7 @@ export default function GalleryPage() {
             Our <span className="gradient-text">Work</span>
           </h1>
           <p className="text-xl text-white/50 font-light max-w-xl leading-relaxed">
-            Installations across Kenya.
+            A look at our installations across Kenya.
           </p>
         </div>
       </section>

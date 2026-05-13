@@ -28,35 +28,35 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     title: "What sets it apart",
-    body: "Higher transparency and finer pixel performance than standard LED Film. The visual finish is more refined — designed to integrate with premium architectural environments rather than sit on top of them.",
+    body: "Higher transparency and finer pixel performance than standard LED Film. The visual finish is more refined, designed to integrate with premium architectural environments rather than impose on them.",
     // REPLACE: Side-by-side or close-up showing crystal clarity of LED Crystal Film vs standard film
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Crystal+Film+Detail",
     imageAlt: "LED Crystal Film showing high transparency and pixel clarity",
   },
   {
-    title: "Where it's specified",
-    body: "Luxury retail. Five-star hotels. Executive lobbies. Showrooms. Museums. Any environment where the display technology must be invisible when off and extraordinary when on.",
+    title: "Where it is specified",
+    body: "Luxury retail. Five-star hotels. Executive lobbies. Showrooms. Museums. Any environment where the display must be near-invisible when off and extraordinary when on.",
     // REPLACE: LED Crystal Film installed in a five-star hotel lobby or luxury retail environment
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Luxury+Hotel+Crystal+Install",
     imageAlt: "LED Crystal Film installed in a luxury hotel lobby",
   },
   {
-    title: "Performance",
-    body: "Vivid in bright daylight. Crystal clear when off. Specified for atriums, naturally lit lobbies, and bright glass-fronted spaces where standard LED performance falls short.",
+    title: "Performance in daylight",
+    body: "Vivid output in bright conditions. Near-invisible when powered off. Specified for atriums, naturally lit lobbies, and glass-fronted spaces where standard LED performance is not sufficient.",
     // REPLACE: Crystal Film displaying content in a naturally lit atrium or sunlit lobby
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Daylight+Performance",
     imageAlt: "LED Crystal Film performing in bright natural light conditions",
   },
   {
     title: "Installation",
-    body: "Direct mount on glass. No structural framework. Installed by Filmbase technicians from site survey through to final commissioning.",
+    body: "Direct mount on glass. No structural framework required. Our own technicians manage every installation from site survey through to final commissioning.",
     // REPLACE: Installation process showing direct glass mounting
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Crystal+Film+Install",
     imageAlt: "LED Crystal Film being installed directly onto glass",
   },
   {
     title: "Support",
-    body: "Warranty. Local spares. Local service team. The same engineers who installed your system are the ones who support it — no third-party service agents.",
+    body: "Written warranty. Local spare parts. Local service team. The same engineers who installed your system are the ones who support it. No third-party agents.",
     // REPLACE: Service technician providing on-site support
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Local+Support+%26+Warranty",
     imageAlt: "Filmbase service team providing local support",
@@ -65,24 +65,24 @@ const FEATURES = [
 
 const FAQ_ITEMS = [
   {
-    q: "What's the difference from standard LED Film?",
-    a: "Higher transparency. Sharper pixel detail. A more refined visual finish. Designed for premium environments where the standard product's performance is not enough.",
+    q: "What is the difference from standard LED Film?",
+    a: "Higher transparency, sharper pixel detail, and a more refined visual finish. Designed for premium environments where the standard product is not the right specification.",
   },
   {
     q: "Where is it specified?",
-    a: "Luxury retail. Five-star hotels. Executive lobbies. Galleries. Architectural showcase installations. Anywhere the display must be nearly invisible when off.",
+    a: "Luxury retail. Five-star hotels. Executive lobbies. Galleries. Architectural showcase installations. Any environment where the display must be near-invisible when off.",
   },
   {
-    q: "How transparent is it when off?",
-    a: "Designed to be near-invisible. The film integrates with the architecture rather than dominating it — you see glass, not screen, when it's powered down.",
+    q: "How transparent is it when powered off?",
+    a: "Near-invisible. The film integrates with the architecture rather than dominating it. When powered down, you see glass, not screen.",
   },
   {
     q: "Does it work in daylight?",
-    a: "Yes. Specified for atriums, naturally lit lobbies, and bright glass-fronted spaces. High-brightness output makes it readable even in direct sun.",
+    a: "Yes. Specified for atriums, naturally lit lobbies, and bright glass-fronted spaces. High-brightness output keeps it readable in direct sunlight.",
   },
   {
     q: "Does it require a special structure?",
-    a: "No. Direct mount on glass. No steel framework required. Installs onto existing glass surfaces with minimal architectural disruption.",
+    a: "No. Direct mount on existing glass. No steel framework required. Minimal architectural disruption.",
   },
 ];
 
@@ -111,8 +111,8 @@ export default function LEDCrystalFilmPage() {
             <span className="gradient-text">display.</span>
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
-            Higher transparency. Sharper pixel detail. Designed to disappear when off, dazzle when on.
-            Engineered for the spaces that lead.
+            Higher transparency. Finer pixel detail. Near-invisible when off, extraordinary when on.
+            For environments where the standard product is not enough.
           </p>
         </div>
       </section>
@@ -183,9 +183,9 @@ export default function LEDCrystalFilmPage() {
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
-            See Crystal in person.
+            See Crystal Film working in person.
           </h2>
-          <p className="text-brand-muted text-lg mb-10 font-light">Showroom appointments available.</p>
+          <p className="text-brand-muted text-lg mb-10 font-light">Our Nairobi showroom has a live demonstration. Visits are by appointment.</p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-3 px-10 py-4 bg-brand-ink text-white font-semibold text-sm tracking-wide rounded-xl hover:bg-brand-ink-light transition-colors duration-200"

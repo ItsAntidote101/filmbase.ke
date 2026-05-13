@@ -30,35 +30,35 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     title: "What it is",
-    body: "LED elements embedded in thin transparent film. Displays video, animation, and graphics through glass — without blocking the view behind them.",
+    body: "LED elements embedded in thin transparent film, mounted directly onto glass. Displays video, animation, and graphics through the glass surface without blocking the view behind it.",
     // REPLACE: Close-up of LED film texture showing transparent LED elements embedded in film
     image: "https://placehold.co/700x500/e8e8e8/666666?text=LED+Film+Close-Up",
     imageAlt: "Close-up of LED film elements embedded in transparent film",
   },
   {
-    title: "Why it's different",
-    body: "Thinner, lighter, and more transparent than traditional LED. No bulky steel framework required. Installs directly on existing glass with minimal disruption to the space.",
+    title: "Why it is different",
+    body: "Thinner, lighter, and more transparent than conventional LED screens. No bulky steel framework. Installs directly onto existing glass with minimal disruption to the space or structure.",
     // REPLACE: Comparison image showing LED film vs traditional LED panel installation
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Film+vs+Traditional+LED",
     imageAlt: "LED Film compared to traditional LED screen installation",
   },
   {
-    title: "Where it's used",
-    body: "Retail storefronts. Banking halls. Car showrooms. Hotel lobbies. Restaurants. Museums. Anywhere glass becomes a communication surface.",
+    title: "Where it is used",
+    body: "Retail storefronts. Banking halls. Car showrooms. Hotel lobbies. Restaurants. Museums. Anywhere a glass surface can become a communication or branding asset.",
     // REPLACE: Wide shot of LED film installed in a retail storefront or bank hall
     image: "https://placehold.co/700x500/e8e8e8/666666?text=LED+Film+Retail+Installation",
     imageAlt: "LED Film Screen installed in a retail storefront",
   },
   {
-    title: "Visibility",
-    body: "High brightness. Vivid in daylight. Designed to perform in the demanding light conditions of glass-fronted commercial spaces.",
+    title: "Visibility in daylight",
+    body: "High-brightness output. Vivid and readable in direct sunlight. Engineered for the demanding light conditions of glass-fronted commercial environments.",
     // REPLACE: LED film displaying content in bright daylight conditions
     image: "https://placehold.co/700x500/e8e8e8/666666?text=Daylight+Visibility",
     imageAlt: "LED Film Screen displaying vibrant content in direct sunlight",
   },
   {
     title: "Installation",
-    body: "Installs directly onto glass via adhesive mounting or screw fixing. No structural steel framework. Installed by our trained technical team from start to finish.",
+    body: "Adhesive or screw-fixed directly to glass. No structural framework required. Our trained technical team manages every installation from site survey to final commissioning.",
     // REPLACE: Technicians installing LED film onto a glass surface
     image: "https://placehold.co/700x500/e8e8e8/666666?text=LED+Film+Installation",
     imageAlt: "Filmbase technicians installing LED Film onto a glass surface",
@@ -68,27 +68,27 @@ const FEATURES = [
 const FAQ_ITEMS = [
   {
     q: "How does it work?",
-    a: "Transparent LED elements bonded to thin film, mounted directly on glass. The film is nearly invisible when the screen is off, displaying vivid content when powered.",
+    a: "Transparent LED elements bonded to thin film, mounted directly on glass. When powered off, the film is nearly invisible. When on, it displays vivid content while the view behind it remains visible.",
   },
   {
     q: "Where is it best suited?",
-    a: "Storefronts, banking halls, car showrooms, hotels, restaurants, museums — anywhere glass can be transformed into a communication or branding surface.",
+    a: "Retail storefronts, banking halls, car showrooms, hotels, restaurants, museums. Anywhere glass can be transformed into a communication or branding surface.",
   },
   {
     q: "How is it different from a traditional LED screen?",
-    a: "Transparent. Lighter. Thinner. No bulky framework. Lets daylight through when off. Preserves the architectural openness of glass-fronted spaces.",
+    a: "It is transparent, lighter, and thinner. No bulky framework is required. Daylight passes through when the screen is off. The architectural openness of a glass-fronted space is preserved.",
   },
   {
     q: "Does it work in bright daylight?",
-    a: "Yes. Engineered for high-brightness performance, even in direct sun. Suitable for south-facing glass-fronted retail and banking environments.",
+    a: "Yes. Engineered for high-brightness performance, including direct sun. Suitable for south-facing glass-fronted retail and banking environments.",
   },
   {
     q: "How is it installed?",
-    a: "Adhesive or screw-fixed to glass. Installed by our trained technical team — we handle everything from site assessment to commissioning.",
+    a: "Adhesive or screw-fixed to glass. Our own trained technical team handles everything from site assessment to final commissioning.",
   },
   {
     q: "How long does installation take?",
-    a: "Two to five working days for most projects, depending on scale and complexity.",
+    a: "Two to five working days for most projects. Larger or more complex installations may take longer. We confirm the timeline at the site assessment stage.",
   },
 ];
 
@@ -117,9 +117,9 @@ export default function LEDFilmPage() {
             <span className="gradient-text">Mounted on glass.</span>
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
-            LED film screen is a next-generation transparent display that mounts directly onto glass surfaces,
-            transforming ordinary windows and partitions into vivid, high-impact digital screens — without
-            obstructing the view behind them.
+            LED film screen is a transparent display that mounts directly onto glass surfaces,
+            transforming windows and partitions into vivid digital screens
+            without obstructing the view behind them.
           </p>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function LEDFilmPage() {
             <div className="lg:sticky lg:top-28 self-start">
               <SectionTag className="mb-6">FAQ</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
-                Common questions about LED Film.
+                Questions about LED Film.
               </h2>
             </div>
             <div>
@@ -172,9 +172,9 @@ export default function LEDFilmPage() {
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
-            Ready to see what LED Film<br />can do for your space?
+            See LED Film<br />working in person.
           </h2>
-          <p className="text-brand-muted text-lg mb-10 font-light">Book a showroom visit.</p>
+          <p className="text-brand-muted text-lg mb-10 font-light">Showroom visits are by appointment. Our team will walk you through a live demonstration.</p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-3 px-10 py-4 bg-brand-ink text-white font-semibold text-sm tracking-wide rounded-xl hover:bg-brand-ink-light transition-colors duration-200"
