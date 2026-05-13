@@ -98,34 +98,32 @@ const FAQ_ITEMS = [
 export default function SwitchableGlassPage() {
   return (
     <PageTransition>
-      {/* ── HERO — stays dark ── */}
-      <section className="relative min-h-[85vh] flex items-end overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0">
-          <Image
-            src="/smart-glass-hero.jpg"
-            alt="Gallery space with frosted and clear switchable smart glass panels"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.55)" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent" />
-        </div>
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      {/* ── HERO IMAGE ── */}
+      <div className="relative w-full h-[400px] lg:h-[600px] overflow-hidden">
+        <Image
+          src="/smart-glass-hero.jpg"
+          alt="Gallery space with frosted and clear switchable smart glass panels"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-40 pb-20 w-full">
+      {/* ── HERO TEXT — dark background below image ── */}
+      <section className="bg-brand-dark">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
           <SectionTag dark className="mb-6">Switchable Smart Glass</SectionTag>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
             Privacy. At the<br />
             <span className="accent-text">Touch of a Button.</span>
           </h1>
-          <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed">
+          <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed mb-10">
             The new standard for boardrooms, executive offices, and premium homes.
             Advanced PDLC smart film: transparent at the flick of a switch. Frosted at the next.
           </p>
 
           {/* State toggle visual */}
-          <div className="mt-10 inline-flex items-center gap-4 dark-card px-6 py-4 rounded-2xl">
+          <div className="inline-flex items-center gap-4 dark-card px-6 py-4 rounded-2xl">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-white/15 border border-white/20 flex items-center justify-center">
                 <div className="w-3.5 h-3.5 rounded-sm bg-white/60" />
