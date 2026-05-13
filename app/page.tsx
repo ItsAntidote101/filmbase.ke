@@ -7,6 +7,7 @@ import AnimatedNumber from "@/components/AnimatedNumber";
 import FAQAccordion from "@/components/FAQAccordion";
 import QuoteForm from "@/components/QuoteForm";
 import HomeAnimations from "@/components/HomeAnimations";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export const metadata: Metadata = {
   title: "Filmbase Technology Limited | Transparent LED & Smart Glass Kenya",
@@ -218,14 +219,11 @@ export default function HomePage() {
           </HomeAnimations>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-          <div className="w-px h-12 bg-gradient-to-b from-transparent to-white" />
-          <span className="text-xs tracking-widest text-white uppercase">Scroll</span>
-        </div>
+        <ScrollIndicator />
       </section>
 
       {/* ── WHY CHOOSE FILMBASE (stats) ── */}
-      <section className="relative bg-brand-ink overflow-hidden">
+      <section id="stats-section" className="relative bg-brand-ink overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
           {/* Heading */}
           <div className="mb-16 lg:mb-20">
@@ -370,20 +368,23 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Tablet + Desktop: masonry columns */}
+        {/* Tablet + Desktop: uniform grid, all tiles equal height */}
         <div className="hidden sm:block max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="columns-2 lg:columns-3 gap-4 lg:gap-5">
+          <div
+            className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5"
+            style={{ gridAutoRows: "400px" }}
+          >
             {SHOWCASE_IMAGES.map((img) => (
               <Link
                 key={img.id}
                 href={img.href}
-                className="break-inside-avoid block mb-4 lg:mb-5 group relative overflow-hidden rounded-xl"
+                className="group relative overflow-hidden rounded-xl"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-auto block group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
                   <p className="text-white font-semibold text-sm">{img.product}</p>

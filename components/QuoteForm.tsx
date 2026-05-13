@@ -111,9 +111,9 @@ export default function QuoteForm({
           <label className={labelClass} htmlFor="budget">Budget</label>
           <select id="budget" name="budget" className={inputClass}>
             <option value="">Select budget range</option>
-            <option value="Less than USD 5,000">Less than USD 5,000</option>
-            <option value="USD 5,000 to 10,000">USD 5,000 to 10,000</option>
-            <option value="Over USD 10,000">Over USD 10,000</option>
+            <option value="Less than KES 500,000">Less than KES 500,000</option>
+            <option value="KES 500,000 to 1,000,000">KES 500,000 to 1,000,000</option>
+            <option value="Over KES 1,000,000">Over KES 1,000,000</option>
             <option value="Please advise">Please advise</option>
           </select>
         </div>

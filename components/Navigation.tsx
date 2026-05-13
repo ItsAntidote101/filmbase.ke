@@ -61,7 +61,7 @@ function Logo({ white = false }: { white?: boolean }) {
     <img
       src={src}
       alt="Filmbase Technology"
-      className="h-8 w-auto"
+      className="h-10 w-auto"
       onError={() => setImgError(true)}
     />
   );
