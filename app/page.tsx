@@ -158,17 +158,18 @@ export default function HomePage() {
     <PageTransition>
       {/* ── HERO — stays dark ── */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0">
-          {/* REPLACE: Full-screen hero background — modern glass building storefront with LED display */}
-          <Image
-            src="https://placehold.co/1920x1080/0a0a0a/1a1a2e?text=Modern+Glass+Building+with+LED+Display"
-            alt="Modern glass building storefront with LED display"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/20 to-brand-dark" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-brand-dark">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="https://filmbasetechnology.co.ke/wp-content/uploads/2026/04/165648422.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.5)" }} />
         </div>
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
