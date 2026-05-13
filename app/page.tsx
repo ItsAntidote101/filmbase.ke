@@ -173,15 +173,15 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS BAND ── */}
-      <section className="relative bg-brand-alt border-y border-brand-border overflow-hidden">
+      <section className="relative bg-brand-ink overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-14">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-brand-border">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-white/10">
             {STATS.map((stat) => (
               <div key={stat.label} className="text-center lg:px-8">
-                <div className="text-4xl lg:text-5xl font-bold text-brand-ink mb-2 tracking-tight">
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">
                   <AnimatedNumber value={stat.value} />
                 </div>
-                <p className="text-sm text-brand-muted font-light leading-snug">{stat.label}</p>
+                <p className="text-sm text-white/60 font-light leading-snug">{stat.label}</p>
               </div>
             ))}
           </div>
