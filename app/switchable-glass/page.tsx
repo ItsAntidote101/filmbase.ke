@@ -98,48 +98,44 @@ const FAQ_ITEMS = [
 export default function SwitchableGlassPage() {
   return (
     <PageTransition>
-      {/* ── HERO IMAGE ── */}
-      <div className="relative w-full h-[400px] lg:h-[600px] overflow-hidden">
-        <Image
-          src="/smart-glass-hero.jpg"
-          alt="Gallery space with frosted and clear switchable smart glass panels"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </div>
+      {/* ── HERO ── */}
+      <section className="relative min-h-[80vh] flex items-end overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/single-glazed-switchable-smart-glass-retail.jpg"
+            alt="Switchable smart glass in a retail environment"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      {/* ── HERO TEXT — dark background below image ── */}
-      <section className="bg-brand-dark">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-40 pb-20 w-full">
           <SectionTag dark className="mb-6">Switchable Smart Glass</SectionTag>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6">
+          <h1
+            className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter max-w-4xl mb-6"
+            style={{ textShadow: "0 2px 30px rgba(0,0,0,0.6)" }}
+          >
             Privacy. At the<br />
             <span className="accent-text">Touch of a Button.</span>
           </h1>
-          <p className="text-xl text-white/60 font-light max-w-2xl leading-relaxed mb-10">
+          <p
+            className="text-xl text-white font-light max-w-2xl leading-relaxed mb-10"
+            style={{ textShadow: "0 1px 15px rgba(0,0,0,0.5)" }}
+          >
             The new standard for boardrooms, executive offices, and premium homes.
             Advanced PDLC smart film: transparent at the flick of a switch. Frosted at the next.
           </p>
-
-          {/* State toggle visual */}
-          <div className="inline-flex items-center gap-4 dark-card px-6 py-4 rounded-2xl">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-white/15 border border-white/20 flex items-center justify-center">
-                <div className="w-3.5 h-3.5 rounded-sm bg-white/60" />
-              </div>
-              <span className="text-sm text-white/60 font-light">Power on: clear</span>
-            </div>
-            <svg className="w-4 h-4 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-ink font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-colors duration-200"
+          >
+            Book a Demo
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                <div className="w-3.5 h-3.5 rounded-sm bg-white/10" />
-              </div>
-              <span className="text-sm text-white/60 font-light">Power off: frosted</span>
-            </div>
-          </div>
+          </Link>
         </div>
       </section>
 
