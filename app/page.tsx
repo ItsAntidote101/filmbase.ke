@@ -10,14 +10,30 @@ import HomeAnimations from "@/components/HomeAnimations";
 import ScrollIndicator from "@/components/ScrollIndicator";
 
 export const metadata: Metadata = {
-  title: "Filmbase Technology Limited | Transparent LED & Smart Glass Kenya",
+  title: "Filmbase Technology | Transparent LED & Smart Glass Kenya",
   description:
-    "Kenya's first specialist in transparent LED display screens and switchable smart glass. Supply, installation, and support across all 47 counties.",
+    "Kenya's first specialist in transparent LED display screens and switchable smart glass. Engineered globally, installed across all 47 counties.",
+  keywords: [
+    "transparent LED screen Kenya",
+    "smart glass Kenya",
+    "switchable glass Nairobi",
+    "LED film screen",
+    "PDLC glass Kenya",
+  ],
   openGraph: {
-    title: "Filmbase Technology Limited",
+    title: "Filmbase Technology | Make Glass Do More",
     description: "Transparent LED. Switchable smart glass. Engineered globally. Delivered across Kenya.",
+    url: "https://filmbasetechnology.co.ke",
+    siteName: "Filmbase Technology",
+    locale: "en_KE",
+    type: "website",
     // REPLACE: OG image for home page
-    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Technology"],
+    images: ["https://placehold.co/1200x630/054e72/ffffff?text=Filmbase+Technology"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Filmbase Technology | Make Glass Do More",
+    description: "Kenya's first specialist in transparent LED and smart glass.",
   },
 };
 

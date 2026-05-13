@@ -4,12 +4,15 @@ import SectionTag from "@/components/SectionTag";
 import GalleryClient from "@/components/GalleryClient";
 
 export const metadata: Metadata = {
-  title: "Gallery | Filmbase Technology Limited",
+  title: "Project Gallery | Filmbase Technology Kenya Installations",
   description:
-    "Real installations across Kenya. LED Film Screens, LED Crystal Film, and Switchable Smart Glass — supplied and installed by Filmbase Technology Limited.",
+    "Browse Filmbase Technology installations across Kenya. LED film screens, crystal displays and switchable smart glass in retail, hospitality, corporate and residential spaces.",
   openGraph: {
-    title: "Gallery | Filmbase Technology Limited",
-    description: "Our work. Installations across Kenya.",
+    title: "Gallery | Filmbase Technology Kenya",
+    description: "Our installations across Kenya — LED film, crystal displays and smart glass.",
+    url: "https://filmbasetechnology.co.ke/gallery",
+    siteName: "Filmbase Technology",
+    type: "website",
     // REPLACE: OG image for gallery page
     images: ["https://placehold.co/1200x630/054e72/ffffff?text=Filmbase+Gallery"],
   },

@@ -6,14 +6,22 @@ import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "LED Crystal Film Screen",
+  title: "LED Crystal Film Screen Kenya | Premium Transparent Display | Filmbase",
   description:
-    "Premium transparent LED display — higher transparency, sharper pixel detail. For luxury retail, five-star hotels, and executive spaces across Kenya.",
+    "Premium transparent LED crystal film display. Higher transparency, sharper pixel detail. For luxury retail, five-star hotels and executive spaces across Kenya.",
+  keywords: [
+    "LED crystal film Kenya",
+    "premium transparent display",
+    "luxury LED glass screen Nairobi",
+  ],
   openGraph: {
-    title: "LED Crystal Film Screen | Filmbase Technology Limited",
-    description: "Higher transparency. Sharper pixel detail. Designed for premium environments.",
+    title: "LED Crystal Film Screen | Filmbase Technology Kenya",
+    description: "Premium-grade transparent display. Engineered for the spaces that lead.",
+    url: "https://filmbasetechnology.co.ke/led-crystal-film",
+    siteName: "Filmbase Technology",
+    type: "website",
     // REPLACE: OG image for LED Crystal Film page
-    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=LED+Crystal+Film"],
+    images: ["https://placehold.co/1200x630/033a55/ffffff?text=LED+Crystal+Film"],
   },
 };
 

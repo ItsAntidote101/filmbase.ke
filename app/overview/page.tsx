@@ -4,15 +4,18 @@ import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 
 export const metadata: Metadata = {
-  title: "Overview",
+  title: "About Us | Filmbase Technology Kenya",
   description:
-    "Filmbase Technology — Kenya's first dedicated specialist in transparent LED display and switchable smart glass. Quality, standards, warranty, sustainability.",
+    "Learn about Filmbase Technology — Kenya's first dedicated specialist in transparent LED display and switchable smart glass. End-to-end supply, installation and support.",
   openGraph: {
-    title: "Overview | Filmbase Technology Limited",
+    title: "About Filmbase Technology Kenya",
     description:
-      "A specialist company with a focused mission. Quality sourced globally. Installed and supported locally.",
+      "A specialist company with a focused mission. Kenya's first in transparent LED and smart glass.",
+    url: "https://filmbasetechnology.co.ke/overview",
+    siteName: "Filmbase Technology",
+    type: "website",
     // REPLACE: OG image for overview page
-    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Overview"],
+    images: ["https://placehold.co/1200x630/054e72/ffffff?text=Filmbase+Overview"],
   },
 };
 

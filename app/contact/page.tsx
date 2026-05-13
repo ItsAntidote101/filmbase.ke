@@ -4,14 +4,18 @@ import SectionTag from "@/components/SectionTag";
 import QuoteForm from "@/components/QuoteForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us | Get a Quote | Filmbase Technology Kenya",
   description:
-    "Get in touch with Filmbase Technology Limited. Send your project brief and our team responds with technical guidance and a detailed quotation — within 48 hours.",
+    "Request a quote for transparent LED display or switchable smart glass installation in Kenya. Visit our showroom in Kileleshwa, Nairobi or contact us by email or WhatsApp.",
   openGraph: {
-    title: "Contact | Filmbase Technology Limited",
-    description: "Tell us about your space. Our team responds with technical guidance and a detailed quotation.",
+    title: "Contact Filmbase Technology Kenya",
+    description:
+      "Tell us about your space. Get technical guidance and a detailed quotation within 48 hours.",
+    url: "https://filmbasetechnology.co.ke/contact",
+    siteName: "Filmbase Technology",
+    type: "website",
     // REPLACE: OG image for contact page
-    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Contact+Filmbase"],
+    images: ["https://placehold.co/1200x630/054e72/ffffff?text=Contact+Filmbase"],
   },
 };
 

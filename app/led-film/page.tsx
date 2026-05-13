@@ -6,14 +6,24 @@ import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "LED Film Screen",
+  title: "LED Film Screen Kenya | Transparent LED Display | Filmbase",
   description:
-    "Transparent LED display mounted directly on glass. Filmbase Technology supplies, installs, and supports LED Film screens across Kenya — storefronts, banks, hotels.",
+    "Transparent LED film screens that mount directly on glass. Transform storefronts, banking halls, and retail spaces into vivid digital displays. Available across Kenya.",
+  keywords: [
+    "LED film screen Kenya",
+    "transparent LED display Nairobi",
+    "LED glass screen",
+    "storefront LED display Kenya",
+  ],
   openGraph: {
-    title: "LED Film Screen | Filmbase Technology Limited",
-    description: "Next-generation transparent LED display that mounts directly onto glass surfaces.",
+    title: "LED Film Screen | Filmbase Technology Kenya",
+    description:
+      "Next-generation transparent LED display mounted directly on glass. For storefronts, banks, hotels and more.",
+    url: "https://filmbasetechnology.co.ke/led-film",
+    siteName: "Filmbase Technology",
+    type: "website",
     // REPLACE: OG image for LED Film page
-    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=LED+Film+Screen"],
+    images: ["https://placehold.co/1200x630/054e72/ffffff?text=LED+Film+Screen"],
   },
 };
 

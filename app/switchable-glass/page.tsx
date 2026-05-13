@@ -6,14 +6,23 @@ import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Switchable Smart Glass",
+  title: "Switchable Smart Glass Kenya | PDLC Privacy Glass | Filmbase",
   description:
-    "PDLC smart film technology — converts glass to on-demand privacy. Transparent to frosted at the touch of a switch. Filmbase Technology installs across Kenya.",
+    "PDLC switchable smart glass that switches from transparent to frosted instantly. For boardrooms, hotels, hospitals and luxury homes across Kenya.",
+  keywords: [
+    "switchable smart glass Kenya",
+    "PDLC glass Nairobi",
+    "privacy glass Kenya",
+    "smart glass boardroom",
+  ],
   openGraph: {
-    title: "Switchable Smart Glass | Filmbase Technology Limited",
-    description: "Privacy at the touch of a button. The new standard for boardrooms, executive offices, and premium homes.",
+    title: "Switchable Smart Glass | Filmbase Technology Kenya",
+    description: "Privacy on demand. Transparent to frosted at the touch of a button.",
+    url: "https://filmbasetechnology.co.ke/switchable-glass",
+    siteName: "Filmbase Technology",
+    type: "website",
     // REPLACE: OG image for Switchable Glass page
-    images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Switchable+Smart+Glass"],
+    images: ["https://placehold.co/1200x630/0a7aad/ffffff?text=Switchable+Smart+Glass"],
   },
 };
 

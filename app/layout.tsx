@@ -48,6 +48,11 @@ export const metadata: Metadata = {
     // REPLACE: Twitter OG image
     images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Technology"],
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
