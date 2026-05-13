@@ -170,7 +170,8 @@ export default function HomePage() {
           >
             <source src="/165648422.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.5)" }} />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.68)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(3, 58, 85, 0.3) 0%, rgba(3, 58, 85, 0.75) 50%, rgba(3, 58, 85, 0.85) 100%)" }} />
         </div>
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -185,12 +186,12 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter text-white mb-8">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter text-white mb-8" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
                 Make Glass<br />
                 <span className="gradient-text">Do More.</span>
               </h1>
 
-              <p className="text-lg sm:text-xl lg:text-2xl text-white/60 font-light max-w-2xl leading-relaxed mb-12">
+              <p className="text-lg sm:text-xl lg:text-2xl text-white/60 font-light max-w-2xl leading-relaxed mb-12" style={{ textShadow: "0 1px 10px rgba(0,0,0,0.4)" }}>
                 Transparent LED. Switchable smart glass.<br />
                 Engineered globally. Delivered across Kenya.
               </p>
