@@ -83,6 +83,57 @@ const FEATURES = [
   },
 ];
 
+const SHOWCASE_IMAGES = [
+  {
+    id: 1,
+    // REPLACE: LED Film Screen installed on a retail storefront window — daytime exterior shot
+    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+Storefront",
+    alt: "LED Film Screen on a retail storefront window",
+    product: "LED Film Screen",
+    href: "/led-film",
+  },
+  {
+    id: 2,
+    // REPLACE: LED Crystal Film Screen in a five-star hotel lobby — interior shot
+    src: "https://placehold.co/800x600/033a55/ffffff?text=LED+Crystal+Hotel+Lobby",
+    alt: "LED Crystal Film Screen in a hotel lobby",
+    product: "LED Crystal Film Screen",
+    href: "/led-crystal-film",
+  },
+  {
+    id: 3,
+    // REPLACE: Switchable smart glass partition in a corporate boardroom — portrait interior shot
+    src: "https://placehold.co/600x800/054e72/ffffff?text=Smart+Glass+Boardroom",
+    alt: "Switchable smart glass in a corporate boardroom",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
+  },
+  {
+    id: 4,
+    // REPLACE: LED Film Screen on a bank facade — exterior daytime shot
+    src: "https://placehold.co/800x600/033a55/ffffff?text=LED+Film+Bank+Facade",
+    alt: "LED Film Screen on a bank facade",
+    product: "LED Film Screen",
+    href: "/led-film",
+  },
+  {
+    id: 5,
+    // REPLACE: Switchable smart glass in a luxury residential bathroom — portrait interior shot
+    src: "https://placehold.co/600x800/0a7aad/ffffff?text=Smart+Glass+Bathroom",
+    alt: "Switchable smart glass in a luxury bathroom",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
+  },
+  {
+    id: 6,
+    // REPLACE: LED Film Screen on a car showroom glass facade — interior shot showing display content
+    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+Car+Showroom",
+    alt: "LED Film Screen on a car showroom",
+    product: "LED Film Screen",
+    href: "/led-film",
+  },
+];
+
 const FAQ_ITEMS = [
   {
     q: "What does Filmbase do?",
@@ -172,18 +223,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STATS BAND ── */}
+      {/* ── WHY CHOOSE FILMBASE (stats) ── */}
       <section className="relative bg-brand-ink overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-14">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-white/10">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="text-center lg:px-8">
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">
-                  <AnimatedNumber value={stat.value} />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
+          {/* Heading */}
+          <div className="mb-16 lg:mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-4">
+              Why Choose Filmbase
+            </h2>
+            <p className="text-white/60 text-lg font-light max-w-2xl leading-relaxed">
+              Kenya&apos;s first dedicated specialist in transparent LED and smart glass — built for the spaces that lead.
+            </p>
+          </div>
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            {STATS.map((stat, i) => {
+              const isLastInMobileRow = i % 2 === 1;
+              const isFirstMobileRow = i < 2;
+              const isLastInDesktop = i === 3;
+              return (
+                <div
+                  key={stat.label}
+                  className={[
+                    "px-0 sm:px-6 lg:px-10 py-10",
+                    !isLastInMobileRow ? "border-r border-white/10" : "",
+                    isFirstMobileRow ? "border-b lg:border-b-0 border-white/10" : "",
+                    !isLastInDesktop && isLastInMobileRow ? "lg:border-r border-white/10" : "",
+                  ].filter(Boolean).join(" ")}
+                >
+                  <div className="text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">
+                    <AnimatedNumber value={stat.value} />
+                  </div>
+                  <div className="w-8 h-px bg-white/25 mb-3" />
+                  <p className="text-sm text-white/60 font-light leading-snug">{stat.label}</p>
                 </div>
-                <p className="text-sm text-white/60 font-light leading-snug">{stat.label}</p>
-              </div>
-            ))}
+              );
+            })}
+          </div>
+
+          {/* Bottom link */}
+          <div className="mt-12 flex justify-end">
+            <Link
+              href="/overview"
+              className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
+            >
+              About us
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -230,6 +319,76 @@ export default function HomePage() {
                       className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
                       fill="none" viewBox="0 0 24 24" stroke="currentColor"
                     >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEEN IN THE WILD ── */}
+      <section className="py-24 lg:py-32 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+            <div>
+              <SectionTag className="mb-4">Gallery</SectionTag>
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
+                Seen in the Wild
+              </h2>
+              <p className="text-brand-muted mt-3 font-light">A glimpse of what&apos;s possible.</p>
+            </div>
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-ink hover:gap-4 transition-all duration-200 flex-shrink-0"
+            >
+              View all
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
+        {/* Mobile: horizontal scroll strip */}
+        <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-6">
+          {SHOWCASE_IMAGES.map((img) => (
+            <Link
+              key={img.id}
+              href={img.href}
+              className="flex-none w-72 snap-start group relative overflow-hidden rounded-xl"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={img.src} alt={img.alt} className="w-full h-auto block" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex flex-col justify-end p-4">
+                <p className="text-white font-semibold text-sm">{img.product}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Tablet + Desktop: masonry columns */}
+        <div className="hidden sm:block max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="columns-2 lg:columns-3 gap-4 lg:gap-5">
+            {SHOWCASE_IMAGES.map((img) => (
+              <Link
+                key={img.id}
+                href={img.href}
+                className="break-inside-avoid block mb-4 lg:mb-5 group relative overflow-hidden rounded-xl"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto block group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                  <p className="text-white font-semibold text-sm">{img.product}</p>
+                  <span className="text-white/70 text-xs mt-1 inline-flex items-center gap-1.5">
+                    View Product
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </span>

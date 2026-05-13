@@ -187,6 +187,20 @@ export default function Navigation() {
             </Link>
           </li>
 
+          {/* Gallery */}
+          <li>
+            <Link
+              href="/gallery"
+              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                pathname === "/gallery"
+                  ? overDark ? "text-white" : "text-brand-ink"
+                  : overDark ? "text-white/70 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"
+              }`}
+            >
+              Gallery
+            </Link>
+          </li>
+
           {/* Products — mega menu trigger */}
           <li
             className="relative"
@@ -349,6 +363,12 @@ export default function Navigation() {
                 className={`py-3 text-base font-medium border-b border-brand-border ${pathname === "/overview" ? "text-brand-ink" : "text-[#0a0a0a]"}`}
               >
                 Overview
+              </Link>
+              <Link
+                href="/gallery"
+                className={`py-3 text-base font-medium border-b border-brand-border ${pathname === "/gallery" ? "text-brand-ink" : "text-[#0a0a0a]"}`}
+              >
+                Gallery
               </Link>
 
               {/* Products accordion */}

@@ -49,6 +49,7 @@ export default function Footer() {
                 { label: "LED Crystal Film", href: "/led-crystal-film" },
                 { label: "Switchable Smart Glass", href: "/switchable-glass" },
                 { label: "Overview", href: "/overview" },
+                { label: "Gallery", href: "/gallery" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
