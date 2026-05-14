@@ -59,8 +59,8 @@ const PRODUCTS = [
     title: "LED Crystal Film Screen",
     description: "Higher transparency, finer pixel detail. For luxury retail, five-star hotels, and premium architectural environments.",
     href: "/led-crystal-film",
-    // REPLACE: Product card image — LED Crystal Film in a luxury hotel or high-end retail environment
-    image: "https://placehold.co/800x600/e8e8e8/666666?text=LED+Crystal+Film+Screen",
+    image: "/transparent-film-led-screen.jpg",
+    unoptimized: true,
   },
   {
     title: "Switchable Smart Glass",

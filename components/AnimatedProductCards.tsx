@@ -10,6 +10,7 @@ interface Product {
   href: string;
   image: string;
   gif?: boolean;
+  unoptimized?: boolean;
 }
 
 export default function AnimatedProductCards({ products }: { products: Product[] }) {
@@ -55,7 +56,8 @@ export default function AnimatedProductCards({ products }: { products: Product[]
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  unoptimized={product.unoptimized}
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
               )}
             </div>
