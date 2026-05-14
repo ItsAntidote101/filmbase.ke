@@ -52,8 +52,9 @@ const FEATURES = [
   {
     title: "A second function",
     body: "In its frosted state, smart glass works as a rear-projection surface. A meeting room divider becomes a presentation screen. One installation. Two functions. No additional hardware required.",
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Rear+Projection+on+Smart+Glass",
+    image: "/smart-glass-plus-graphic-makeup-02.svg",
     imageAlt: "Smart glass used as a rear projection screen in a meeting room",
+    gif: true,
   },
   {
     title: "Installed by our own team",
