@@ -5,7 +5,7 @@ import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import FAQAccordion from "@/components/FAQAccordion";
-import QuoteForm from "@/components/QuoteForm";
+import QuoteSection from "@/components/QuoteSection";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import HeroHeadline from "@/components/HeroHeadline";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -271,8 +271,8 @@ export default function HomePage() {
           <ScrollReveal className="mb-16 max-w-3xl">
             <SectionTag className="mb-6">Our Products</SectionTag>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
-              Two technologies.<br />
-              Serious <span className="gradient-text-teal">applications.</span>
+              Built for spaces that<br />
+              demand <span className="gradient-text-teal">more.</span>
             </h2>
             <p className="text-brand-muted text-lg leading-relaxed font-light">
               Filmbase supplies two of the most advanced architectural technologies available: transparent LED display
@@ -406,59 +406,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SECTION DIVIDER ── */}
-      <div className="flex justify-center py-2 bg-brand-alt">
-        <div className="w-[60%] h-px opacity-30" style={{ background: "linear-gradient(to right, transparent, #054e72, transparent)" }} />
-      </div>
-
-      {/* ── QUOTE FORM ── */}
-      <section className="py-24 lg:py-32 bg-brand-alt">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <ScrollReveal className="lg:sticky lg:top-28">
-              <SectionTag className="mb-6">Get in Touch</SectionTag>
-              <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
-                Tell us about your project.
-              </h2>
-              <p className="text-brand-muted leading-relaxed text-lg font-light">
-                Send us your brief and our team will respond with technical guidance, product recommendations,
-                and a detailed quotation within 48 hours.
-              </p>
-
-              <div className="mt-10 flex flex-col gap-4">
-                <a
-                  href="mailto:info@filmbasetechnology.co.ke"
-                  className="flex items-center gap-3 text-sm text-brand-muted hover:text-brand-ink transition-colors duration-200"
-                >
-                  <span className="w-8 h-8 rounded-full bg-brand-ink/5 border border-brand-border flex items-center justify-center">
-                    <svg className="w-4 h-4 text-brand-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </span>
-                  info@filmbasetechnology.co.ke
-                </a>
-                <a
-                  href="tel:+254727808264"
-                  className="flex items-center gap-3 text-sm text-brand-muted hover:text-brand-ink transition-colors duration-200"
-                >
-                  <span className="w-8 h-8 rounded-full bg-brand-ink/5 border border-brand-border flex items-center justify-center">
-                    <svg className="w-4 h-4 text-brand-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </span>
-                  +254 727 808 264
-                </a>
-              </div>
-            </ScrollReveal>
-
-            <div className="glass-card rounded-2xl p-8 lg:p-10">
-              <QuoteForm showBudget />
-            </div>
-          </div>
-        </div>
-      </section>
+      <QuoteSection />
     </PageTransition>
   );
 }
