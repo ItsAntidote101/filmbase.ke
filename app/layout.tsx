@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Technology"],
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon-8.png",
+    shortcut: "/favicon-8.png",
+    apple: "/favicon-8.png",
   },
 };
 
@@ -62,6 +62,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon-8.png" />
+        <link rel="shortcut icon" href="/favicon-8.png" />
+        <link rel="apple-touch-icon" href="/favicon-8.png" />
+      </head>
       <body className={`${dmSans.variable} font-sans antialiased bg-white text-[#0a0a0a]`}>
         <Navigation />
         <main>{children}</main>
