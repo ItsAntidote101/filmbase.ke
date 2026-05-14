@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import ButtonPill from "@/components/ButtonPill";
 
 const INTERVAL = 3500;
 
@@ -190,24 +191,8 @@ export default function HeroHeadline() {
         transition={{ duration: 0.6, delay: 0.9 }}
         className="flex flex-col sm:flex-row gap-4 mt-5"
       >
-        <Link
-          href="/led-film"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-dark font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-all duration-200 group"
-        >
-          See Our Products
-          <svg
-            className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </Link>
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-white/8 border border-white/15 text-white font-medium text-sm tracking-wide rounded-xl hover:bg-white/12 transition-all duration-200"
-        >
-          Get a Quote
-        </Link>
+        <ButtonPill href="/led-film" variant="primary-white">See Our Products</ButtonPill>
+        <ButtonPill href="/contact" variant="secondary-dark">Get a Quote</ButtonPill>
       </motion.div>
 
       {/* Proof strip — hidden on mobile */}

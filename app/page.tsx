@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import AnimatedNumber from "@/components/AnimatedNumber";
@@ -212,14 +213,9 @@ export default function HomePage() {
 
           {/* Bottom link */}
           <div className="mt-12 flex justify-end">
-            <Link
-              href="/overview"
-              className="inline-flex items-center gap-2 text-sm text-brand-accent/70 hover:text-brand-accent transition-colors duration-200"
-            >
+            <Link href="/overview" className="arr-link text-sm text-brand-accent/70 hover:text-brand-accent transition-colors duration-200">
               About us
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <span className="arr-link-icon"><ArrowRight size={14} /></span>
             </Link>
           </div>
         </div>
@@ -266,14 +262,9 @@ export default function HomePage() {
               </h2>
               <p className="text-brand-muted mt-3 font-light">A look at what these technologies look like in real spaces.</p>
             </ScrollReveal>
-            <Link
-              href="/gallery"
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-ink hover:gap-4 transition-all duration-200 flex-shrink-0"
-            >
+            <Link href="/gallery" className="arr-link text-sm font-medium text-brand-ink flex-shrink-0">
               View all
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <span className="arr-link-icon"><ArrowRight size={14} /></span>
             </Link>
           </div>
         </div>
@@ -347,14 +338,9 @@ export default function HomePage() {
                 switchable smart glass. We work directly with established manufacturers and bring their most advanced
                 products to Kenya through a fully integrated supply, installation, and support operation.
               </p>
-              <Link
-                href="/overview"
-                className="inline-flex items-center gap-3 text-brand-ink font-medium text-sm hover:gap-5 transition-all duration-200"
-              >
+              <Link href="/overview" className="arr-link text-brand-ink font-medium text-sm">
                 Read our overview
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <span className="arr-link-icon"><ArrowRight size={16} /></span>
               </Link>
             </ScrollReveal>
 

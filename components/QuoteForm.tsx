@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import ButtonPill from "@/components/ButtonPill";
 
 const FAKE_DOMAINS = new Set([
   "test.com", "fake.com", "example.com", "mailinator.com",
@@ -262,21 +263,9 @@ export default function QuoteForm({
 
       {rateError && <p className={errClass}>{rateError}</p>}
 
-      <button
-        type="submit"
-        disabled={submitting}
-        className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-brand-ink text-white font-semibold text-sm tracking-wide rounded-xl hover:bg-brand-ink-light transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-      >
-        {submitting ? (
-          <>
-            <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-            </svg>
-            Sending...
-          </>
-        ) : "Request a Quote"}
-      </button>
+      <ButtonPill type="submit" loading={submitting} disabled={submitting}>
+        {submitting ? "Sending..." : "Request a Quote"}
+      </ButtonPill>
     </form>
   );
 }

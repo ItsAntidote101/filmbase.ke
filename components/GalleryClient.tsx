@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import ButtonPill from "@/components/ButtonPill";
 
 type Category = "all" | "led-film" | "led-crystal-film" | "switchable-glass";
 
@@ -166,15 +167,7 @@ export default function GalleryClient() {
             <p className="text-brand-muted font-light mb-8">
               Tell us about your space and we&apos;ll respond with technical guidance and a quotation.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-brand-ink text-white font-semibold text-sm tracking-wide rounded-xl hover:bg-brand-ink-light transition-colors duration-200"
-            >
-              Get a Quote
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <ButtonPill href="/contact">Get a Quote</ButtonPill>
           </div>
         </div>
       </section>

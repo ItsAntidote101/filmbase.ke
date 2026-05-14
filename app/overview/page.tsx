@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import ButtonPill from "@/components/ButtonPill";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 
@@ -122,15 +122,7 @@ export default function OverviewPage() {
           <p className="text-white/60 text-lg mb-10 font-light">
             Our Nairobi showroom has live demonstrations of every product. Visits are by appointment.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-white text-brand-ink font-semibold text-sm tracking-wide rounded-xl hover:bg-white/90 transition-colors duration-200"
-          >
-            Book a Visit
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <ButtonPill href="/contact" variant="primary-white">Book a Visit</ButtonPill>
         </div>
       </section>
     </PageTransition>

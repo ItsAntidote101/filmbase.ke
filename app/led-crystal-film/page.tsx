@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import ButtonPill from "@/components/ButtonPill";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -186,15 +186,7 @@ export default function LEDCrystalFilmPage() {
             See Crystal Film working in person.
           </h2>
           <p className="text-brand-muted text-lg mb-10 font-light">Our Nairobi showroom has a live demonstration. Visits are by appointment.</p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-brand-ink text-white font-semibold text-sm tracking-wide rounded-xl hover:bg-brand-ink-light transition-colors duration-200"
-          >
-            Request a Quote
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <ButtonPill href="/contact">Request a Quote</ButtonPill>
         </div>
       </section>
     </PageTransition>

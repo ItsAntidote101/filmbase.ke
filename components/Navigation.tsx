@@ -8,6 +8,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import ButtonPill from "@/components/ButtonPill";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -195,16 +196,9 @@ export default function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Link
-            href="/contact"
-            className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all duration-300 tracking-wide ${
-              overDark
-                ? "border border-white/60 text-white bg-transparent hover:bg-white/10"
-                : "bg-brand-ink text-white hover:bg-brand-ink-light"
-            }`}
-          >
+          <ButtonPill href="/contact" variant={overDark ? "secondary-dark" : "primary"} size="sm">
             Get a Quote
-          </Link>
+          </ButtonPill>
         </div>
 
         {/* Mobile hamburger */}
@@ -319,16 +313,9 @@ export default function Navigation() {
                   </svg>
                   Visit our showroom in Kileleshwa, Nairobi
                 </div>
-                <Link
-                  href="/contact"
-                  onClick={() => setMegaOpen(false)}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-brand-ink text-white text-xs font-semibold rounded-lg hover:bg-brand-ink-light transition-colors duration-200"
-                >
+                <ButtonPill href="/contact" size="sm" onClick={() => setMegaOpen(false)}>
                   Book a Visit
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
+                </ButtonPill>
               </div>
             </div>
           </motion.div>
@@ -415,12 +402,9 @@ export default function Navigation() {
                 Contact
               </Link>
 
-              <Link
-                href="/contact"
-                className="mt-4 px-5 py-3.5 bg-brand-ink text-white text-sm font-semibold rounded-xl text-center"
-              >
+              <ButtonPill href="/contact" className="mt-4 justify-center w-full">
                 Get a Quote
-              </Link>
+              </ButtonPill>
             </div>
           </motion.div>
         )}

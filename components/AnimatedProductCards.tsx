@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 interface Product {
   title: string;
@@ -68,14 +69,9 @@ export default function AnimatedProductCards({ products }: { products: Product[]
               <p className="text-brand-muted text-sm leading-relaxed font-light mb-5 flex-1">
                 {product.description}
               </p>
-              <span className="inline-flex items-center gap-2 text-brand-ink text-sm font-medium">
+              <span className="arr-link text-brand-ink text-sm font-medium">
                 Learn more
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <span className="arr-link-icon"><ArrowRight size={14} /></span>
               </span>
             </div>
           </Link>
