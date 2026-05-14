@@ -15,8 +15,7 @@ const MEGA_PRODUCTS = [
   {
     title: "LED Film Screen",
     href: "/led-film",
-    // REPLACE: Mega menu product image — LED Film installed on a retail storefront
-    image: "https://placehold.co/500x380/054e72/ffffff?text=LED+Film+Screen",
+    image: "/led-film-Mega-menu@2x-100.jpg",
   },
   {
     title: "LED Crystal Film Screen",
@@ -240,7 +239,7 @@ export default function Navigation() {
 
                 {/* LEFT PANEL — 40%: crossfading image + name + link */}
                 <div className="w-[40%] flex-shrink-0 py-8 pr-10">
-                  <div className="relative overflow-hidden rounded-xl bg-brand-alt" style={{ aspectRatio: "500/380" }}>
+                  <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "500/380" }}>
                     <AnimatePresence mode="wait">
                       <motion.img
                         key={activeProduct.href}
