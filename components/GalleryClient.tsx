@@ -104,42 +104,38 @@ const GALLERY_IMAGES: GalleryImage[] = [
   // Switchable Glass — 4 images
   {
     id: 9,
-    // REPLACE: Switchable smart glass boardroom partition in Parklands — frosted state, meeting in progress
-    src: "https://placehold.co/800x600/0a7aad/ffffff?text=Smart+Glass+%E2%80%94+Parklands",
-    alt: "Switchable smart glass boardroom partition in Parklands, Nairobi",
+    src: "/single-glazed-switchable-smart-glass-retail.jpg",
+    alt: "Switchable smart glass installed in a retail environment, Nairobi",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
-    location: "Parklands, Nairobi",
+    location: "Nairobi, Kenya",
     href: "/switchable-glass",
   },
   {
     id: 10,
-    // REPLACE: Switchable smart glass in a luxury hotel suite bathroom in Lavington — clear state
-    src: "https://placehold.co/800x600/0a7aad/ffffff?text=Smart+Glass+%E2%80%94+Lavington",
-    alt: "Switchable smart glass in a hotel suite bathroom in Lavington",
+    src: "/Switchable.gif",
+    alt: "Switchable smart glass switching between clear and frosted states, Kileleshwa",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
-    location: "Lavington, Nairobi",
+    location: "Kileleshwa, Nairobi",
     href: "/switchable-glass",
   },
   {
     id: 11,
-    // REPLACE: Switchable smart glass used as a projection screen in a law firm meeting room in Riverside
-    src: "https://placehold.co/800x600/0a7aad/ffffff?text=Smart+Glass+%E2%80%94+Riverside",
-    alt: "Switchable smart glass projection screen in a law firm in Riverside, Nairobi",
+    src: "/JW-Switchable.gif",
+    alt: "Switchable smart glass installation in Westlands, Nairobi",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
-    location: "Riverside, Nairobi",
+    location: "Westlands, Nairobi",
     href: "/switchable-glass",
   },
   {
     id: 12,
-    // REPLACE: Switchable smart glass executive office partition on Thika Road — transparent state
-    src: "https://placehold.co/800x600/0a7aad/ffffff?text=Smart+Glass+%E2%80%94+Thika+Road",
-    alt: "Switchable smart glass executive office on Thika Road, Nairobi",
+    src: "/jw-gif2.gif",
+    alt: "Switchable smart glass installation in Karen, Nairobi",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
-    location: "Thika Road, Nairobi",
+    location: "Karen, Nairobi",
     href: "/switchable-glass",
   },
 ];

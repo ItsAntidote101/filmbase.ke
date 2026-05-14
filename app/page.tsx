@@ -99,27 +99,24 @@ const SHOWCASE_IMAGES = [
   },
   {
     id: 4,
-    // REPLACE: LED Film Screen on a bank facade — exterior daytime shot
-    src: "https://placehold.co/800x600/033a55/ffffff?text=LED+Film+Bank+Facade",
-    alt: "LED Film Screen on a bank facade",
-    product: "LED Film Screen",
-    href: "/led-film",
+    src: "/single-glazed-switchable-smart-glass-retail.jpg",
+    alt: "Switchable smart glass installed in a retail space",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
   },
   {
     id: 5,
-    // REPLACE: Switchable smart glass in a luxury residential bathroom — portrait interior shot
-    src: "https://placehold.co/600x800/0a7aad/ffffff?text=Smart+Glass+Bathroom",
-    alt: "Switchable smart glass in a luxury bathroom",
+    src: "/Switchable.gif",
+    alt: "Switchable smart glass switching between clear and frosted states",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
     id: 6,
-    // REPLACE: LED Film Screen on a car showroom glass facade — interior shot showing display content
-    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+Car+Showroom",
-    alt: "LED Film Screen on a car showroom",
-    product: "LED Film Screen",
-    href: "/led-film",
+    src: "/JW-Switchable.gif",
+    alt: "Switchable smart glass in a corporate environment",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
   },
 ];
 
