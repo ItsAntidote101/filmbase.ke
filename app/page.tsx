@@ -52,8 +52,8 @@ const PRODUCTS = [
     title: "LED Film Screen",
     description: "Transparent LED mounted directly on glass. For storefronts, banking halls, car showrooms, and anywhere glass needs to communicate.",
     href: "/led-film",
-    // REPLACE: Product card image — LED film display installed on a retail storefront
-    image: "https://placehold.co/800x600/e8e8e8/666666?text=LED+Film+Screen",
+    image: "/LED-film-screen@2x-100.jpg",
+    gif: true,
   },
   {
     title: "LED Crystal Film Screen",
