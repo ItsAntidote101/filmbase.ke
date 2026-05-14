@@ -197,7 +197,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28" style={{ zIndex: 2 }}>
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20" style={{ zIndex: 2 }}>
           {/* Heading */}
           <ScrollReveal className="mb-16 lg:mb-20">
             <SectionTag dark className="mb-6">About Us</SectionTag>
@@ -219,22 +219,22 @@ export default function HomePage() {
                   {/* Vertical divider — right of left-column items on mobile */}
                   {!isLastInMobileRow && (
                     <span
-                      className="absolute right-0 top-[10%] bottom-[10%] w-px"
-                      style={{ background: "rgba(255,255,255,0.15)" }}
+                      className="absolute right-0 top-0 bottom-0 w-px"
+                      style={{ background: "rgba(255,255,255,0.25)", zIndex: 3 }}
                     />
                   )}
                   {/* Vertical divider — desktop only for item i=1 */}
                   {!isLastInDesktop && isLastInMobileRow && (
                     <span
-                      className="hidden lg:block absolute right-0 top-[10%] bottom-[10%] w-px"
-                      style={{ background: "rgba(255,255,255,0.15)" }}
+                      className="hidden lg:block absolute right-0 top-0 bottom-0 w-px"
+                      style={{ background: "rgba(255,255,255,0.25)", zIndex: 3 }}
                     />
                   )}
                   {/* Horizontal separator — mobile second row only */}
                   {i >= 2 && (
                     <span
-                      className="lg:hidden absolute top-0 left-[10%] right-[10%] h-px"
-                      style={{ background: "rgba(255,255,255,0.15)" }}
+                      className="lg:hidden absolute top-0 left-0 right-0 h-px"
+                      style={{ background: "rgba(255,255,255,0.25)", zIndex: 3 }}
                     />
                   )}
 
