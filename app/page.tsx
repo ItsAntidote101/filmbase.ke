@@ -66,8 +66,8 @@ const PRODUCTS = [
     title: "Switchable Smart Glass",
     description: "Transparent to frosted at the touch of a button. For boardrooms, executive offices, hotel suites, and premium homes.",
     href: "/switchable-glass",
-    // REPLACE: Product card image — switchable smart glass partition in a corporate boardroom
-    image: "https://placehold.co/800x600/e8e8e8/666666?text=Switchable+Smart+Glass",
+    image: "/jw-gif2.gif",
+    gif: true,
   },
 ];
 

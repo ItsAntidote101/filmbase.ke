@@ -9,6 +9,7 @@ interface Product {
   description: string;
   href: string;
   image: string;
+  gif?: boolean;
 }
 
 export default function AnimatedProductCards({ products }: { products: Product[] }) {
@@ -40,13 +41,23 @@ export default function AnimatedProductCards({ products }: { products: Product[]
                 "0 1px 4px rgba(0,0,0,0.05)";
             }}
           >
-            <div className="aspect-[4/3] overflow-hidden relative bg-brand-alt">
-              <Image
-                src={product.image}
-                alt={product.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+            <div className="aspect-[4/3] overflow-hidden relative">
+              {product.gif ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  className="group-hover:scale-105 transition-transform duration-700"
+                />
+              ) : (
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              )}
             </div>
             <div className="p-7 flex-1 flex flex-col">
               <h3 className="text-xl font-bold text-brand-ink mb-3 group-hover:text-brand-ink-light transition-colors duration-200">
