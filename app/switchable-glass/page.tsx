@@ -5,6 +5,7 @@ import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
 import HeroStats from "@/components/HeroStats";
+import InstallationTimeline from "@/components/InstallationTimeline";
 
 export const metadata: Metadata = {
   title: "Switchable Smart Glass Kenya | PDLC Privacy Glass | Filmbase",
@@ -59,8 +60,9 @@ const FEATURES = [
   {
     title: "Installed by our own team",
     body: "Most installations are completed in one to three days. Locally stocked and locally installed. Our technical team is on the ground. No waiting on imported shipments or third-party contractors.",
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Smart+Glass+Installation",
-    imageAlt: "Filmbase team installing switchable smart glass",
+    image: "",
+    imageAlt: "",
+    timeline: true,
   },
 ];
 
@@ -156,7 +158,11 @@ export default function SwitchableGlassPage() {
                 <p className="text-brand-muted text-lg leading-relaxed font-light">{feature.body}</p>
               </div>
 
-              {"gif" in feature && feature.gif ? (
+              {"timeline" in feature && feature.timeline ? (
+                <div className={i % 2 === 1 ? "lg:order-1" : ""}>
+                  <InstallationTimeline />
+                </div>
+              ) : "gif" in feature && feature.gif ? (
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
