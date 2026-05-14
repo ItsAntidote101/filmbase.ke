@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Trophy, Layers, MapPin, Users, type LucideIcon } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import AnimatedNumber from "@/components/AnimatedNumber";
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   },
 };
 
-const STATS = [
-  { value: "1st", label: "First in Kenya" },
-  { value: 2, label: "Product Categories" },
-  { value: 47, label: "Counties We Serve" },
-  { value: "100%", label: "Installed by Our Own Team" },
+const STATS: Array<{ value: string | number; label: string; Icon: LucideIcon }> = [
+  { value: "1st", label: "First in Kenya",            Icon: Trophy },
+  { value: 2,     label: "Product Categories",        Icon: Layers },
+  { value: 47,    label: "Counties We Serve",          Icon: MapPin },
+  { value: "100%",label: "Installed by Our Own Team", Icon: Users  },
 ];
 
 const PRODUCTS = [
@@ -178,7 +178,26 @@ export default function HomePage() {
 
       {/* ── WHY CHOOSE FILMBASE (stats) ── */}
       <section id="stats-section" className="relative bg-brand-ink overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
+          }}
+        />
+        {/* Top fade — hides grid near heading, reveals it near stats */}
+        <div
+          className="absolute top-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: "60%",
+            background: "linear-gradient(to bottom, #054e72 0%, transparent 100%)",
+            zIndex: 1,
+          }}
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28" style={{ zIndex: 2 }}>
           {/* Heading */}
           <ScrollReveal className="mb-16 lg:mb-20">
             <SectionTag dark className="mb-6">About Us</SectionTag>
@@ -194,23 +213,38 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {STATS.map((stat, i) => {
               const isLastInMobileRow = i % 2 === 1;
-              const isFirstMobileRow = i < 2;
               const isLastInDesktop = i === 3;
               return (
-                <div
-                  key={stat.label}
-                  className={[
-                    "px-0 sm:px-6 lg:px-10 py-10",
-                    !isLastInMobileRow ? "border-r border-white/10" : "",
-                    isFirstMobileRow ? "border-b lg:border-b-0 border-white/10" : "",
-                    !isLastInDesktop && isLastInMobileRow ? "lg:border-r border-white/10" : "",
-                  ].filter(Boolean).join(" ")}
-                >
-                  <div className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight">
+                <div key={stat.label} className="relative px-6 lg:px-10 py-10">
+                  {/* Vertical divider — right of left-column items on mobile */}
+                  {!isLastInMobileRow && (
+                    <span
+                      className="absolute right-0 top-[10%] bottom-[10%] w-px"
+                      style={{ background: "rgba(255,255,255,0.15)" }}
+                    />
+                  )}
+                  {/* Vertical divider — desktop only for item i=1 */}
+                  {!isLastInDesktop && isLastInMobileRow && (
+                    <span
+                      className="hidden lg:block absolute right-0 top-[10%] bottom-[10%] w-px"
+                      style={{ background: "rgba(255,255,255,0.15)" }}
+                    />
+                  )}
+                  {/* Horizontal separator — mobile second row only */}
+                  {i >= 2 && (
+                    <span
+                      className="lg:hidden absolute top-0 left-[10%] right-[10%] h-px"
+                      style={{ background: "rgba(255,255,255,0.15)" }}
+                    />
+                  )}
+
+                  <stat.Icon size={28} color="#7dd3f0" style={{ display: "block", marginBottom: "12px" }} />
+
+                  <div className="text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
                     <AnimatedNumber value={stat.value} className="accent-text" />
                   </div>
-                  <div className="w-8 h-px mb-3" style={{ backgroundColor: "rgba(125, 211, 240, 0.6)" }} />
-                  <p className="text-sm text-white/60 font-light leading-snug">{stat.label}</p>
+
+                  <p className="text-xs text-white/80 font-light leading-snug uppercase tracking-widest">{stat.label}</p>
                 </div>
               );
             })}

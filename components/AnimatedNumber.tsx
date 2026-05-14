@@ -53,18 +53,10 @@ export default function AnimatedNumber({
   }
 
   return (
-    <span ref={ref} className={`relative inline-block ${done ? "stat-bounce" : ""}`}>
+    <span ref={ref} className={`inline-block ${done ? "stat-bounce" : ""}`}>
       <span className={className}>
         {prefix}{count}{suffix}
       </span>
-      <span
-        className="absolute left-0 -bottom-1 h-0.5 block rounded-full"
-        style={{
-          backgroundColor: "#7dd3f0",
-          width: done ? "100%" : "0%",
-          transition: done ? "width 0.4s ease 0.05s" : "none",
-        }}
-      />
     </span>
   );
 }
