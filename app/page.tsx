@@ -75,48 +75,45 @@ const PRODUCTS = [
 const SHOWCASE_IMAGES = [
   {
     id: 1,
-    // REPLACE: LED Film Screen installed on a retail storefront window — daytime exterior shot
-    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+Storefront",
-    alt: "LED Film Screen on a retail storefront window",
-    product: "LED Film Screen",
-    href: "/led-film",
+    src: "/single-glazed-switchable-smart-glass-retail.jpg",
+    alt: "Switchable smart glass installed in a retail environment",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
   },
   {
     id: 2,
-    // REPLACE: LED Crystal Film Screen in a five-star hotel lobby — interior shot
-    src: "https://placehold.co/800x600/033a55/ffffff?text=LED+Crystal+Hotel+Lobby",
-    alt: "LED Crystal Film Screen in a hotel lobby",
-    product: "LED Crystal Film Screen",
-    href: "/led-crystal-film",
+    src: "/jw-gif2.gif",
+    alt: "Switchable smart glass installation",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
   },
   {
     id: 3,
-    // REPLACE: Switchable smart glass partition in a corporate boardroom — portrait interior shot
-    src: "https://placehold.co/600x800/054e72/ffffff?text=Smart+Glass+Boardroom",
-    alt: "Switchable smart glass in a corporate boardroom",
-    product: "Switchable Smart Glass",
-    href: "/switchable-glass",
-  },
-  {
-    id: 4,
-    src: "/single-glazed-switchable-smart-glass-retail.jpg",
-    alt: "Switchable smart glass installed in a retail space",
-    product: "Switchable Smart Glass",
-    href: "/switchable-glass",
-  },
-  {
-    id: 5,
     src: "/Switchable.gif",
     alt: "Switchable smart glass switching between clear and frosted states",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 6,
+    id: 4,
     src: "/JW-Switchable.gif",
     alt: "Switchable smart glass in a corporate environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
+  },
+  {
+    id: 5,
+    src: "/transparent-film-led-screen.jpg",
+    alt: "LED Crystal Film Screen installation",
+    product: "LED Crystal Film Screen",
+    href: "/led-crystal-film",
+  },
+  {
+    id: 6,
+    src: "/LED-film-screen@2x-100.jpg",
+    alt: "LED Film Screen installation",
+    product: "LED Film Screen",
+    href: "/led-film",
   },
 ];
 

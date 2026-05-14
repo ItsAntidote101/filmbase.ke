@@ -17,93 +17,8 @@ interface GalleryImage {
 }
 
 const GALLERY_IMAGES: GalleryImage[] = [
-  // LED Film — 4 images
   {
     id: 1,
-    // REPLACE: LED Film Screen on a retail storefront in Westlands — daytime exterior
-    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+%E2%80%94+Westlands",
-    alt: "LED Film Screen installed at a retail storefront in Westlands, Nairobi",
-    category: "led-film",
-    categoryLabel: "LED Film Screen",
-    location: "Westlands, Nairobi",
-    href: "/led-film",
-  },
-  {
-    id: 2,
-    // REPLACE: LED Film Screen on a bank facade in CBD Nairobi — exterior evening shot
-    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+%E2%80%94+CBD+Nairobi",
-    alt: "LED Film Screen on a bank facade in CBD, Nairobi",
-    category: "led-film",
-    categoryLabel: "LED Film Screen",
-    location: "CBD, Nairobi",
-    href: "/led-film",
-  },
-  {
-    id: 3,
-    // REPLACE: LED Film Screen in a car showroom on Mombasa Road — interior wide shot
-    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+%E2%80%94+Mombasa+Road",
-    alt: "LED Film Screen in a car showroom on Mombasa Road",
-    category: "led-film",
-    categoryLabel: "LED Film Screen",
-    location: "Mombasa Road",
-    href: "/led-film",
-  },
-  {
-    id: 4,
-    // REPLACE: LED Film Screen on a restaurant glazing in Karen — interior/exterior dusk shot
-    src: "https://placehold.co/800x600/054e72/ffffff?text=LED+Film+%E2%80%94+Karen",
-    alt: "LED Film Screen on a restaurant in Karen, Nairobi",
-    category: "led-film",
-    categoryLabel: "LED Film Screen",
-    location: "Karen, Nairobi",
-    href: "/led-film",
-  },
-
-  // LED Crystal Film — 4 images
-  {
-    id: 5,
-    // REPLACE: LED Crystal Film Screen in a five-star hotel lobby in Upper Hill — interior shot
-    src: "https://placehold.co/800x600/033a55/ffffff?text=Crystal+Film+%E2%80%94+Upper+Hill",
-    alt: "LED Crystal Film Screen in a hotel lobby in Upper Hill, Nairobi",
-    category: "led-crystal-film",
-    categoryLabel: "LED Crystal Film Screen",
-    location: "Upper Hill, Nairobi",
-    href: "/led-crystal-film",
-  },
-  {
-    id: 6,
-    // REPLACE: LED Crystal Film Screen in a luxury retail store in Westlands — daylight interior
-    src: "https://placehold.co/800x600/033a55/ffffff?text=Crystal+Film+%E2%80%94+Westlands",
-    alt: "LED Crystal Film Screen in a luxury retail store in Westlands",
-    category: "led-crystal-film",
-    categoryLabel: "LED Crystal Film Screen",
-    location: "Westlands, Nairobi",
-    href: "/led-crystal-film",
-  },
-  {
-    id: 7,
-    // REPLACE: LED Crystal Film Screen in a corporate executive lobby in Gigiri — interior wide shot
-    src: "https://placehold.co/800x600/033a55/ffffff?text=Crystal+Film+%E2%80%94+Gigiri",
-    alt: "LED Crystal Film Screen in a corporate lobby in Gigiri, Nairobi",
-    category: "led-crystal-film",
-    categoryLabel: "LED Crystal Film Screen",
-    location: "Gigiri, Nairobi",
-    href: "/led-crystal-film",
-  },
-  {
-    id: 8,
-    // REPLACE: LED Crystal Film Screen in a museum atrium in Kilimani — natural light, display on
-    src: "https://placehold.co/800x600/033a55/ffffff?text=Crystal+Film+%E2%80%94+Kilimani",
-    alt: "LED Crystal Film Screen in a museum atrium in Kilimani",
-    category: "led-crystal-film",
-    categoryLabel: "LED Crystal Film Screen",
-    location: "Kilimani, Nairobi",
-    href: "/led-crystal-film",
-  },
-
-  // Switchable Glass — 4 images
-  {
-    id: 9,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment, Nairobi",
     category: "switchable-glass",
@@ -112,31 +27,49 @@ const GALLERY_IMAGES: GalleryImage[] = [
     href: "/switchable-glass",
   },
   {
-    id: 10,
-    src: "/Switchable.gif",
-    alt: "Switchable smart glass switching between clear and frosted states, Kileleshwa",
+    id: 2,
+    src: "/jw-gif2.gif",
+    alt: "Switchable smart glass installation in Kileleshwa, Nairobi",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
     location: "Kileleshwa, Nairobi",
     href: "/switchable-glass",
   },
   {
-    id: 11,
-    src: "/JW-Switchable.gif",
-    alt: "Switchable smart glass installation in Westlands, Nairobi",
+    id: 3,
+    src: "/Switchable.gif",
+    alt: "Switchable smart glass switching between clear and frosted states, Westlands",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
     location: "Westlands, Nairobi",
     href: "/switchable-glass",
   },
   {
-    id: 12,
-    src: "/jw-gif2.gif",
+    id: 4,
+    src: "/JW-Switchable.gif",
     alt: "Switchable smart glass installation in Karen, Nairobi",
     category: "switchable-glass",
     categoryLabel: "Switchable Smart Glass",
     location: "Karen, Nairobi",
     href: "/switchable-glass",
+  },
+  {
+    id: 5,
+    src: "/transparent-film-led-screen.jpg",
+    alt: "LED Crystal Film Screen installation, Nairobi",
+    category: "led-crystal-film",
+    categoryLabel: "LED Crystal Film Screen",
+    location: "Nairobi, Kenya",
+    href: "/led-crystal-film",
+  },
+  {
+    id: 6,
+    src: "/LED-film-screen@2x-100.jpg",
+    alt: "LED Film Screen installation, Nairobi",
+    category: "led-film",
+    categoryLabel: "LED Film Screen",
+    location: "Nairobi, Kenya",
+    href: "/led-film",
   },
 ];
 
