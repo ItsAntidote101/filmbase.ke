@@ -100,7 +100,7 @@ export default function SwitchableGlassPage() {
       <section
         className="relative min-h-[80vh] flex items-end overflow-hidden"
         style={{
-          backgroundImage: "url('/Switchable.gif')",
+          backgroundImage: "url('/single-glazed-switchable-smart-glass-retail.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
