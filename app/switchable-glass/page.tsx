@@ -6,6 +6,7 @@ import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
 import HeroStats from "@/components/HeroStats";
 import InstallationTimeline from "@/components/InstallationTimeline";
+import LocationIconGrid from "@/components/LocationIconGrid";
 
 export const metadata: Metadata = {
   title: "Switchable Smart Glass Kenya | PDLC Privacy Glass | Filmbase",
@@ -42,6 +43,7 @@ const FEATURES = [
     image: "/JW-Switchable.gif",
     imageAlt: "Switchable smart glass in a corporate boardroom setting",
     gif: true,
+    iconGrid: true,
   },
   {
     title: "Why it wins",
@@ -156,6 +158,7 @@ export default function SwitchableGlassPage() {
                   {feature.title}
                 </h2>
                 <p className="text-brand-muted text-lg leading-relaxed font-light">{feature.body}</p>
+                {"iconGrid" in feature && feature.iconGrid && <LocationIconGrid />}
               </div>
 
               {"timeline" in feature && feature.timeline ? (
@@ -228,8 +231,16 @@ export default function SwitchableGlassPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-24 bg-brand-ink">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <section
+        className="py-24 relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/switchable-section-footer.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.65)" }} />
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
             See it. Press the button. Decide.
           </h2>
