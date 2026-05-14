@@ -159,8 +159,6 @@ export default function HomePage() {
           >
             <source src="/165648422.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0" style={{ backgroundColor: "rgba(3, 58, 85, 0.68)" }} />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(3, 58, 85, 0.3) 0%, rgba(3, 58, 85, 0.75) 50%, rgba(3, 58, 85, 0.85) 100%)" }} />
         </div>
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />

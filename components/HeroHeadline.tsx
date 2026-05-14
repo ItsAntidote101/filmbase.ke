@@ -117,6 +117,7 @@ export default function HeroHeadline() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className="inline-flex items-center gap-2 mb-3"
+        style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}
       >
         <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
         <span className="text-xs font-semibold text-white/50 tracking-[0.25em] uppercase">
@@ -134,7 +135,7 @@ export default function HeroHeadline() {
             exit={{ opacity: 0, y: -60 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-[36px] sm:text-[48px] lg:text-[64px] font-extrabold leading-[1.05] tracking-tighter text-white"
-            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}
+            style={{ textShadow: "0 2px 30px rgba(0,0,0,0.7)" }}
           >
             {slide.headlineParts.map((part, i) =>
               part.accent ? (
@@ -157,7 +158,7 @@ export default function HeroHeadline() {
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
             className="text-base sm:text-lg lg:text-xl text-white/60 font-light max-w-2xl leading-relaxed"
-            style={{ textShadow: "0 1px 10px rgba(0,0,0,0.4)" }}
+            style={{ textShadow: "0 1px 15px rgba(0,0,0,0.6)" }}
           >
             {slide.sub}
           </motion.p>
@@ -223,6 +224,7 @@ export default function HeroHeadline() {
               background: "rgba(255,255,255,0.1)",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255,255,255,0.15)",
+              textShadow: "0 1px 10px rgba(0,0,0,0.5)",
             }}
           >
             <span className="text-brand-accent">
