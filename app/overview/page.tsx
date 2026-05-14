@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ButtonPill from "@/components/ButtonPill";
+import ButtonFilled from "@/components/ButtonFilled";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 
@@ -122,7 +122,7 @@ export default function OverviewPage() {
           <p className="text-white/60 text-lg mb-10 font-light">
             Our Nairobi showroom has live demonstrations of every product. Visits are by appointment.
           </p>
-          <ButtonPill href="/contact" variant="primary-white">Book a Visit</ButtonPill>
+          <ButtonFilled href="/contact" variant="light">Book a Visit</ButtonFilled>
         </div>
       </section>
     </PageTransition>

@@ -8,7 +8,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import ButtonPill from "@/components/ButtonPill";
+import ButtonFilled from "@/components/ButtonFilled";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -196,9 +196,9 @@ export default function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <ButtonPill href="/contact" variant={overDark ? "primary-white" : "primary"} size="sm">
+          <ButtonFilled href="/contact" variant={overDark ? "light" : "dark"} size="sm">
             Get a Quote
-          </ButtonPill>
+          </ButtonFilled>
         </div>
 
         {/* Mobile hamburger */}
@@ -313,9 +313,9 @@ export default function Navigation() {
                   </svg>
                   Visit our showroom in Kileleshwa, Nairobi
                 </div>
-                <ButtonPill href="/contact" size="sm" onClick={() => setMegaOpen(false)}>
+                <ButtonFilled href="/contact" size="sm" onClick={() => setMegaOpen(false)}>
                   Book a Visit
-                </ButtonPill>
+                </ButtonFilled>
               </div>
             </div>
           </motion.div>
@@ -402,9 +402,9 @@ export default function Navigation() {
                 Contact
               </Link>
 
-              <ButtonPill href="/contact" className="mt-4">
+              <ButtonFilled href="/contact" className="mt-4">
                 Get a Quote
-              </ButtonPill>
+              </ButtonFilled>
             </div>
           </motion.div>
         )}

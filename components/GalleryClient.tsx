@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import ButtonPill from "@/components/ButtonPill";
+import ButtonFilled from "@/components/ButtonFilled";
 
 type Category = "all" | "led-film" | "led-crystal-film" | "switchable-glass";
 
@@ -167,7 +167,7 @@ export default function GalleryClient() {
             <p className="text-brand-muted font-light mb-8">
               Tell us about your space and we&apos;ll respond with technical guidance and a quotation.
             </p>
-            <ButtonPill href="/contact">Get a Quote</ButtonPill>
+            <ButtonFilled href="/contact">Get a Quote</ButtonFilled>
           </div>
         </div>
       </section>

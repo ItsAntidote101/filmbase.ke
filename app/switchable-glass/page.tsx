@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import ButtonPill from "@/components/ButtonPill";
+import ButtonFilled from "@/components/ButtonFilled";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -130,7 +130,7 @@ export default function SwitchableGlassPage() {
             The new standard for boardrooms, executive offices, and premium homes.
             Advanced PDLC smart film: transparent at the flick of a switch. Frosted at the next.
           </p>
-          <ButtonPill href="/contact" variant="primary-white">Book a Demo</ButtonPill>
+          <ButtonFilled href="/contact" variant="light">Book a Demo</ButtonFilled>
           <HeroStats />
         </div>
       </section>
@@ -240,7 +240,7 @@ export default function SwitchableGlassPage() {
           <p className="text-white/60 text-lg mb-10 font-light">
             Our Nairobi showroom has a working smart glass installation. Book a visit and experience it for yourself.
           </p>
-          <ButtonPill href="/contact" variant="primary-white">Book a Demo</ButtonPill>
+          <ButtonFilled href="/contact" variant="light">Book a Demo</ButtonFilled>
         </div>
       </section>
     </PageTransition>

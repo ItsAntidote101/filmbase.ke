@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ButtonPill from "@/components/ButtonPill";
+import ButtonFilled from "@/components/ButtonFilled";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -186,7 +186,7 @@ export default function LEDCrystalFilmPage() {
             See Crystal Film working in person.
           </h2>
           <p className="text-brand-muted text-lg mb-10 font-light">Our Nairobi showroom has a live demonstration. Visits are by appointment.</p>
-          <ButtonPill href="/contact">Request a Quote</ButtonPill>
+          <ButtonFilled href="/contact">Request a Quote</ButtonFilled>
         </div>
       </section>
     </PageTransition>
