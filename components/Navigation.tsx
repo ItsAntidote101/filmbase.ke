@@ -402,7 +402,7 @@ export default function Navigation() {
                 Contact
               </Link>
 
-              <ButtonPill href="/contact" className="mt-4 justify-center w-full">
+              <ButtonPill href="/contact" className="mt-4">
                 Get a Quote
               </ButtonPill>
             </div>

@@ -124,90 +124,78 @@ body {
 .btn-pill {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px 12px 12px 28px;
-  border-radius: 999px;
-  font-weight: 600;
+  gap: 32px;
+  padding: 13px 13px 13px 22px;
+  border-radius: 8px;
   font-size: 14px;
-  letter-spacing: 0.025em;
+  font-weight: 500;
+  white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  width: fit-content;
+  transition: all 0.25s ease;
 }
 .btn-pill:hover { transform: translateY(-2px); }
 .btn-pill:disabled,
-.btn-pill[disabled] { opacity: 0.6; cursor: not-allowed; transform: none; }
+.btn-pill[disabled] { opacity: 0.7; cursor: not-allowed; transform: none; }
 
-.btn-pill-sm { padding: 8px 8px 8px 16px; font-size: 12px; gap: 10px; }
+/* Navbar small size */
+.btn-pill-sm { padding: 10px 10px 10px 18px; font-size: 13px; gap: 24px; }
 
 /* Arrow circle */
 .btn-pill .btn-circle {
-  width: 40px; height: 40px; border-radius: 50%;
-  flex-shrink: 0; position: relative; overflow: hidden;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-.btn-pill-sm .btn-circle { width: 28px; height: 28px; }
-
-/* Two-arrow slide animation */
-.btn-pill .arr-1,
-.btn-pill .arr-2 {
-  position: absolute; inset: 0;
+  width: 36px; height: 36px; border-radius: 50%;
+  flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: all 0.25s ease;
 }
-.btn-pill .arr-2 { transform: translateX(-6px); opacity: 0; }
-.btn-pill:not(:disabled):hover .arr-1 { transform: translateX(6px); opacity: 0; }
-.btn-pill:not(:disabled):hover .arr-2 { transform: translateX(0); opacity: 1; }
+.btn-pill-sm .btn-circle { width: 32px; height: 32px; }
+
+/* Arrow icon — nudges right on hover */
+.btn-pill .btn-arrow {
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.2s ease;
+}
+.btn-pill:not(:disabled):hover .btn-arrow { transform: translateX(4px); }
 
 /* Variant: primary */
 .btn-pill-primary { background-color: #054e72; color: #fff; }
 .btn-pill-primary .btn-circle { background-color: #7dd3f0; color: #fff; }
 .btn-pill-primary:hover .btn-circle { background-color: #0a7aad; }
 
-/* Variant: primary-white (dark/image backgrounds) */
+/* Variant: primary-white (solid white on dark/image backgrounds) */
 .btn-pill-white { background-color: #fff; color: #054e72; }
 .btn-pill-white .btn-circle { background-color: #054e72; color: #fff; }
-.btn-pill-white:hover { background-color: rgba(255,255,255,0.92); }
 .btn-pill-white:hover .btn-circle { background-color: #0a7aad; }
 
-/* Variant: secondary-dark (outline on dark bg — fills white on hover) */
+/* Variant: secondary-dark (outline ghost on dark/video backgrounds) */
 .btn-pill-secondary-dark {
-  background-color: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.06);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.9);
 }
 .btn-pill-secondary-dark .btn-circle {
   background-color: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(255,255,255,0.8);
 }
-.btn-pill-secondary-dark:hover {
-  background-color: #fff;
-  color: #054e72;
-  border-color: #fff;
-}
-.btn-pill-secondary-dark:hover .btn-circle {
-  background-color: #fff;
-  border-color: #fff;
-  color: #054e72;
-}
+.btn-pill-secondary-dark:hover { background-color: rgba(255,255,255,0.14); }
 
-/* Variant: secondary-light (outline on light bg) */
+/* Variant: secondary-light (outline on white/light backgrounds) */
 .btn-pill-secondary-light {
   background-color: transparent; color: #054e72;
-  border: 2px solid #054e72;
+  border: 1.5px solid #054e72;
 }
 .btn-pill-secondary-light .btn-circle {
   background-color: transparent; color: #054e72;
-  border: 2px solid #054e72;
+  border: 1.5px solid #054e72;
 }
-.btn-pill-secondary-light:hover .btn-circle {
-  background-color: #054e72; color: #fff; border-color: #054e72;
-}
+.btn-pill-secondary-light:hover { background-color: #f0f7fb; }
 
 /* ── Animated text-link arrow (no pill shape) ── */
 .arr-link {
   display: inline-flex; align-items: center; gap: 6px;
-  text-decoration: none;
+  text-decoration: none; font-weight: 500;
 }
 .arr-link .arr-link-icon {
   display: flex; align-items: center; justify-content: center;

@@ -20,10 +20,10 @@ interface ButtonPillProps {
 }
 
 const variantClass: Record<Variant, string> = {
-  "primary":          "btn-pill-primary",
-  "primary-white":    "btn-pill-white",
-  "secondary-dark":   "btn-pill-secondary-dark",
-  "secondary-light":  "btn-pill-secondary-light",
+  "primary":         "btn-pill-primary",
+  "primary-white":   "btn-pill-white",
+  "secondary-dark":  "btn-pill-secondary-dark",
+  "secondary-light": "btn-pill-secondary-light",
 };
 
 export default function ButtonPill({
@@ -45,26 +45,19 @@ export default function ButtonPill({
     className,
   ].filter(Boolean).join(" ");
 
-  const iconSize = size === "sm" ? 14 : 17;
+  const iconSize = size === "sm" ? 14 : 15;
 
   const inner = (
     <>
       <span>{children}</span>
       <span className="btn-circle">
-        {loading ? (
-          <span className="arr-1" style={{ opacity: 1, transform: "none" }}>
+        <span className="btn-arrow">
+          {loading ? (
             <Loader2 size={iconSize} className="animate-spin" />
-          </span>
-        ) : (
-          <>
-            <span className="arr-1">
-              <ArrowRight size={iconSize} />
-            </span>
-            <span className="arr-2">
-              <ArrowRight size={iconSize} />
-            </span>
-          </>
-        )}
+          ) : (
+            <ArrowRight size={iconSize} />
+          )}
+        </span>
       </span>
     </>
   );

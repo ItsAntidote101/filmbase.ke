@@ -263,7 +263,12 @@ export default function QuoteForm({
 
       {rateError && <p className={errClass}>{rateError}</p>}
 
-      <ButtonPill type="submit" loading={submitting} disabled={submitting}>
+      <ButtonPill
+        type="submit"
+        loading={submitting}
+        disabled={submitting}
+        className="max-sm:w-full max-sm:justify-between"
+      >
         {submitting ? "Sending..." : "Request a Quote"}
       </ButtonPill>
     </form>
