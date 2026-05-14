@@ -20,14 +20,12 @@ const MEGA_PRODUCTS = [
   {
     title: "LED Crystal Film Screen",
     href: "/led-crystal-film",
-    // REPLACE: Mega menu product image — LED Crystal Film in a luxury hotel lobby
-    image: "https://placehold.co/500x380/033a55/ffffff?text=LED+Crystal+Film",
+    image: "/transparent-film-led-screen.jpg",
   },
   {
     title: "Switchable Smart Glass",
     href: "/switchable-glass",
-    // REPLACE: Mega menu product image — smart glass boardroom partition
-    image: "https://placehold.co/500x380/0a7aad/ffffff?text=Switchable+Smart+Glass",
+    image: "/jw-gif2.gif",
   },
 ];
 
