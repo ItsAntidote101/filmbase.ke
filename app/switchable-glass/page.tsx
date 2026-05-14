@@ -44,8 +44,9 @@ const FEATURES = [
   {
     title: "Why it wins",
     body: "Outlasts blinds, curtains, and fabric partitions that wear, tear, and require constant maintenance. Modernises any glass surface without architectural disruption. Delivers a result that traditional privacy solutions cannot match.",
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Smart+Glass+vs+Blinds",
+    image: "/jw-gif2.gif",
     imageAlt: "Smart glass versus traditional blind and curtain alternatives",
+    gif: true,
   },
   {
     title: "A second function",
