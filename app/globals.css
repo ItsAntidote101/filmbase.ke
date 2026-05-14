@@ -125,18 +125,17 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  padding: 14px 14px 14px 28px;
+  padding: 12px 12px 12px 28px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.025em;
   cursor: pointer;
   text-decoration: none;
-  border: none;
-  transition: transform 0.2s ease-out, background-color 0.2s ease-out,
-              border-color 0.2s ease-out, opacity 0.2s ease-out;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
 }
-.btn-pill:hover { transform: scale(1.02); }
+.btn-pill:hover { transform: translateY(-2px); }
 .btn-pill:disabled,
 .btn-pill[disabled] { opacity: 0.6; cursor: not-allowed; transform: none; }
 
@@ -144,9 +143,9 @@ body {
 
 /* Arrow circle */
 .btn-pill .btn-circle {
-  width: 36px; height: 36px; border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 50%;
   flex-shrink: 0; position: relative; overflow: hidden;
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .btn-pill-sm .btn-circle { width: 28px; height: 28px; }
 
@@ -155,38 +154,44 @@ body {
 .btn-pill .arr-2 {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
-.btn-pill .arr-2 { transform: translateX(-100%); opacity: 0; }
-.btn-pill:not(:disabled):hover .arr-1 { transform: translateX(100%); opacity: 0; }
+.btn-pill .arr-2 { transform: translateX(-6px); opacity: 0; }
+.btn-pill:not(:disabled):hover .arr-1 { transform: translateX(6px); opacity: 0; }
 .btn-pill:not(:disabled):hover .arr-2 { transform: translateX(0); opacity: 1; }
 
 /* Variant: primary */
 .btn-pill-primary { background-color: #054e72; color: #fff; }
 .btn-pill-primary .btn-circle { background-color: #7dd3f0; color: #fff; }
-.btn-pill-primary:hover .btn-circle { background-color: #5bc4e8; }
+.btn-pill-primary:hover .btn-circle { background-color: #0a7aad; }
 
 /* Variant: primary-white (dark/image backgrounds) */
 .btn-pill-white { background-color: #fff; color: #054e72; }
 .btn-pill-white .btn-circle { background-color: #054e72; color: #fff; }
 .btn-pill-white:hover { background-color: rgba(255,255,255,0.92); }
+.btn-pill-white:hover .btn-circle { background-color: #0a7aad; }
 
-/* Variant: secondary-dark (ghost on dark bg) */
+/* Variant: secondary-dark (outline on dark bg — fills white on hover) */
 .btn-pill-secondary-dark {
   background-color: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,0.45);
+  border: 2px solid rgba(255,255,255,0.6);
 }
 .btn-pill-secondary-dark .btn-circle {
   background-color: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,0.45);
+  border: 2px solid rgba(255,255,255,0.6);
 }
-.btn-pill-secondary-dark:hover { background-color: rgba(255,255,255,0.08); }
+.btn-pill-secondary-dark:hover {
+  background-color: #fff;
+  color: #054e72;
+  border-color: #fff;
+}
 .btn-pill-secondary-dark:hover .btn-circle {
-  background-color: rgba(255,255,255,0.15);
-  border-color: rgba(255,255,255,0.8);
+  background-color: #fff;
+  border-color: #fff;
+  color: #054e72;
 }
 
-/* Variant: secondary-light (ghost on light bg) */
+/* Variant: secondary-light (outline on light bg) */
 .btn-pill-secondary-light {
   background-color: transparent; color: #054e72;
   border: 2px solid #054e72;
@@ -194,23 +199,63 @@ body {
 .btn-pill-secondary-light .btn-circle {
   background-color: transparent; color: #054e72;
   border: 2px solid #054e72;
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
 }
 .btn-pill-secondary-light:hover .btn-circle {
-  background-color: #054e72; color: #fff;
+  background-color: #054e72; color: #fff; border-color: #054e72;
 }
 
 /* ── Animated text-link arrow (no pill shape) ── */
 .arr-link {
   display: inline-flex; align-items: center; gap: 6px;
-  transition: gap 0.2s ease-out;
+  text-decoration: none;
 }
-.arr-link:hover { gap: 10px; }
 .arr-link .arr-link-icon {
   display: flex; align-items: center; justify-content: center;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
-.arr-link:hover .arr-link-icon { transform: translateX(2px); }
+.arr-link:hover .arr-link-icon { transform: translateX(4px); color: #0a7aad; }
+
+/* ── Marquee Ticker Strip ── */
+.marquee-strip {
+  height: 44px;
+  background-color: #054e72;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-scroll 30s linear infinite;
+}
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-item {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+.marquee-sep { color: #7dd3f0; }
+
+/* ── Counter bounce ── */
+@keyframes stat-bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.stat-bounce { animation: stat-bounce 0.4s ease-out forwards; }
 
 /* Scrollbar */
 ::-webkit-scrollbar {

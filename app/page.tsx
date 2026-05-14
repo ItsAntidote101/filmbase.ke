@@ -12,6 +12,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedProductCards from "@/components/AnimatedProductCards";
 import AnimatedFeatureBlocks from "@/components/AnimatedFeatureBlocks";
 import QuoteBreak from "@/components/QuoteBreak";
+import MarqueeTicker from "@/components/MarqueeTicker";
 
 export const metadata: Metadata = {
   title: "Filmbase Technology | Transparent LED & Smart Glass Kenya",
@@ -172,11 +173,15 @@ export default function HomePage() {
         <ScrollIndicator />
       </section>
 
+      {/* ── MARQUEE TICKER ── */}
+      <MarqueeTicker />
+
       {/* ── WHY CHOOSE FILMBASE (stats) ── */}
       <section id="stats-section" className="relative bg-brand-ink overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
           {/* Heading */}
           <ScrollReveal className="mb-16 lg:mb-20">
+            <SectionTag dark className="mb-6">About Us</SectionTag>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-4">
               Why Choose <span className="accent-text">Filmbase</span>
             </h2>
@@ -306,11 +311,9 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
                   <p className="text-white font-semibold text-sm">{img.product}</p>
-                  <span className="text-white/70 text-xs mt-1 inline-flex items-center gap-1.5">
+                  <span className="arr-link text-white/70 text-xs mt-1">
                     View Product
-                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    <span className="arr-link-icon"><ArrowRight size={12} /></span>
                   </span>
                 </div>
               </Link>
@@ -329,7 +332,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <ScrollReveal>
-              <SectionTag className="mb-6">Why Filmbase</SectionTag>
+              <SectionTag className="mb-6">Why Us</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
                 The first. The only. The local team behind it.
               </h2>
@@ -357,7 +360,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <ScrollReveal className="lg:sticky lg:top-28 self-start">
-              <SectionTag className="mb-6">FAQs</SectionTag>
+              <SectionTag className="mb-6">FAQ</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight">
                 Questions We Get Asked
               </h2>
@@ -379,7 +382,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <ScrollReveal className="lg:sticky lg:top-28">
-              <SectionTag className="mb-6">Get a Quote</SectionTag>
+              <SectionTag className="mb-6">Get in Touch</SectionTag>
               <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-6">
                 Tell us about your project.
               </h2>
