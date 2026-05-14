@@ -45,19 +45,17 @@ export default function ButtonPill({
     className,
   ].filter(Boolean).join(" ");
 
-  const iconSize = size === "sm" ? 14 : 15;
+  const iconSize = size === "sm" ? 14 : 16;
 
   const inner = (
     <>
       <span>{children}</span>
-      <span className="btn-circle">
-        <span className="btn-arrow">
-          {loading ? (
-            <Loader2 size={iconSize} className="animate-spin" />
-          ) : (
-            <ArrowRight size={iconSize} />
-          )}
-        </span>
+      <span className="btn-arrow">
+        {loading ? (
+          <Loader2 size={iconSize} className="animate-spin" />
+        ) : (
+          <ArrowRight size={iconSize} />
+        )}
       </span>
     </>
   );

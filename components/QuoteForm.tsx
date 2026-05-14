@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import ButtonPill from "@/components/ButtonPill";
+import { ArrowRight, Loader2 } from "lucide-react";
 
 const FAKE_DOMAINS = new Set([
   "test.com", "fake.com", "example.com", "mailinator.com",
@@ -263,14 +263,23 @@ export default function QuoteForm({
 
       {rateError && <p className={errClass}>{rateError}</p>}
 
-      <ButtonPill
+      <button
         type="submit"
-        loading={submitting}
         disabled={submitting}
-        className="max-sm:w-full max-sm:justify-between"
+        className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#054e72] text-white text-sm font-medium rounded-lg hover:bg-[#0a7aad] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed max-sm:w-full max-sm:justify-between"
       >
-        {submitting ? "Sending..." : "Request a Quote"}
-      </ButtonPill>
+        {submitting ? (
+          <>
+            <Loader2 size={15} className="animate-spin" />
+            <span>Sending...</span>
+          </>
+        ) : (
+          <>
+            <span>Request a Quote</span>
+            <ArrowRight size={15} />
+          </>
+        )}
+      </button>
     </form>
   );
 }

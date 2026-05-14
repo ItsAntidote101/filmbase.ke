@@ -196,7 +196,7 @@ export default function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <ButtonPill href="/contact" variant={overDark ? "secondary-dark" : "primary"} size="sm">
+          <ButtonPill href="/contact" variant={overDark ? "primary-white" : "primary"} size="sm">
             Get a Quote
           </ButtonPill>
         </div>
