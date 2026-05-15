@@ -108,7 +108,6 @@ export default function LEDFilmPage() {
           >
             <source src="/165648422.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0" style={{ background: "rgba(3, 58, 85, 0.55)" }} />
         </div>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
