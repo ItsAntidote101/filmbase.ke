@@ -158,13 +158,11 @@ export default function HomePage() {
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-        {/* Left-side gradient to improve text legibility */}
+        {/* Smooth gradient scrim for text legibility — no hard edges */}
         <div
-          className="absolute bottom-0 left-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            width: "60%",
-            height: "70%",
-            background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 100%)",
+            background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)",
             zIndex: 1,
           }}
         />
