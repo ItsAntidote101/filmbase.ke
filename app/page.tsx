@@ -146,7 +146,7 @@ export default function HomePage() {
   return (
     <PageTransition>
       {/* ── HERO — stays dark ── */}
-      <section className="relative flex flex-col overflow-hidden bg-brand-dark h-[80vh] min-h-[480px] sm:h-[70vh] sm:min-h-[520px] lg:h-[65vh] lg:min-h-[580px]">
+      <section className="relative flex flex-col overflow-hidden bg-brand-dark h-[85vh] min-h-[560px] sm:h-[75vh] sm:min-h-[620px] lg:h-[90vh] lg:min-h-[680px]">
         <div className="absolute inset-0 bg-brand-dark">
           <video
             autoPlay
@@ -163,7 +163,7 @@ export default function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         {/* Vertically centered content */}
-        <div className="relative flex-1 flex items-center">
+        <div className="relative flex-1 flex flex-col justify-center">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
             <HeroHeadline />
           </div>

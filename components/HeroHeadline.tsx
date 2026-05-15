@@ -111,13 +111,13 @@ export default function HeroHeadline() {
   const ProofIcon = ICONS[slide.proof.icon];
 
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl pt-[90px] sm:pt-[100px] lg:pt-[120px]">
       {/* Badge */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="inline-flex items-center gap-2 mb-3"
+        className="inline-flex items-center gap-2 mb-5"
         style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}
       >
         <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
@@ -127,7 +127,7 @@ export default function HeroHeadline() {
       </motion.div>
 
       {/* Rotating headline */}
-      <div className="min-h-[76px] sm:min-h-[100px] lg:min-h-[136px]">
+      <div className="min-h-[84px] sm:min-h-[112px] lg:min-h-[156px]">
         <AnimatePresence mode="wait">
           <motion.h1
             key={current}
@@ -135,7 +135,7 @@ export default function HeroHeadline() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -60 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[36px] sm:text-[48px] lg:text-[64px] font-extrabold leading-[1.05] tracking-tighter text-white"
+            className="text-[38px] sm:text-[52px] lg:text-[72px] font-extrabold leading-[1.05] tracking-tighter text-white"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.7)" }}
           >
             {slide.headlineParts.map((part, i) =>
@@ -150,7 +150,7 @@ export default function HeroHeadline() {
       </div>
 
       {/* Rotating subheadline */}
-      <div className="min-h-[60px] sm:min-h-[56px] mt-4">
+      <div className="min-h-[60px] sm:min-h-[56px] mt-6">
         <AnimatePresence mode="wait">
           <motion.p
             key={current}
@@ -167,7 +167,7 @@ export default function HeroHeadline() {
       </div>
 
       {/* Indicator dots */}
-      <div className="flex items-center gap-2 mt-3">
+      <div className="flex items-center gap-2 mt-5">
         {SLIDES.map((_, i) => (
           <motion.button
             key={i}
@@ -189,7 +189,7 @@ export default function HeroHeadline() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="flex items-center mt-5"
+        className="flex items-center mt-7"
       >
         <ButtonPill href="/led-film" variant="primary-white">See Our Products</ButtonPill>
         <span className="hero-cta-sep" />
@@ -197,7 +197,7 @@ export default function HeroHeadline() {
       </motion.div>
 
       {/* Proof strip — hidden on mobile */}
-      <div className="hidden sm:block mt-5">
+      <div className="hidden sm:block mt-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
