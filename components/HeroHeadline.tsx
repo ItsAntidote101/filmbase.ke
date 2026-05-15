@@ -136,7 +136,7 @@ export default function HeroHeadline() {
             exit={{ opacity: 0, y: -60 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-[38px] sm:text-[52px] lg:text-[72px] font-extrabold leading-[1.05] tracking-tighter text-white"
-            style={{ textShadow: "0 2px 30px rgba(0,0,0,0.7)" }}
+            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}
           >
             {slide.headlineParts.map((part, i) =>
               part.accent ? (
@@ -158,8 +158,8 @@ export default function HeroHeadline() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
-            className="text-base sm:text-lg lg:text-xl text-white/60 font-light max-w-2xl leading-relaxed"
-            style={{ textShadow: "0 1px 15px rgba(0,0,0,0.6)" }}
+            className="text-base sm:text-lg lg:text-xl text-white font-light max-w-2xl leading-relaxed"
+            style={{ textShadow: "0 1px 12px rgba(0,0,0,0.8)" }}
           >
             {slide.sub}
           </motion.p>

@@ -158,8 +158,19 @@ export default function HomePage() {
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
+        {/* Left-side gradient to improve text legibility */}
+        <div
+          className="absolute bottom-0 left-0 pointer-events-none"
+          style={{
+            width: "60%",
+            height: "70%",
+            background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 100%)",
+            zIndex: 1,
+          }}
+        />
+
         {/* Vertically centered content */}
-        <div className="relative flex-1 flex flex-col justify-center">
+        <div className="relative flex-1 flex flex-col justify-center" style={{ zIndex: 2 }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
             <HeroHeadline />
           </div>
