@@ -147,18 +147,14 @@ export default function HomePage() {
     <PageTransition>
       {/* ── HERO — stays dark ── */}
       <section className="relative flex flex-col overflow-hidden bg-brand-dark h-[85vh] min-h-[560px] sm:h-[75vh] sm:min-h-[620px] lg:h-[90vh] lg:min-h-[680px]">
-        <div className="absolute inset-0 bg-brand-dark">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/165648422.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/gtc-led-film.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 

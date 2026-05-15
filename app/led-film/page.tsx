@@ -98,15 +98,17 @@ export default function LEDFilmPage() {
       {/* ── HERO — stays dark ── */}
       <section className="relative min-h-[80vh] flex items-end overflow-hidden bg-brand-dark">
         <div className="absolute inset-0">
-          {/* REPLACE: Wide storefront glass with vivid LED display overlay — daytime exterior shot */}
-          <Image
-            src="https://placehold.co/1400x700/0a0a0a/1a1a2e?text=LED+Film+Screen+%E2%80%94+Glass+Storefront+with+LED+Overlay"
-            alt="LED Film Screen installed on glass storefront"
-            fill
-            className="object-cover opacity-50"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/165648422.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0" style={{ background: "rgba(3, 58, 85, 0.55)" }} />
         </div>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
