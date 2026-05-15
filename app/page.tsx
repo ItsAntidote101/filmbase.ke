@@ -77,48 +77,41 @@ const PRODUCTS = [
 const SHOWCASE_IMAGES = [
   {
     id: 1,
-    src: "/Absa-LED-FILM.png",
-    alt: "Absa Bank LED Film Screen installation, Nairobi",
-    product: "LED Film Screen",
-    href: "/led-film",
-  },
-  {
-    id: 2,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 3,
+    id: 2,
     src: "/jw-gif2.gif",
     alt: "Switchable smart glass installation",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 4,
+    id: 3,
     src: "/Switchable.gif",
     alt: "Switchable smart glass switching between clear and frosted states",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 5,
+    id: 4,
     src: "/JW-Switchable.gif",
     alt: "Switchable smart glass in a corporate environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 6,
+    id: 5,
     src: "/transparent-film-led-screen.jpg",
     alt: "LED Crystal Film Screen installation",
     product: "LED Crystal Film Screen",
     href: "/led-crystal-film",
   },
   {
-    id: 7,
+    id: 6,
     src: "/LED-film-screen@2x-100.jpg",
     alt: "LED Film Screen installation",
     product: "LED Film Screen",
@@ -318,48 +311,32 @@ export default function HomePage() {
               <span className="arr-link-icon"><ArrowRight size={14} /></span>
             </Link>
           </div>
-        </div>
 
-        {/* Hero banner — responsive height */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-5">
-          <div className="h-[250px] sm:h-[350px] lg:h-[500px] overflow-hidden rounded-xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/Absa-LED-FILM.png"
-              alt="Absa Bank LED Film Screen installation, Nairobi"
-              className="w-full h-full object-cover object-center transition-transform duration-[400ms] ease-out hover:scale-[1.02]"
-            />
-          </div>
-        </div>
+          {/* Unified featured-first grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        {/* Mobile: horizontal scroll strip */}
-        <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 px-6">
-          {SHOWCASE_IMAGES.map((img) => (
+            {/* Featured tile — full width */}
             <Link
-              key={img.id}
-              href={img.href}
-              className="flex-none w-72 snap-start group relative overflow-hidden rounded-xl"
+              href="/led-film"
+              className="group relative overflow-hidden rounded-xl col-span-1 sm:col-span-2 lg:col-span-3 h-[280px] sm:h-[380px] lg:h-[480px]"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img.src} alt={img.alt} className="w-full h-auto block" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex flex-col justify-end p-4">
-                <p className="text-white font-semibold text-sm">{img.product}</p>
+              <img
+                src="/Absa-LED-FILM.png"
+                alt="Absa Bank LED Film Screen installation, Nairobi"
+                className="w-full h-full object-cover object-center transition-transform duration-[400ms] ease-out group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                <p className="text-white font-semibold text-sm">LED Film Screen — Absa Bank, Nairobi</p>
               </div>
             </Link>
-          ))}
-        </div>
 
-        {/* Tablet + Desktop: uniform grid, all tiles equal height */}
-        <div className="hidden sm:block max-w-7xl mx-auto px-6 lg:px-8">
-          <div
-            className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5"
-            style={{ gridAutoRows: "400px" }}
-          >
+            {/* Remaining tiles */}
             {SHOWCASE_IMAGES.map((img) => (
               <Link
                 key={img.id}
                 href={img.href}
-                className="group relative overflow-hidden rounded-xl"
+                className="group relative overflow-hidden rounded-xl h-[300px]"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
