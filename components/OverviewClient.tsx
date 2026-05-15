@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import ButtonFilled from "@/components/ButtonFilled";
 import SectionTag from "@/components/SectionTag";
+import KenyaMap from "@/components/KenyaMap";
 
 // ── SHARED FADE-UP VARIANT ────────────────────────────────
 const fadeUp = {
@@ -630,7 +631,38 @@ export default function OverviewClient() {
         </div>
       </section>
 
-      {/* ── SECTION 06 — Showroom CTA ── */}
+      {/* ── SECTION 06 — Kenya Coverage Map ── */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55 }}
+            className="text-center mb-12"
+          >
+            <span
+              className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-semibold tracking-[0.18em] uppercase mb-5"
+              style={{
+                background: "#e8f4fb",
+                color: "#054e72",
+                border: "1px solid rgba(5,78,114,0.2)",
+              }}
+            >
+              Coverage
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-4">
+              Installed across Kenya.
+            </h2>
+            <p className="text-brand-muted text-lg font-light">
+              From Nairobi to the coast. From the highlands to the lake region.
+            </p>
+          </motion.div>
+          <KenyaMap />
+        </div>
+      </section>
+
+      {/* ── SECTION 07 — Showroom CTA ── */}
       <section
         className="py-24 lg:py-32 relative overflow-hidden"
         style={{ background: "#033a55" }}
