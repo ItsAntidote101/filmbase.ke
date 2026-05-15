@@ -77,41 +77,48 @@ const PRODUCTS = [
 const SHOWCASE_IMAGES = [
   {
     id: 1,
+    src: "/Absa-LED-FILM.png",
+    alt: "Absa Bank LED Film Screen installation, Nairobi",
+    product: "LED Film Screen",
+    href: "/led-film",
+  },
+  {
+    id: 2,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 2,
+    id: 3,
     src: "/jw-gif2.gif",
     alt: "Switchable smart glass installation",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 3,
+    id: 4,
     src: "/Switchable.gif",
     alt: "Switchable smart glass switching between clear and frosted states",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 4,
+    id: 5,
     src: "/JW-Switchable.gif",
     alt: "Switchable smart glass in a corporate environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 5,
+    id: 6,
     src: "/transparent-film-led-screen.jpg",
     alt: "LED Crystal Film Screen installation",
     product: "LED Crystal Film Screen",
     href: "/led-crystal-film",
   },
   {
-    id: 6,
+    id: 7,
     src: "/LED-film-screen@2x-100.jpg",
     alt: "LED Film Screen installation",
     product: "LED Film Screen",
@@ -310,6 +317,18 @@ export default function HomePage() {
               View all
               <span className="arr-link-icon"><ArrowRight size={14} /></span>
             </Link>
+          </div>
+        </div>
+
+        {/* Hero banner — responsive height */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-5">
+          <div className="h-[250px] sm:h-[350px] lg:h-[500px] overflow-hidden rounded-xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Absa-LED-FILM.png"
+              alt="Absa Bank LED Film Screen installation, Nairobi"
+              className="w-full h-full object-cover object-center transition-transform duration-[400ms] ease-out hover:scale-[1.02]"
+            />
           </div>
         </div>
 

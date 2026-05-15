@@ -19,6 +19,15 @@ interface GalleryImage {
 
 const GALLERY_IMAGES: GalleryImage[] = [
   {
+    id: 0,
+    src: "/Absa-LED-FILM.png",
+    alt: "Absa Bank LED Film Screen installation, Nairobi",
+    category: "led-film",
+    categoryLabel: "LED Film Screen",
+    location: "Nairobi, Kenya",
+    href: "/led-film",
+  },
+  {
     id: 1,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment, Nairobi",
