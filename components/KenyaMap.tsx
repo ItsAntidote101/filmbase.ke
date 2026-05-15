@@ -2,9 +2,14 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const RSM = require("react-simple-maps");
-const { ComposableMap, Geographies, Geography, Marker, Line } = RSM;
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+  Line,
+  type GeographyType,
+} from "react-simple-maps";
 
 const GEO_URL =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
@@ -87,7 +92,7 @@ export default function KenyaMap() {
             ))}
 
             <Geographies geography={GEO_URL}>
-              {({ geographies }: { geographies: { rsmKey: string; id: string; properties: Record<string, unknown> }[] }) =>
+              {({ geographies }: { geographies: GeographyType[] }) =>
                 geographies.map((geo) => {
                   const id = String(geo.id ?? "");
                   const isKenya = id === KENYA_ID;
