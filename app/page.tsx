@@ -77,41 +77,48 @@ const PRODUCTS = [
 const SHOWCASE_IMAGES = [
   {
     id: 1,
+    src: "/samsung-store.jpg",
+    alt: "Samsung Store LED Film Screen installation",
+    product: "LED Film Screen",
+    href: "/led-film",
+  },
+  {
+    id: 2,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 2,
+    id: 3,
     src: "/jw-gif2.gif",
     alt: "Switchable smart glass installation",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 3,
+    id: 4,
     src: "/Switchable.gif",
     alt: "Switchable smart glass switching between clear and frosted states",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 4,
+    id: 5,
     src: "/JW-Switchable.gif",
     alt: "Switchable smart glass in a corporate environment",
     product: "Switchable Smart Glass",
     href: "/switchable-glass",
   },
   {
-    id: 5,
+    id: 6,
     src: "/transparent-film-led-screen.jpg",
     alt: "LED Crystal Film Screen installation",
     product: "LED Crystal Film Screen",
     href: "/led-crystal-film",
   },
   {
-    id: 6,
+    id: 7,
     src: "/LED-film-screen@2x-100.jpg",
     alt: "LED Film Screen installation",
     product: "LED Film Screen",
@@ -312,13 +319,12 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Unified featured-first grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-            {/* Featured tile — full width */}
+          {/* 70/30 featured split */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
+            {/* Left — 70% */}
             <Link
               href="/led-film"
-              className="group relative overflow-hidden rounded-xl col-span-1 sm:col-span-2 lg:col-span-3 h-[280px] sm:h-[380px] lg:h-[480px]"
+              className="group relative overflow-hidden rounded-xl h-[280px] sm:h-[500px] sm:flex-[7]"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -327,11 +333,29 @@ export default function HomePage() {
                 className="w-full h-full object-cover object-center transition-transform duration-[400ms] ease-out group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                <p className="text-white font-semibold text-sm">LED Film Screen — Absa Bank, Nairobi</p>
+                <p className="text-white font-semibold text-[13px]">LED Film — Absa Bank, Nairobi</p>
               </div>
             </Link>
 
-            {/* Remaining tiles */}
+            {/* Right — 30% */}
+            <Link
+              href="/led-film"
+              className="group relative overflow-hidden rounded-xl h-[200px] sm:h-[500px] sm:flex-[3]"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/samsung-store.jpg"
+                alt="Samsung Store LED Film Screen installation, Nairobi"
+                className="w-full h-full object-cover object-center transition-transform duration-[400ms] ease-out group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                <p className="text-white font-semibold text-[13px]">LED Film — Samsung Store</p>
+              </div>
+            </Link>
+          </div>
+
+          {/* Remaining tiles — 3 column grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SHOWCASE_IMAGES.map((img) => (
               <Link
                 key={img.id}

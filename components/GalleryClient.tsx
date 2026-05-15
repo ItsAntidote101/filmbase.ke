@@ -28,6 +28,15 @@ const GALLERY_IMAGES: GalleryImage[] = [
     href: "/led-film",
   },
   {
+    id: 7,
+    src: "/samsung-store.jpg",
+    alt: "Samsung Store LED Film Screen installation, Nairobi",
+    category: "led-film",
+    categoryLabel: "LED Film Screen",
+    location: "Nairobi, Kenya",
+    href: "/led-film",
+  },
+  {
     id: 1,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment, Nairobi",
