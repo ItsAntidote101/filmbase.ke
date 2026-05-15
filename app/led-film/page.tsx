@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ButtonFilled from "@/components/ButtonFilled";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
@@ -31,37 +30,32 @@ const FEATURES = [
   {
     title: "What it is",
     body: "LED elements embedded in thin transparent film, mounted directly onto glass. Displays video, animation, and graphics through the glass surface without blocking the view behind it.",
-    // REPLACE: Close-up of LED film texture showing transparent LED elements embedded in film
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=LED+Film+Close-Up",
+    image: "/LED-film-screen@2x-100.jpg",
     imageAlt: "Close-up of LED film elements embedded in transparent film",
   },
   {
     title: "Why it is different",
     body: "Thinner, lighter, and more transparent than conventional LED screens. No bulky steel framework. Installs directly onto existing glass with minimal disruption to the space or structure.",
-    // REPLACE: Comparison image showing LED film vs traditional LED panel installation
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Film+vs+Traditional+LED",
+    image: "/transparent-film-led-screen.jpg",
     imageAlt: "LED Film compared to traditional LED screen installation",
   },
   {
     title: "Where it is used",
     body: "Retail storefronts. Banking halls. Car showrooms. Hotel lobbies. Restaurants. Museums. Anywhere a glass surface can become a communication or branding asset.",
-    // REPLACE: Wide shot of LED film installed in a retail storefront or bank hall
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=LED+Film+Retail+Installation",
-    imageAlt: "LED Film Screen installed in a retail storefront",
+    image: "/Absa-LED-FILM.png",
+    imageAlt: "LED Film Screen installed in Absa Bank banking hall, Nairobi",
   },
   {
     title: "Visibility in daylight",
     body: "High-brightness output. Vivid and readable in direct sunlight. Engineered for the demanding light conditions of glass-fronted commercial environments.",
-    // REPLACE: LED film displaying content in bright daylight conditions
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Daylight+Visibility",
-    imageAlt: "LED Film Screen displaying vibrant content in direct sunlight",
+    image: "/samsung-store.jpg",
+    imageAlt: "LED Film Screen displaying vibrant content in a retail store in daylight",
   },
   {
     title: "Installation",
     body: "Adhesive or screw-fixed directly to glass. No structural framework required. Our trained technical team manages every installation from site survey to final commissioning.",
-    // REPLACE: Technicians installing LED film onto a glass surface
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=LED+Film+Installation",
-    imageAlt: "Filmbase technicians installing LED Film onto a glass surface",
+    image: "/gtc-led-film.png",
+    imageAlt: "Large-scale LED Film Screen installation showing product scope and impact",
   },
 ];
 
@@ -143,8 +137,9 @@ export default function LEDFilmPage() {
                 <p className="text-brand-muted text-lg leading-relaxed font-light">{feature.body}</p>
               </div>
 
-              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} rounded-2xl overflow-hidden aspect-[7/5] relative bg-brand-alt`}>
-                <Image src={feature.image} alt={feature.imageAlt} fill className="object-cover" />
+              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} rounded-2xl overflow-hidden aspect-[7/5] relative`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={feature.image} alt={feature.imageAlt} className="w-full h-full object-cover object-center" />
                 <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
               </div>
             </div>
