@@ -4,6 +4,7 @@ import Link from "next/link";
 import ButtonFilled from "@/components/ButtonFilled";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
+import SwitchableSlider from "@/components/SwitchableSlider";
 import FAQAccordion from "@/components/FAQAccordion";
 import HeroStats from "@/components/HeroStats";
 import InstallationTimeline from "@/components/InstallationTimeline";
@@ -41,9 +42,9 @@ const FEATURES = [
   {
     title: "Where it is used",
     body: "Corporate boardrooms and executive offices, hotel suite bathrooms and bedroom partitions, hospital consultation rooms, law firm partner offices, premium residential master suites, home offices, and spa facilities.",
-    image: "/JW-Switchable.gif",
-    imageAlt: "Switchable smart glass in a corporate boardroom setting",
-    gif: true,
+    image: "",
+    imageAlt: "",
+    slider: true,
     iconGrid: true,
   },
   {
@@ -157,6 +158,10 @@ export default function SwitchableGlassPage() {
               {"timeline" in feature && feature.timeline ? (
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                   <InstallationTimeline />
+                </div>
+              ) : "slider" in feature && feature.slider ? (
+                <div className={i % 2 === 1 ? "lg:order-1" : ""}>
+                  <SwitchableSlider />
                 </div>
               ) : "gif" in feature && feature.gif ? (
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>

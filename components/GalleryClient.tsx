@@ -37,6 +37,15 @@ const GALLERY_IMAGES: GalleryImage[] = [
     href: "/led-film",
   },
   {
+    id: 8,
+    src: "/DBB-Board-Room.gif",
+    alt: "Switchable smart glass in Diamond Business Bay boardroom, Nairobi",
+    category: "switchable-glass",
+    categoryLabel: "Switchable Smart Glass",
+    location: "Diamond Business Bay, Nairobi",
+    href: "/switchable-glass",
+  },
+  {
     id: 1,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment, Nairobi",
