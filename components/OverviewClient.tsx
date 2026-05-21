@@ -584,9 +584,9 @@ export default function OverviewClient() {
                 A long-term partner,<br />not a one-time supplier.
               </h2>
               <p className="text-lg font-light leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-                Written warranty issued by Filmbase Technology Limited. Local spare parts.
-                Local service team. The engineers who installed your project are the same
-                ones who support it.
+                Certified warranty issuance. Readily available local parts and dedicated
+                service team. The serviced personnel who installed your project films are
+                the same who will support it.
               </p>
             </motion.div>
           </div>
@@ -611,8 +611,8 @@ export default function OverviewClient() {
               </h2>
               <p className="text-brand-muted text-lg leading-relaxed font-light">
                 Our products are built for years of continuous operation. We prioritise repair
-                and maintenance over replacement, which means lower long-term cost and a
-                smaller environmental footprint for every client.
+                and maintenance over replacement — keeping costs low and extending the working
+                life of every installation.
               </p>
             </motion.div>
 
