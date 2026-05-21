@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ButtonFilled from "@/components/ButtonFilled";
 import PageTransition from "@/components/PageTransition";
 import SectionTag from "@/components/SectionTag";
 import FAQAccordion from "@/components/FAQAccordion";
+import CrystalFilmGraphics from "@/components/CrystalFilmGraphics";
 
 export const metadata: Metadata = {
   title: "LED Crystal Film Screen Kenya | Premium Transparent Display | Filmbase",
@@ -20,48 +20,9 @@ export const metadata: Metadata = {
     url: "https://filmbasetechnology.co.ke/led-crystal-film",
     siteName: "Filmbase Technology",
     type: "website",
-    // REPLACE: OG image for LED Crystal Film page
     images: ["https://placehold.co/1200x630/033a55/ffffff?text=LED+Crystal+Film"],
   },
 };
-
-const FEATURES = [
-  {
-    title: "What sets it apart",
-    body: "Higher transparency and finer pixel performance than standard LED Film. The visual finish is more refined, designed to integrate with premium architectural environments rather than impose on them.",
-    // REPLACE: Side-by-side or close-up showing crystal clarity of LED Crystal Film vs standard film
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Crystal+Film+Detail",
-    imageAlt: "LED Crystal Film showing high transparency and pixel clarity",
-  },
-  {
-    title: "Where it is specified",
-    body: "Luxury retail. Five-star hotels. Executive lobbies. Showrooms. Museums. Any environment where the display must be near-invisible when off and extraordinary when on.",
-    // REPLACE: LED Crystal Film installed in a five-star hotel lobby or luxury retail environment
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Luxury+Hotel+Crystal+Install",
-    imageAlt: "LED Crystal Film installed in a luxury hotel lobby",
-  },
-  {
-    title: "Performance in daylight",
-    body: "Vivid output in bright conditions. Near-invisible when powered off. Specified for atriums, naturally lit lobbies, and glass-fronted spaces where standard LED performance is not sufficient.",
-    // REPLACE: Crystal Film displaying content in a naturally lit atrium or sunlit lobby
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Daylight+Performance",
-    imageAlt: "LED Crystal Film performing in bright natural light conditions",
-  },
-  {
-    title: "Installation",
-    body: "Direct mount on glass. No structural framework required. Our own technicians manage every installation from site survey through to final commissioning.",
-    // REPLACE: Installation process showing direct glass mounting
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Crystal+Film+Install",
-    imageAlt: "LED Crystal Film being installed directly onto glass",
-  },
-  {
-    title: "Support",
-    body: "Written warranty. Local spare parts. Local service team. The same engineers who installed your system are the ones who support it. No third-party agents.",
-    // REPLACE: Service technician providing on-site support
-    image: "https://placehold.co/700x500/e8e8e8/666666?text=Local+Support+%26+Warranty",
-    imageAlt: "Filmbase service team providing local support",
-  },
-];
 
 const FAQ_ITEMS = [
   {
@@ -89,19 +50,17 @@ const FAQ_ITEMS = [
 export default function LEDCrystalFilmPage() {
   return (
     <PageTransition>
-      {/* ── HERO — stays dark ── */}
+      {/* ── HERO ── */}
       <section className="relative min-h-[80vh] flex items-end overflow-hidden bg-brand-dark">
-        <div className="absolute inset-0">
-          {/* REPLACE: Luxury hotel lobby or high-end retail space with crystal LED display in operation */}
-          <Image
-            src="https://placehold.co/1400x700/0a0a0a/1a1a2e?text=LED+Crystal+Film+%E2%80%94+Luxury+Hotel+Lobby"
-            alt="LED Crystal Film Screen in a luxury hotel lobby"
-            fill
-            className="object-cover opacity-50"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent" />
-        </div>
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-40 pb-20 w-full">
@@ -142,40 +101,16 @@ export default function LEDCrystalFilmPage() {
         </div>
       </section>
 
-      {/* ── FEATURES ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
-        {FEATURES.map((feature, i) => (
-          <section
-            key={feature.title}
-            className={`py-16 lg:py-20 ${i < FEATURES.length - 1 ? "border-b border-brand-border" : ""}`}
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                <span className="text-xs font-semibold text-brand-ink/30 tracking-[0.2em] uppercase block mb-4">
-                  0{i + 1}
-                </span>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#0a0a0a] leading-tight tracking-tight mb-5">
-                  {feature.title}
-                </h2>
-                <p className="text-brand-muted text-lg leading-relaxed font-light">{feature.body}</p>
-              </div>
-
-              <div className={`${i % 2 === 1 ? "lg:order-1" : ""} rounded-2xl overflow-hidden aspect-[7/5] relative bg-brand-alt`}>
-                <Image src={feature.image} alt={feature.imageAlt} fill className="object-cover" />
-                <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
+      {/* ── INFOGRAPHIC SECTIONS ── */}
+      <CrystalFilmGraphics />
 
       {/* ── COMPARISON CALLOUT ── */}
       <section className="py-16 bg-brand-alt border-y border-brand-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { metric: "Higher", label: "transparency than standard LED Film" },
-              { metric: "Finer", label: "pixel resolution and visual finish" },
+              { metric: "Higher",   label: "transparency than standard LED Film" },
+              { metric: "Finer",    label: "pixel resolution and visual finish" },
               { metric: "Near-zero", label: "visual presence when off" },
             ].map((item) => (
               <div key={item.label} className="glass-card rounded-2xl p-8 text-center hover:border-brand-ink/20 transition-colors duration-200">
