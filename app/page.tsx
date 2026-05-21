@@ -124,6 +124,20 @@ const SHOWCASE_IMAGES = [
     product: "LED Film Screen",
     href: "/led-film",
   },
+  {
+    id: 8,
+    src: "/DBB-Board-Room.gif",
+    alt: "Switchable smart glass — Diamond Business Bay boardroom",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
+  },
+  {
+    id: 9,
+    src: "/Boardroom.gif",
+    alt: "Switchable smart glass corporate boardroom installation",
+    product: "Switchable Smart Glass",
+    href: "/switchable-glass",
+  },
 ];
 
 const FAQ_ITEMS = [

@@ -46,6 +46,15 @@ const GALLERY_IMAGES: GalleryImage[] = [
     href: "/switchable-glass",
   },
   {
+    id: 9,
+    src: "/Boardroom.gif",
+    alt: "Switchable smart glass corporate boardroom installation, Nairobi",
+    category: "switchable-glass",
+    categoryLabel: "Switchable Smart Glass",
+    location: "Nairobi, Kenya",
+    href: "/switchable-glass",
+  },
+  {
     id: 1,
     src: "/single-glazed-switchable-smart-glass-retail.jpg",
     alt: "Switchable smart glass installed in a retail environment, Nairobi",
