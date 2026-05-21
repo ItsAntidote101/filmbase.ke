@@ -2,7 +2,7 @@ const ITEMS = [
   "Transparent LED Display",
   "Switchable Smart Glass",
   "Kenya's First Specialist",
-  "47 Counties",
+  "Across 47 Counties",
   "Installed by Our Own Team",
   "Written Warranty",
   "Nairobi Showroom",
