@@ -16,7 +16,6 @@ interface Fields {
   email: string;
   phone: string;
   project_type: string;
-  budget: string;
   message: string;
 }
 
@@ -25,7 +24,6 @@ interface Errors {
   email?: string;
   phone?: string;
   project_type?: string;
-  budget?: string;
   message?: string;
 }
 
@@ -52,7 +50,6 @@ function validate(f: Fields): Errors {
   }
 
   if (!f.project_type) e.project_type = "Please select a project type";
-  if (!f.budget)       e.budget       = "Please select a budget range";
 
   if (f.message.trim().length < 20) {
     e.message = "Please tell us a bit more about your project (at least 20 characters)";
@@ -69,7 +66,7 @@ const TRUST_STATS = [
 
 export default function QuoteSection() {
   const [fields, setFields] = useState<Fields>({
-    name: "", email: "", phone: "", project_type: "", budget: "", message: "",
+    name: "", email: "", phone: "", project_type: "", message: "",
   });
   const [errors, setErrors]       = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
@@ -314,23 +311,6 @@ export default function QuoteSection() {
                           </select>
                           {errors.project_type && <p className={errClass}>{errors.project_type}</p>}
                         </div>
-                      </div>
-
-                      {/* Budget — full width */}
-                      <div>
-                        <label className={labelClass} htmlFor="qs-budget">Budget *</label>
-                        <select
-                          id="qs-budget" name="budget"
-                          value={fields.budget} onChange={set("budget")}
-                          className={cls("budget")}
-                        >
-                          <option value="">Select budget range</option>
-                          <option value="Less than KES 500,000">Less than KES 500,000</option>
-                          <option value="KES 500,000 to 1,000,000">KES 500,000 to 1,000,000</option>
-                          <option value="Over KES 1,000,000">Over KES 1,000,000</option>
-                          <option value="Please advise">Please advise</option>
-                        </select>
-                        {errors.budget && <p className={errClass}>{errors.budget}</p>}
                       </div>
 
                       {/* Message — full width */}

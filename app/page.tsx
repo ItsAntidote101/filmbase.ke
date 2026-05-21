@@ -145,7 +145,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Do you handle installation yourselves?",
-    a: "Yes. Our own trained team handles every installation from site survey to commissioning. We do not subcontract.",
+    a: "Yes. Our own trained team handles every installation from site survey to commissioning.",
   },
 ];
 

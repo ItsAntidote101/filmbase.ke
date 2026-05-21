@@ -470,9 +470,7 @@ export default function OverviewClient() {
               </h2>
               <p className="text-brand-muted text-lg leading-relaxed font-light">
                 Filmbase Technology is Kenya&apos;s first dedicated specialist in transparent LED
-                display and switchable smart glass. We work with architects, brands, developers,
-                and space owners to deliver installations that change how a space communicates
-                and feels.
+                display and switchable smart glass.
               </p>
             </motion.div>
 
@@ -519,8 +517,8 @@ export default function OverviewClient() {
                 Engineered to global standards.
               </h2>
               <p className="text-brand-muted text-lg leading-relaxed font-light">
-                Every product is sourced from leading global manufacturers, technically vetted
-                by our team, and proven in real installations before we offer it to any client.
+                We&apos;ve partnered with the leading global manufacturers, technically vetted
+                every product, and proven it in real installations before bringing it to our clients.
               </p>
             </motion.div>
           </div>
@@ -545,7 +543,7 @@ export default function OverviewClient() {
               </h2>
               <p className="text-brand-muted text-lg leading-relaxed font-light">
                 Site assessment. Mounting. Electrical. Commissioning. Every stage is handled
-                by our own trained technical team. No subcontractors. No shortcuts.
+                by our own trained technical team.
               </p>
             </motion.div>
 
