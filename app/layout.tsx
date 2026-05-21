@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -33,7 +30,6 @@ export const metadata: Metadata = {
     locale: "en_KE",
     url: "https://filmbasetechnology.co.ke",
     siteName: "Filmbase Technology Limited",
-    // REPLACE: OG image — 1200x630 hero image of an installed LED screen
     images: [
       {
         url: "https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Technology",
@@ -45,7 +41,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    // REPLACE: Twitter OG image
     images: ["https://placehold.co/1200x630/0a0a0a/ffffff?text=Filmbase+Technology"],
   },
   icons: {
@@ -55,11 +50,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -68,10 +59,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon-8.png" />
       </head>
       <body className={`${dmSans.variable} font-sans antialiased bg-white text-[#0a0a0a]`}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        {children}
       </body>
     </html>
   );
