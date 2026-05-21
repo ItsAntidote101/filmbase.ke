@@ -62,7 +62,7 @@ const FEATURES = [
   },
   {
     title: "Installed by our own team",
-    body: "Most installations are completed in one to three days. Locally stocked and locally installed. Our technical team is on the ground. No waiting on imported shipments or third-party contractors.",
+    body: "Most installations are completed in one to three days. Locally stocked and locally installed. Our technical team is on the ground and ready to serve you. Estimated installation duration will be 1 to 3 days.",
     image: "",
     imageAlt: "",
     timeline: true,

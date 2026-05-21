@@ -70,7 +70,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Where is it specified?",
-    a: "Luxury retail. Five-star hotels. Executive lobbies. Galleries. Architectural showcase installations. Any environment where the display must be near-invisible when off.",
+    a: "Retail showrooms. Corporate offices. Hotel lobbies. Galleries. Museums. Any environment where a premium display needs to disappear when off and impress when on.",
   },
   {
     q: "How transparent is it when powered off?",

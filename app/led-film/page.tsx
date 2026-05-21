@@ -53,7 +53,7 @@ const FEATURES = [
   },
   {
     title: "Installation",
-    body: "Adhesive or screw-fixed directly to glass. No structural framework required. Our trained technical team manages every installation from site survey to final commissioning.",
+    body: "Our trained technical team manages every installation from site survey to final commissioning.",
     image: "/gtc-led-film.png",
     imageAlt: "Large-scale LED Film Screen installation showing product scope and impact",
   },

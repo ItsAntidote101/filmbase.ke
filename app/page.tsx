@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const STATS: Array<{ value: string | number; label: string; Icon: LucideIcon }> = [
   { value: "1st", label: "First in Kenya",            Icon: Trophy },
   { value: 2,     label: "Product Categories",        Icon: Layers },
-  { value: 47,    label: "Counties We Serve",          Icon: MapPin },
+  { value: 47,    label: "Across 47 Counties",          Icon: MapPin },
   { value: "100%",label: "Installed by Our Own Team", Icon: Users  },
 ];
 
@@ -289,7 +289,7 @@ export default function HomePage() {
             <p className="text-brand-muted text-lg leading-relaxed font-light">
               Filmbase supplies two of the most advanced architectural technologies available: transparent LED display
               and switchable smart glass. Both sourced from leading global manufacturers. Both installed by our own team.
-              Both backed by a written warranty.
+              Both backed by a warranty issued in writing.
             </p>
           </ScrollReveal>
 
