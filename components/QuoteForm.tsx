@@ -149,7 +149,7 @@ export default function QuoteForm({
           In the meantime you can reach us on WhatsApp.
         </p>
         <a
-          href="https://wa.me/254727808264"
+          href="https://wa.me/254796502192"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#25D366] text-white font-semibold text-sm rounded-xl hover:bg-[#1ebe5d] transition-colors duration-200"

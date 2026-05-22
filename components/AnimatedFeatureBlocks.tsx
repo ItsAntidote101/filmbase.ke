@@ -20,7 +20,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Direct manufacturer access",
-    body: "Direct partnerships with leading global manufacturers. No middlemen.",
+    body: "Direct partnerships with leading global manufacturers.",
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Installed by Our Own Team",
-    body: "Sourcing, installation, warranty, and support. All handled by our team. No subcontractors.",
+    body: "Sourcing, installation, warranty, and support. All handled by our team.",
   },
 ];
 
