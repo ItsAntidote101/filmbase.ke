@@ -83,19 +83,13 @@ export default function LEDCrystalFilmPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="rounded-2xl overflow-hidden aspect-[7/5] relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/LC-waikiki.jpg" alt="LED Crystal Film installed at LC Waikiki" className="w-full h-full object-cover object-center" />
+              <img src="/LC-waikiki.jpg" alt="LED Crystal Film retail installation" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
-              <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-2xl">
-                <p className="text-white text-sm font-semibold">LC Waikiki</p>
-              </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[7/5] relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/Woolworths.jpg" alt="LED Crystal Film installed at Woolworths" className="w-full h-full object-cover object-center" />
+              <img src="/Woolworths.jpg" alt="LED Crystal Film retail installation" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
-              <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-2xl">
-                <p className="text-white text-sm font-semibold">Woolworths</p>
-              </div>
             </div>
           </div>
         </div>

@@ -190,7 +190,6 @@ export default function GalleryClient() {
                     <p className="text-white text-xs font-semibold uppercase tracking-wider">
                       {img.categoryLabel}
                     </p>
-                    <p className="text-white/70 text-xs font-light mt-1">{img.location}</p>
                   </div>
                 </motion.div>
               ))}
@@ -249,7 +248,6 @@ export default function GalleryClient() {
               <div className="mt-4 flex items-center justify-between">
                 <div>
                   <p className="text-white font-semibold text-sm">{lightbox.categoryLabel}</p>
-                  <p className="text-white/50 text-xs font-light mt-0.5">{lightbox.location}</p>
                 </div>
                 <Link
                   href={lightbox.href}

@@ -64,11 +64,6 @@ export default function SwitchableSlider() {
             alt={SLIDES[current].label}
             className="w-full h-full object-cover"
           />
-          {/* Caption */}
-          <div className="absolute bottom-0 left-0 right-0 px-5 py-5 bg-gradient-to-t from-black/65 to-transparent">
-            <p className="text-white text-sm font-semibold leading-tight">{SLIDES[current].label}</p>
-            <p className="text-white/70 text-xs mt-0.5">{SLIDES[current].sub}</p>
-          </div>
         </motion.div>
       </AnimatePresence>
 
