@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 const FEATURES = [
   {
-    title: "What it is",
+    title: "LED on glass",
     body: "LED elements embedded in thin transparent film, mounted directly onto glass. Displays video, animation, and graphics through the glass surface without blocking the view behind it.",
     image: "/LED-film-screen@2x-100.jpg",
     imageAlt: "Close-up of LED film elements embedded in transparent film",
