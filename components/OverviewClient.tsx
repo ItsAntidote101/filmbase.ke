@@ -392,6 +392,15 @@ export default function OverviewClient() {
         className="relative overflow-hidden pt-40 pb-28 lg:pb-36"
         style={{ background: "#054e72" }}
       >
+        {/* GTC background image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/gtc-led-film.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ opacity: 0.18 }}
+        />
         {/* Grid pattern */}
         <div
           className="absolute inset-0 pointer-events-none"
